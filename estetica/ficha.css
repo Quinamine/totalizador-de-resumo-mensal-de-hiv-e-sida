@@ -1,0 +1,339 @@
+﻿
+/* FORMATAÇÃO GERAL */
+input, textarea {
+    border: none;
+    border-radius: 0;
+    outline: none;
+    color: var(--text-color);
+    font-family:  sans-serif, Arial, Helvetica !important; /* Coerção para Firefox */
+    font-size: 12px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    padding: 0;
+    max-width: 50px;
+}
+
+input[type=text], input[type=date],
+input[readonly] {
+    font-weight: bold;
+}
+
+input[readonly] {
+    cursor: context-menu;
+    transition: background-color 400ms ease-out;
+}
+
+input[readonly].bg-gray,
+.bgc-gray {
+    background-color: var(--gray-c) !important;
+}
+
+input[type=number].fundo-vermelho {
+    background-color: var(--danger-color) !important;
+    color: var(--yt);
+}
+
+div.container input:focus {
+    border-bottom: 2px solid var(--blue) !important;
+}
+
+/* CSS REUTILIZÁVEL */
+div.ficha,
+div.republica {
+    font-weight: bold;
+}
+div.container > header,
+div.ficha header {
+    display: grid;
+}
+
+div.republica,
+div.republica > div,
+div.ficha header span,
+div.col.de-enumeracao-das-linhas span,
+div.col.de-indicadores div {
+    display: flex;
+    align-items: center;
+}
+
+strong {
+    text-decoration: underline;
+}
+
+div.container {
+    max-width: 992px;
+    min-width: 992px;
+    margin: 30px auto 10px auto;
+}
+
+/* HEADER DO CONTAINER */
+div.container > header {
+    grid-template-columns: 370px 1fr;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+div.col1.emblema-e-republica {
+    max-height: 76px;
+    display: flex;
+}
+
+@media print {
+    div.emblema-e-republica {
+        display: flex;
+        align-items: center;
+    }
+}
+
+div.emblema-e-republica figure {
+    margin: 0;
+    width: 70px;
+    height: 75px;
+}
+
+div.emblema-e-republica 
+figure img {
+    height: 100%;
+}
+
+div.republica {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px 0;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+div.republica > div {
+    flex-direction: column;
+    font-size: 10.5px;
+}
+
+div.republica > span {
+    font-size: 10px;
+}
+
+/* HEADER COL 2 */
+div.container > header h1 {
+    font-size: 20.40px;
+    font-weight: bold;
+}
+
+div.container > header label {
+    margin-right: 2px;
+}
+
+div.container > header input {
+    border-bottom: 1px solid var(--border-color);
+}
+
+div.contentor-de-provincia-e-distrito {
+    line-height: 4;
+}
+
+div.contentor-de-provincia-e-distrito,
+div.contentor-de-us-mes-e-ano {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* FICHA */
+div.ficha {
+    line-height: 1.3;
+}
+
+/* Grades Reutilizáveis */
+.grade-col10 {
+    display: grid;
+    grid-template-columns: 50px 320px repeat(8, 50px);
+}
+
+.grade-col3 {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+}
+
+.grade-col1 {
+    display: grid;
+    grid-template-columns: 50px;
+}
+
+/* CABEÇALHO DA FICHA */
+div.linha-de-nid-e-cabecalho {
+    display: grid;
+    grid-template-columns: 370px 1fr;
+}
+
+div.contentor-de-nid {
+    display: flex;
+    align-items: center;
+}
+
+div.contentor-de-nid input {
+    min-width: 214px;
+    margin-left: 4px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header.cabecalho-da-ficha  {
+    grid-template-columns: 400px 150px 50px;
+    grid-column-gap: 2px;
+}
+
+/* HEADER ITEMS */
+header.cabecalho-da-ficha > div:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, 50px) repeat(3, 100px);
+}
+
+div.faixa-etaria-e-sexo {
+    display: grid;
+    grid-template-columns: repeat(2, 50px);
+}
+
+div.faixa-etaria-e-sexo span:first-child {
+    grid-column: 1/3;
+}
+
+header.cabecalho-da-ficha span {
+    justify-content: center;
+    text-align: center;
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+}
+
+header.cabecalho-da-ficha span.br {
+    border-right: 1px solid var(--border-color);
+}
+
+/* CORPO DA PAGINA */
+div.corpo-da-ficha {
+    display: grid;
+    grid-template-columns: 770px 150px 50px;
+    grid-column-gap: 2px;
+}
+
+/* BODY ITEMS CHILDREN */
+div.corpo-da-ficha div.col {
+    display: grid;
+    grid-template-rows: 47px 34px 47px;
+}
+
+div.corpo-da-ficha div.col.inputs-container {
+    grid-template-columns: 50px;
+}
+
+div.col.de-enumeracao-das-linhas span {
+    justify-content: center;
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+}
+
+div.col.de-enumeracao-das-linhas span:last-child {
+    border-bottom: 1px solid var(--border-color);
+}
+
+div.col.de-indicadores div {
+    padding: 2px 4px;
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+}
+
+div.col.de-indicadores div:last-child {
+    border-bottom: 1px solid var(--border-color);
+}
+
+div.col.inputs-container input {
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+div.col.inputs-container input:last-child {
+    border-bottom: 1px solid var(--border-color);
+}
+
+div.col.de-20-ou-mais-anos.sexo-m input,
+div.col.total-geral input,
+div.col.total-adolescentes input {
+    border-right: 1px solid var(--border-color);
+}
+
+/* GRADE 2 */
+header.cabecalho-da-ficha.ii {
+    margin: 4px 0 0 370px;
+}
+
+div.corpo-da-ficha.ii div.col {
+    grid-template-rows: repeat(9, 34px);
+}
+
+/* GRADE 3 */
+div.corpo-da-ficha.iii div.col {
+    grid-template-rows: repeat(2, 47px) repeat(2, 34px);
+    margin-top: 4px;
+}
+
+
+
+
+/* SECCAO DE NOTA */
+div.nota {
+    margin-bottom: 20px;
+    min-height: 79px;
+    display: none;
+}
+
+@-moz-document url-prefix() {
+    div.nota {
+        min-height: 96px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    divdiv.linha.nota {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+div.nota textarea {
+    font: 14px san-serif, Arial, Helvetica;
+    min-width: 880px;
+    padding: 5px;
+    line-height: 1.5;
+    border: 1px solid var(--border-color);
+}
+
+@media print {
+    div.nota.no-print {
+        display: none;
+    }
+
+    div.nota textarea {
+        padding: 0;
+    }
+}
+
+div.nota textarea.bold {
+    font-weight: bold;
+    border-color: transparent;
+}
+
+div.nota textarea:focus {
+    border: 2px solid var(--blue);
+}
+
+
+
+
+
