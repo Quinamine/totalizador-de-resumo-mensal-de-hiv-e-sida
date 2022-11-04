@@ -245,7 +245,6 @@ div.linha.do-cabecalho a.logo span:nth-child(2) {
 @media screen and (max-width: 370px) {
     div.linha.do-cabecalho a.logo span:nth-child(2) {
         display: initial;
-        font-weight: initial;
     }
 
     div.linha.do-cabecalho a.logo span:nth-child(1) {
