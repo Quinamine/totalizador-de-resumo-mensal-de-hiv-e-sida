@@ -126,54 +126,7 @@ article div.consentimento p {
     padding: 5px 5px 5px 10px;
 }
 
-/* PESQUISA */
-div.caixa-de-pesquisa { 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4px;
-    background-color: var(--primary-color);
-    position: fixed;
-    top: -35px;
-    right: calc(50vw - 257px / 2);
-    visibility: hidden;
-    transition: top 200ms linear;
-    z-index: 15000;
-}
-
-div.caixa-de-pesquisa.on {
-    top: 0;
-    visibility: initial;
-}
-
-div.caixa-de-pesquisa input.pesquisar-linha { 
-    min-width: 188px;
-    padding: 2px 0 2px 5px;
-    border: 2px solid var(--primary-color) !important;
-    background-color: var(--gray-d);
-}
-
-div.caixa-de-pesquisa input.pesquisar-linha:focus { 
-    border-color: var(--purple) !important;
-}
-
-div.caixa-de-pesquisa button {
-    width: 24px;
-    height: 20px;
-    font-weight: bold;
-}
-
-div.caixa-de-pesquisa button {
-    background-color: inherit;
-    color: var(--yt);
-    font-size: 16px;
-    margin-left: 2px;
-}
-
-div.caixa-de-pesquisa button:hover {
-    background-color: var(--danger-color);
-    border-radius: 2px;
-}
+/* CAIXA DE ALERTA */
 
 div.caixa-de-alerta {
     width: 100%;
@@ -214,14 +167,17 @@ div.caixa-de-alerta button {
     padding: 6px 4px;
     margin-left: auto;
     display: block;
-    color: var(--yt);
-    background-color: var(--btn-bgc);
-    border-radius: 4px;
     font-size: 14px;
+    color: var(--yt);
+    background-color: var(--yt);;
+    border-radius: 4px;
+    border: 1px solid var(--gray-a);
+    color: var(--blue);
+    box-shadow: 0 0 5px var(--gray-d);
 }
 
 div.caixa-de-alerta button:hover {
-    background-color: var(--btn-hover-bgc);
+    background-color: var(--important-text-bgc);
 }
 
 /* CONFIRMAÇÃO DE ESVAZIAMENTO DA FICHA */
@@ -460,56 +416,62 @@ div.seccao-de-interatividade > button:hover {
 }
 
 /* LINHA DE REFERÊNCIA DE SEXO E IDADE */
+
 div.linha-de-referencia {
-    display: none;
+    display: block;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10000 !important;
+    background-color: var(--blue-dark);
+    color: var(--yt);
+    transition: bottom 250ms ease;
 }
 
-@media screen and (max-width: 1300px) {
-    div.linha-de-referencia {
-        display: block;
-        width: 100%;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        z-index: 10000 !important;
-        background-color: var(--footer-bgc);
-        transition: bottom 250ms ease;
-    }
+div.linha-de-referencia.off {
+    bottom: -30px;
+}
 
-    div.linha-de-referencia.off {
-        bottom: -30px;
-    }
-    
+div.coluna-de-referencia  {
+    max-width: 998px;
+    margin: 0 auto;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 998px) {
     div.coluna-de-referencia  {
-        max-width: 1300px;
-        margin: 0 auto;
         padding: 4px 8px;
-        display: flex;
-        align-items: center;
     }
-    
-    div.coluna-de-referencia > * {
-        margin: 0 5px;
-        display: flex;
-        align-items: center;
-    }
-    
-    div.coluna-de-referencia output {
-        min-height: 18px;
-        border: thin solid var(--border-color);
-        margin: 0 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--black-alpha-5);
-        color: var(--yt);
-        font-weight: bold;
-        min-width: 24px;
-    }
-    
-    div.coluna-de-referencia output.ref-de-faixa-etaria {
-        min-width: 86px;
-    }
+}
+
+div.coluna-de-referencia > div {
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+div.coluna-de-referencia > div:first-child {
+    margin-left: 3px;
+}
+
+div.coluna-de-referencia output {
+    min-height: 18px;
+    border: thin solid var(--blue);
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-alpha-5);
+    color: var(--yt);
+    font-weight: bold;
+    min-width: 24px;
+}
+
+div.coluna-de-referencia output.ref-de-faixa-etaria {
+    min-width: 86px;
 }
 
 /* DESFOQUE DO FUNDO */
@@ -525,10 +487,10 @@ div.desfoque.on {
 /* AVISO DE USO DE COOKIES  */
 div.aviso-de-uso-de-cookies {
     width: 100%;
-    max-width: 1300px;
+    max-width: 998px;
     padding: 15px;
     position: fixed;
-    right: calc(50vw - 1300px / 2);
+    left: calc(50vw - 998px / 2);
     bottom: -132px;
     font-size: 13px;
     line-height: 1.5;
@@ -545,7 +507,7 @@ div.aviso-de-uso-de-cookies.on {
     visibility: visible;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 998px) {
     div.aviso-de-uso-de-cookies.on {
         right: 0;
         bottom: 0;

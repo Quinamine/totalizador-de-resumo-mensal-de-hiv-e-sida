@@ -1,11 +1,11 @@
 const sessaoWeb = {
-    verDisponiilidade: () => sessionStorage.getItem("trmc-session") ? "defined" : "undefined",
+    verDisponiilidade: () => sessionStorage.getItem("trmhiv-session") ? "defined" : "undefined",
 
     mostrarAviso: () => aviso.classList.add("on"),
 
     omitirAviso: () => aviso.classList.remove("on"),
 
-    criarSessao: () => sessionStorage.setItem("trmc-session", "on")
+    criarSessao: () => sessionStorage.setItem("trmhiv-session", "on")
 }
 
 let aviso;

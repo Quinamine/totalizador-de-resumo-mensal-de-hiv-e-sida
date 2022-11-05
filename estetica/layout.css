@@ -1,7 +1,5 @@
 /* FORMATAÇÕES GERAIS */
 :root {
-    --primary-color: #444444;
-    --secondary-color: #6985a7;
     --border-color: #444444;
     --anchor-color: #1558bc;
     --text-color: #333333;
@@ -11,16 +9,15 @@
     --fullblack: #000000;
     --black-alpha-5: rgba(0, 0, 0, .5);
     --black-alpha-8: rgba(0, 0, 0, .8);
-    --btn-bgc: var(--primary-color);
-    --btn-hover-bgc: var(--text-color);
-    --footer-bgc: #dce4f4;
     --important-text-bgc: #f4f4f4;
-    --gray: var(--border-color);
+    --gray: #888888;
     --gray-a: #aaaaaa;
     --gray-c: #cccccc;
     --gray-d: #dddddd;
     --gray-light: #f0f0f0;
+    --footer-bgc: var(--gray-d);
     --blue: #0060EE; 
+    --blue-dark: #0f1c2e;
     --purple: rgb(116, 116, 235);
     --orange: #faa032;
 }
@@ -66,17 +63,12 @@ main {
     flex: 1;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 998px) {
     main {
         max-width: 100%;
         overflow: auto;
         padding: 0 15px;
     }
-}
-
-*::selection {
-    background-color: var(--primary-color);
-    color: var(--yt);
 }
 
 a {
@@ -171,7 +163,6 @@ section.menu li input[type=checkbox] {
     cursor: pointer;
 }
 
-
 /* CABEÇALHO */
 body > header, 
 body > footer {
@@ -188,14 +179,18 @@ body > footer {
 body > header {
     line-height: 2;
     box-shadow: 0 0 10px var(--gray-d);
+    position: sticky;
+    top: 0;
+    background-color: var(--yt);
+    z-index: 1;
 }
 
 div.linha {
-    max-width: 1300px;
+    max-width: 998px;
     margin: 0 auto;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 998px) {
     div.linha {
         padding-left: 15px;
         padding-right: 15px;
@@ -252,7 +247,6 @@ div.linha.do-cabecalho a.logo span:nth-child(2) {
     }
 }
 
-
 /* SECÇÃO DE NAVEGAÇÃO */
 section.menu, 
 section.menu ul,
@@ -277,6 +271,10 @@ section.menu ul li.partilha {
 }
 
 @media screen and (max-width: 1023px) {
+    section.menu ul li.partilha {
+        display: initial;
+    }
+
     section.menu,
     section.menu ul {
         width: 100%;
@@ -386,9 +384,8 @@ div.linha.do-rodape p {
 
 div.linha.do-rodape a.voltar,
 div.linha.do-rodape a.voltar:visited {
-    margin-right: 10px;
     padding: 5px;
-    color: var(--border-color);
+    color: var(--gray);
 }
 
 @media screen and (max-width: 1023px) {

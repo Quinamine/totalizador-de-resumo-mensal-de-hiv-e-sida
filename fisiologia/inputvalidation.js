@@ -12,7 +12,7 @@ const validacao = {
     },
 
     mostrarAlertaVermelho: () => {
-        if(!sessionStorage.getItem("trmc-alertaVermelho")) {
+        if(!sessionStorage.getItem("trmhiv-alertaVermelho")) {
             alertaVermelho.classList.add("on");
             desfoqueDoFundo.on()
         }
@@ -26,9 +26,9 @@ const validacao = {
     salvarPreferenciaNaoMostrarMais: () => {
         const checkboxPreference = document.querySelector("#nao-mostrar-mais");
         if(checkboxPreference.checked) {
-            sessionStorage.setItem("trmc-alertaVermelho", "nao-mostrar-mais");
+            sessionStorage.setItem("trmhiv-alertaVermelho", "nao-mostrar-mais");
         } else {
-            sessionStorage.removeItem("trmc-alertaVermelho");
+            sessionStorage.removeItem("trmhiv-alertaVermelho");
         }
     }
 }
@@ -47,7 +47,14 @@ function eventos() {
             validacao.validarInput();
 
             // Mostrar alerta se a 'cel' ficar vermelha ou a sua celula de saida de total parcial ou geral
-            let celTotalParcialOutput = document.querySelector(`.${cel.dataset.subtotaloutput}`);
+            let celTotalParcialOutput;
+            
+            if(cel.dataset.total0a14eixox) {
+                celTotalParcialOutput = document.querySelector(`.${cel.dataset.total0a14eixox}`);
+            } else if(cel.dataset.total15oumaiseixox) {
+                celTotalParcialOutput = document.querySelector(`.${cel.dataset.total15oumaiseixox}`);
+            }
+            
             let celTotalGeralOutput = document.querySelector(`.${cel.dataset.totalgeraloutput}`);
 
             if (cel.matches(".fundo-vermelho") || celTotalParcialOutput.matches(".fundo-vermelho") 

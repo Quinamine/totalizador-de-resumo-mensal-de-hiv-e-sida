@@ -26,7 +26,7 @@
         <!-- FUNCIONALIDADES -->
         <script src="fisiologia/menu.js"></script>
         <script src="fisiologia/inputvalidation.js"></script>
-        <script src="fisiologia/totalizador-rmc.js"></script>
+        <script src="fisiologia/totalizador-rmhiv.js"></script>
         <script src="fisiologia/referencia.js"></script>
         <script src="fisiologia/webstorage.js"></script>
 
@@ -45,9 +45,6 @@
                         <li class="destacar-as-celulas-automaticas" title="Adicionar um fundo opaco às celulas dos totais">
                             <input type="checkbox" id="readonlyinputs-darker"/> 
                             <label for="readonlyinputs-darker">Destacar&nbsp;o&nbsp;fundo&nbsp;dos&nbsp;totais</label>
-                        </li>
-                        <li title="Migrar até uma determinada linha">
-                            <button class="ir-para">Ir&nbsp;para&nbsp;a&nbsp;linha...</button>
                         </li>                             
                         <li title="Limpar os dados da ficha">
                             <button class="esvaziar-ficha">Esvaziar&nbsp;a&nbsp;ficha</button>
@@ -380,101 +377,101 @@
                             </div>
 
                             <div class="inputs-container col de-0-a-4-anos">
-                                <input type="number" min="0" data-total0a14eixox="b1-c1c2c3c4" data-total0a14eixoxoutput="b1-c9" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-totaleixoy="b1b2b3-c1" data-totaleixoyoutput="b4-c1" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-totalb11="b1b10-c1" data-totalb11output="b11-c1" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b1-c1c2c3c4" data-total0a14eixoxoutput="b1-c9" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-totaleixoy="b1b2b3-c1" data-totaleixoyoutput="b4-c1" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-totalb11="b1b10-c1" data-totalb11output="b11-c1" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b2-c1c2c3c4" data-total0a14eixoxoutput="b2-c9" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-totaleixoy="b1b2b3-c1" data-totaleixoyoutput="b4-c1" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b2-c1c2c3c4" data-total0a14eixoxoutput="b2-c9" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-totaleixoy="b1b2b3-c1" data-totaleixoyoutput="b4-c1" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b3-c1c2c3c4" data-total0a14eixoxoutput="b3-c9" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-totaleixoy="b1b2b3-c1" data-totaleixoyoutput="b4-c1" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b3-c1c2c3c4" data-total0a14eixoxoutput="b3-c9" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-totaleixoy="b1b2b3-c1" data-totaleixoyoutput="b4-c1" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11"/>
 
                                 <input type="number" min="0" readonly class="b4-c1 bgc-gray"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b5-c1c2c3c4" data-total0a14eixoxoutput="b5-c9" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-totaleixoy="b5b6b7b8-c1" data-totaleixoyoutput="b9-c1" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b5-c1c2c3c4" data-total0a14eixoxoutput="b5-c9" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-totaleixoy="b5b6b7b8-c1" data-totaleixoyoutput="b9-c1" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b6-c1c2c3c4" data-total0a14eixoxoutput="b6-c9" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-totaleixoy="b5b6b7b8-c1" data-totaleixoyoutput="b9-c1" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b6-c1c2c3c4" data-total0a14eixoxoutput="b6-c9" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-totaleixoy="b5b6b7b8-c1" data-totaleixoyoutput="b9-c1" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b7-c1c2c3c4" data-total0a14eixoxoutput="b7-c9" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-totaleixoy="b5b6b7b8-c1" data-totaleixoyoutput="b9-c1" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b7-c1c2c3c4" data-total0a14eixoxoutput="b7-c9" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-totaleixoy="b5b6b7b8-c1" data-totaleixoyoutput="b9-c1" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b8-c1c2c3c4" data-total0a14eixoxoutput="b8-c9" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-totaleixoy="b5b6b7b8-c1" data-totaleixoyoutput="b9-c1" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b8-c1c2c3c4" data-total0a14eixoxoutput="b8-c9" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-totaleixoy="b5b6b7b8-c1" data-totaleixoyoutput="b9-c1" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"/>
 
                                 <input type="number" min="0" readonly class="b9-c1 bgc-gray" />
                             </div>
 
                             <div class="inputs-container col de-5-a-9-anos">
-                                <input type="number" min="0" data-total0a14eixox="b1-c1c2c3c4" data-total0a14eixoxoutput="b1-c9" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-totaleixoy="b1b2b3-c2" data-totaleixoyoutput="b4-c2" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-totalb11="b1b10-c2" data-totalb11output="b11-c2" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b1-c1c2c3c4" data-total0a14eixoxoutput="b1-c9" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-totaleixoy="b1b2b3-c2" data-totaleixoyoutput="b4-c2" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-totalb11="b1b10-c2" data-totalb11output="b11-c2" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b2-c1c2c3c4" data-total0a14eixoxoutput="b2-c9" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-totaleixoy="b1b2b3-c2" data-totaleixoyoutput="b4-c2" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b2-c1c2c3c4" data-total0a14eixoxoutput="b2-c9" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-totaleixoy="b1b2b3-c2" data-totaleixoyoutput="b4-c2" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b3-c1c2c3c4" data-total0a14eixoxoutput="b3-c9" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-totaleixoy="b1b2b3-c2" data-totaleixoyoutput="b4-c2" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b3-c1c2c3c4" data-total0a14eixoxoutput="b3-c9" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-totaleixoy="b1b2b3-c2" data-totaleixoyoutput="b4-c2" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11"/>
 
                                 <input type="number" min="0" readonly class="b4-c2 bgc-gray"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b5-c1c2c3c4" data-total0a14eixoxoutput="b5-c9" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-totaleixoy="b5b6b7b8-c2" data-totaleixoyoutput="b9-c2" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b5-c1c2c3c4" data-total0a14eixoxoutput="b5-c9" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-totaleixoy="b5b6b7b8-c2" data-totaleixoyoutput="b9-c2" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b6-c1c2c3c4" data-total0a14eixoxoutput="b6-c9" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-totaleixoy="b5b6b7b8-c2" data-totaleixoyoutput="b9-c2" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b6-c1c2c3c4" data-total0a14eixoxoutput="b6-c9" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-totaleixoy="b5b6b7b8-c2" data-totaleixoyoutput="b9-c2" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b7-c1c2c3c4" data-total0a14eixoxoutput="b7-c9" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-totaleixoy="b5b6b7b8-c2" data-totaleixoyoutput="b9-c2" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b7-c1c2c3c4" data-total0a14eixoxoutput="b7-c9" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-totaleixoy="b5b6b7b8-c2" data-totaleixoyoutput="b9-c2" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b8-c1c2c3c4" data-total0a14eixoxoutput="b8-c9" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-totaleixoy="b5b6b7b8-c2" data-totaleixoyoutput="b9-c2" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"/>
+                                <input type="number" min="0" data-total0a14eixox="b8-c1c2c3c4" data-total0a14eixoxoutput="b8-c9" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-totaleixoy="b5b6b7b8-c2" data-totaleixoyoutput="b9-c2" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"/>
 
                                 <input type="number" min="0" readonly class="b9-c2 bgc-gray" />
                             </div>
 
                             <div class="inputs-container col de-10-a-14-anos sexo-f">
-                                <input type="number" min="0" data-total0a14eixox="b1-c1c2c3c4" data-total0a14eixoxoutput="b1-c9" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-total10a19eixox="b1-c3c4c5c6" data-total10a19eixoxoutput="b1-c12" data-totaleixoy="b1b2b3-c3" data-totaleixoyoutput="b4-c3" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" data-totalb11="b1b10-c3" data-totalb11output="b11-c3" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11" data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b1-c1c2c3c4" data-total0a14eixoxoutput="b1-c9" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-total10a19eixox="b1-c3c4c5c6" data-total10a19eixoxoutput="b1-c12" data-totaleixoy="b1b2b3-c3" data-totaleixoyoutput="b4-c3" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" data-totalb11="b1b10-c3" data-totalb11output="b11-c3" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11" data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
 
-                                <input type="number" min="0" data-total0a14eixox="b2-c1c2c3c4" data-total0a14eixoxoutput="b2-c9" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-total10a19eixox="b2-c3c4c5c6" data-total10a19eixoxoutput="b2-c12" data-totaleixoy="b1b2b3-c3" data-totaleixoyoutput="b4-c3" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b2-c1c2c3c4" data-total0a14eixoxoutput="b2-c9" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-total10a19eixox="b2-c3c4c5c6" data-total10a19eixoxoutput="b2-c12" data-totaleixoy="b1b2b3-c3" data-totaleixoyoutput="b4-c3" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
 
-                                <input type="number" min="0" data-total0a14eixox="b3-c1c2c3c4" data-total0a14eixoxoutput="b3-c9" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-total10a19eixox="b3-c3c4c5c6" data-total10a19eixoxoutput="b3-c12" data-totaleixoy="b1b2b3-c3" data-totaleixoyoutput="b4-c3" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b3-c1c2c3c4" data-total0a14eixoxoutput="b3-c9" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-total10a19eixox="b3-c3c4c5c6" data-total10a19eixoxoutput="b3-c12" data-totaleixoy="b1b2b3-c3" data-totaleixoyoutput="b4-c3" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
 
                                 <input type="number" min="0" readonly class="b4-c3 bgc-gray"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b5-c1c2c3c4" data-total0a14eixoxoutput="b5-c9" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-total10a19eixox="b5-c3c4c5c6" data-total10a19eixoxoutput="b5-c12" data-totaleixoy="b5b6b7b8-c3" data-totaleixoyoutput="b9-c3" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b5-c1c2c3c4" data-total0a14eixoxoutput="b5-c9" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-total10a19eixox="b5-c3c4c5c6" data-total10a19eixoxoutput="b5-c12" data-totaleixoy="b5b6b7b8-c3" data-totaleixoyoutput="b9-c3" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
 
-                                <input type="number" min="0" data-total0a14eixox="b6-c1c2c3c4" data-total0a14eixoxoutput="b6-c9" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-total10a19eixox="b6-c3c4c5c6" data-total10a19eixoxoutput="b6-c12" data-totaleixoy="b5b6b7b8-c3" data-totaleixoyoutput="b9-c3" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b6-c1c2c3c4" data-total0a14eixoxoutput="b6-c9" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-total10a19eixox="b6-c3c4c5c6" data-total10a19eixoxoutput="b6-c12" data-totaleixoy="b5b6b7b8-c3" data-totaleixoyoutput="b9-c3" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
 
-                                <input type="number" min="0" data-total0a14eixox="b7-c1c2c3c4" data-total0a14eixoxoutput="b7-c9" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-total10a19eixox="b7-c3c4c5c6" data-total10a19eixoxoutput="b7-c12" data-totaleixoy="b5b6b7b8-c3" data-totaleixoyoutput="b9-c3" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b7-c1c2c3c4" data-total0a14eixoxoutput="b7-c9" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-total10a19eixox="b7-c3c4c5c6" data-total10a19eixoxoutput="b7-c12" data-totaleixoy="b5b6b7b8-c3" data-totaleixoyoutput="b9-c3" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
 
-                                <input type="number" min="0" data-total0a14eixox="b8-c1c2c3c4" data-total0a14eixoxoutput="b8-c9" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-total10a19eixox="b8-c3c4c5c6" data-total10a19eixoxoutput="b8-c12" data-totaleixoy="b5b6b7b8-c3" data-totaleixoyoutput="b9-c3" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b8-c1c2c3c4" data-total0a14eixoxoutput="b8-c9" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-total10a19eixox="b8-c3c4c5c6" data-total10a19eixoxoutput="b8-c12" data-totaleixoy="b5b6b7b8-c3" data-totaleixoyoutput="b9-c3" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
 
                                 <input type="number" min="0" readonly class="b9-c3 bgc-gray" />
                             </div>
 
                             <div class="inputs-container col de-10-a-14-anos sexo-m">
-                                <input type="number" min="0" data-total0a14eixox="b1-c1c2c3c4" data-total0a14eixoxoutput="b1-c9" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-total10a19eixox="b1-c3c4c5c6" data-total10a19eixoxoutput="b1-c12" data-totaleixoy="b1b2b3-c4" data-totaleixoyoutput="b4-c4" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" data-totalb11="b1b10-c4" data-totalb11output="b11-c4" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11" data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b1-c1c2c3c4" data-total0a14eixoxoutput="b1-c9" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-total10a19eixox="b1-c3c4c5c6" data-total10a19eixoxoutput="b1-c12" data-totaleixoy="b1b2b3-c4" data-totaleixoyoutput="b4-c4" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" data-totalb11="b1b10-c4" data-totalb11output="b11-c4" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11" data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
 
-                                <input type="number" min="0" data-total0a14eixox="b2-c1c2c3c4" data-total0a14eixoxoutput="b2-c9" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-total10a19eixox="b2-c3c4c5c6" data-total10a19eixoxoutput="b2-c12" data-totaleixoy="b1b2b3-c4" data-totaleixoyoutput="b4-c4" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b2-c1c2c3c4" data-total0a14eixoxoutput="b2-c9" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-total10a19eixox="b2-c3c4c5c6" data-total10a19eixoxoutput="b2-c12" data-totaleixoy="b1b2b3-c4" data-totaleixoyoutput="b4-c4" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
 
-                                <input type="number" min="0" data-total0a14eixox="b3-c1c2c3c4" data-total0a14eixoxoutput="b3-c9" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-total10a19eixox="b3-c3c4c5c6" data-total10a19eixoxoutput="b3-c12" data-totaleixoy="b1b2b3-c4" data-totaleixoyoutput="b4-c4" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b3-c1c2c3c4" data-total0a14eixoxoutput="b3-c9" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-total10a19eixox="b3-c3c4c5c6" data-total10a19eixoxoutput="b3-c12" data-totaleixoy="b1b2b3-c4" data-totaleixoyoutput="b4-c4" data-total0a14eixoy="b1b2b3-c1c2c3c4" data-total0a14eixoyoutput="b4-c9" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
 
                                 <input type="number" min="0" readonly class="b4-c4 bgc-gray"/>
 
-                                <input type="number" min="0" data-total0a14eixox="b5-c1c2c3c4" data-total0a14eixoxoutput="b5-c9" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-total10a19eixox="b5-c3c4c5c6" data-total10a19eixoxoutput="b5-c12" data-totaleixoy="b5b6b7b8-c4" data-totaleixoyoutput="b9-c4" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b5-c1c2c3c4" data-total0a14eixoxoutput="b5-c9" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-total10a19eixox="b5-c3c4c5c6" data-total10a19eixoxoutput="b5-c12" data-totaleixoy="b5b6b7b8-c4" data-totaleixoyoutput="b9-c4" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
 
-                                <input type="number" min="0" data-total0a14eixox="b6-c1c2c3c4" data-total0a14eixoxoutput="b6-c9" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-total10a19eixox="b6-c3c4c5c6" data-total10a19eixoxoutput="b6-c12" data-totaleixoy="b5b6b7b8-c4" data-totaleixoyoutput="b9-c4" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b6-c1c2c3c4" data-total0a14eixoxoutput="b6-c9" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-total10a19eixox="b6-c3c4c5c6" data-total10a19eixoxoutput="b6-c12" data-totaleixoy="b5b6b7b8-c4" data-totaleixoyoutput="b9-c4" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
 
-                                <input type="number" min="0" data-total0a14eixox="b7-c1c2c3c4" data-total0a14eixoxoutput="b7-c9" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-total10a19eixox="b7-c3c4c5c6" data-total10a19eixoxoutput="b7-c12" data-totaleixoy="b5b6b7b8-c4" data-totaleixoyoutput="b9-c4" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b7-c1c2c3c4" data-total0a14eixoxoutput="b7-c9" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-total10a19eixox="b7-c3c4c5c6" data-total10a19eixoxoutput="b7-c12" data-totaleixoy="b5b6b7b8-c4" data-totaleixoyoutput="b9-c4" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
 
-                                <input type="number" min="0" data-total0a14eixox="b8-c1c2c3c4" data-total0a14eixoxoutput="b8-c9" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-total10a19eixox="b8-c3c4c5c6" data-total10a19eixoxoutput="b8-c12" data-totaleixoy="b5b6b7b8-c4" data-totaleixoyoutput="b9-c4" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b8-c1c2c3c4" data-total0a14eixoxoutput="b8-c9" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-total10a19eixox="b8-c3c4c5c6" data-total10a19eixoxoutput="b8-c12" data-totaleixoy="b5b6b7b8-c4" data-totaleixoyoutput="b9-c4" data-total0a14eixoy="b5b6b7b8-c1c2c3c4" data-total0a14eixoyoutput="b9-c9" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
 
                                 <input type="number" min="0" readonly class="b9-c4 bgc-gray" />
                             </div>
 
                             <div class="inputs-container col de-15-a-19-anos sexo-f">
-                                <input type="number" min="0" data-total15oumaiseixox="b1-c5c6c7c8" data-total15oumaiseixoxoutput="b1-c10" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-total10a19eixox="b1-c3c4c5c6" data-total10a19eixoxoutput="b1-c12" data-totaleixoy="b1b2b3-c5" data-totaleixoyoutput="b4-c5" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" data-totalb11="b1b10-c5" data-totalb11output="b11-c5" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11"  data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
+                                <input type="number" min="0" data-total15oumaiseixox="b1-c5c6c7c8" data-total15oumaiseixoxoutput="b1-c10" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-total10a19eixox="b1-c3c4c5c6" data-total10a19eixoxoutput="b1-c12" data-totaleixoy="b1b2b3-c5" data-totaleixoyoutput="b4-c5" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" data-totalb11="b1b10-c5" data-totalb11output="b11-c5" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11"  data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b2-c5c6c7c8" data-total15oumaiseixoxoutput="b2-c10" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-total10a19eixox="b2-c3c4c5c6" data-total10a19eixoxoutput="b2-c12" data-totaleixoy="b1b2b3-c5" data-totaleixoyoutput="b4-c5" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11"  data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
+                                <input type="number" min="0" data-total15oumaiseixox="b2-c5c6c7c8" data-total15oumaiseixoxoutput="b2-c10" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-total10a19eixox="b2-c3c4c5c6" data-total10a19eixoxoutput="b2-c12" data-totaleixoy="b1b2b3-c5" data-totaleixoyoutput="b4-c5" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11"  data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b3-c5c6c7c8" data-total15oumaiseixoxoutput="b3-c10" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-total10a19eixox="b3-c3c4c5c6" data-total10a19eixoxoutput="b3-c12" data-totaleixoy="b1b2b3-c5" data-totaleixoyoutput="b4-c5" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11"  data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
+                                <input type="number" min="0" data-total15oumaiseixox="b3-c5c6c7c8" data-total15oumaiseixoxoutput="b3-c10" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-total10a19eixox="b3-c3c4c5c6" data-total10a19eixoxoutput="b3-c12" data-totaleixoy="b1b2b3-c5" data-totaleixoyoutput="b4-c5" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11"  data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
 
                                 <input type="number" min="0" readonly class="b4-c5 bgc-gray"/>
 
-                                <input type="number" min="0" data-total15oumaiseixox="b5-c5c6c7c8" data-total15oumaiseixoxoutput="b5-c10" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-total10a19eixox="b5-c3c4c5c6" data-total10a19eixoxoutput="b5-c12" data-totaleixoy="b5b6b7b8-c5" data-totaleixoyoutput="b9-c5" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"  data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
+                                <input type="number" min="0" data-total15oumaiseixox="b5-c5c6c7c8" data-total15oumaiseixoxoutput="b5-c10" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-total10a19eixox="b5-c3c4c5c6" data-total10a19eixoxoutput="b5-c12" data-totaleixoy="b5b6b7b8-c5" data-totaleixoyoutput="b9-c5" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"  data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b6-c5c6c7c8" data-total15oumaiseixoxoutput="b6-c10" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-total10a19eixox="b6-c3c4c5c6" data-total10a19eixoxoutput="b6-c12" data-totaleixoy="b5b6b7b8-c5" data-totaleixoyoutput="b9-c5" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"  data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
+                                <input type="number" min="0" data-total15oumaiseixox="b6-c5c6c7c8" data-total15oumaiseixoxoutput="b6-c10" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-total10a19eixox="b6-c3c4c5c6" data-total10a19eixoxoutput="b6-c12" data-totaleixoy="b5b6b7b8-c5" data-totaleixoyoutput="b9-c5" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"  data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b7-c5c6c7c8" data-total15oumaiseixoxoutput="b7-c10" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-total10a19eixox="b7-c3c4c5c6" data-total10a19eixoxoutput="b7-c12" data-totaleixoy="b5b6b7b8-c5" data-totaleixoyoutput="b9-c5" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"  data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
+                                <input type="number" min="0" data-total15oumaiseixox="b7-c5c6c7c8" data-total15oumaiseixoxoutput="b7-c10" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-total10a19eixox="b7-c3c4c5c6" data-total10a19eixoxoutput="b7-c12" data-totaleixoy="b5b6b7b8-c5" data-totaleixoyoutput="b9-c5" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"  data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b8-c5c6c7c8" data-total15oumaiseixoxoutput="b8-c10" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-total10a19eixox="b8-c3c4c5c6" data-total10a19eixoxoutput="b8-c12" data-totaleixoy="b5b6b7b8-c5" data-totaleixoyoutput="b9-c5" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"  data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
+                                <input type="number" min="0" data-total15oumaiseixox="b8-c5c6c7c8" data-total15oumaiseixoxoutput="b8-c10" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-total10a19eixox="b8-c3c4c5c6" data-total10a19eixoxoutput="b8-c12" data-totaleixoy="b5b6b7b8-c5" data-totaleixoyoutput="b9-c5" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"  data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12" />
 
                                 <input type="number" min="0" readonly class="b9-c5 bgc-gray" />
                             </div>
@@ -482,60 +479,60 @@
                             <div class="inputs-container col de-15-a-19-anos sexo-m">
                                 <input type="number" min="0" data-total15oumaiseixox="b1-c5c6c7c8" data-total15oumaiseixoxoutput="b1-c10" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-total10a19eixox="b1-c3c4c5c6" data-total10a19eixoxoutput="b1-c12" data-totaleixoy="b1b2b3-c6" data-totaleixoyoutput="b4-c6" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" data-totalb11="b1b10-c6" data-totalb11output="b11-c6" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11"  data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b2-c5c6c7c8" data-total15oumaiseixoxoutput="b2-c10" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-total10a19eixox="b2-c3c4c5c6" data-total10a19eixoxoutput="b2-c12" data-totaleixoy="b1b2b3-c6" data-totaleixoyoutput="b4-c6" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
+                                <input type="number" min="0" data-total15oumaiseixox="b2-c5c6c7c8" data-total15oumaiseixoxoutput="b2-c10" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-total10a19eixox="b2-c3c4c5c6" data-total10a19eixoxoutput="b2-c12" data-totaleixoy="b1b2b3-c6" data-totaleixoyoutput="b4-c6" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b3-c5c6c7c8" data-total15oumaiseixoxoutput="b3-c10" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-total10a19eixox="b3-c3c4c5c6" data-total10a19eixoxoutput="b3-c12" data-totaleixoy="b1b2b3-c6" data-totaleixoyoutput="b4-c6" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
+                                <input type="number" min="0" data-total15oumaiseixox="b3-c5c6c7c8" data-total15oumaiseixoxoutput="b3-c10" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-total10a19eixox="b3-c3c4c5c6" data-total10a19eixoxoutput="b3-c12" data-totaleixoy="b1b2b3-c6" data-totaleixoyoutput="b4-c6" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-total10a19eixoy="b1b2b3-c3c4c5c6" data-total10a19eixoyoutput="b4-c12" />
 
                                 <input type="number" min="0" readonly class="b4-c6 bgc-gray"/>
 
-                                <input type="number" min="0" data-total15oumaiseixox="b5-c5c6c7c8" data-total15oumaiseixoxoutput="b5-c10" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-total10a19eixox="b5-c3c4c5c6" data-total10a19eixoxoutput="b5-c12" data-totaleixoy="b5b6b7b8-c6" data-totaleixoyoutput="b9-c6" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12"/>
+                                <input type="number" min="0" data-total15oumaiseixox="b5-c5c6c7c8" data-total15oumaiseixoxoutput="b5-c10" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-total10a19eixox="b5-c3c4c5c6" data-total10a19eixoxoutput="b5-c12" data-totaleixoy="b5b6b7b8-c6" data-totaleixoyoutput="b9-c6" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12"/>
 
-                                <input type="number" min="0" data-total15oumaiseixox="b6-c5c6c7c8" data-total15oumaiseixoxoutput="b6-c10" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-total10a19eixox="b6-c3c4c5c6" data-total10a19eixoxoutput="b6-c12" data-totaleixoy="b5b6b7b8-c6" data-totaleixoyoutput="b9-c6" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12"/>
+                                <input type="number" min="0" data-total15oumaiseixox="b6-c5c6c7c8" data-total15oumaiseixoxoutput="b6-c10" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-total10a19eixox="b6-c3c4c5c6" data-total10a19eixoxoutput="b6-c12" data-totaleixoy="b5b6b7b8-c6" data-totaleixoyoutput="b9-c6" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12"/>
 
-                                <input type="number" min="0" data-total15oumaiseixox="b7-c5c6c7c8" data-total15oumaiseixoxoutput="b7-c10" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-total10a19eixox="b7-c3c4c5c6" data-total10a19eixoxoutput="b7-c12" data-totaleixoy="b5b6b7b8-c6" data-totaleixoyoutput="b9-c6" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12"/>
+                                <input type="number" min="0" data-total15oumaiseixox="b7-c5c6c7c8" data-total15oumaiseixoxoutput="b7-c10" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-total10a19eixox="b7-c3c4c5c6" data-total10a19eixoxoutput="b7-c12" data-totaleixoy="b5b6b7b8-c6" data-totaleixoyoutput="b9-c6" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12"/>
 
-                                <input type="number" min="0" data-total15oumaiseixox="b8-c5c6c7c8" data-total15oumaiseixoxoutput="b8-c10" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-total10a19eixox="b8-c3c4c5c6" data-total10a19eixoxoutput="b8-c12" data-totaleixoy="b5b6b7b8-c6" data-totaleixoyoutput="b9-c6" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12"/>
+                                <input type="number" min="0" data-total15oumaiseixox="b8-c5c6c7c8" data-total15oumaiseixoxoutput="b8-c10" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-total10a19eixox="b8-c3c4c5c6" data-total10a19eixoxoutput="b8-c12" data-totaleixoy="b5b6b7b8-c6" data-totaleixoyoutput="b9-c6" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" data-total10a19eixoy="b5b6b7b8-c3c4c5c6" data-total10a19eixoyoutput="b9-c12"/>
 
                                 <input type="number" min="0" readonly class="b9-c6 bgc-gray" />
 
                             </div>
 
                             <div class="inputs-container col de-20-ou-mais-anos sexo-f">
-                                <input type="number" min="0" data-total15oumaiseixox="b1-c5c6c7c8" data-total15oumaiseixoxoutput="b1-c10" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-totaleixoy="b1b2b3-c7" data-totaleixoyoutput="b4-c7" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-totalb11="b1b10-c7" data-totalb11output="b11-c7" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11" />
+                                <input type="number" min="0" data-total15oumaiseixox="b1-c5c6c7c8" data-total15oumaiseixoxoutput="b1-c10" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-totaleixoy="b1b2b3-c7" data-totaleixoyoutput="b4-c7" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-totalb11="b1b10-c7" data-totalb11output="b11-c7" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b2-c5c6c7c8" data-total15oumaiseixoxoutput="b2-c10" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-totaleixoy="b1b2b3-c7" data-totaleixoyoutput="b4-c7" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11" />
+                                <input type="number" min="0" data-total15oumaiseixox="b2-c5c6c7c8" data-total15oumaiseixoxoutput="b2-c10" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-totaleixoy="b1b2b3-c7" data-totaleixoyoutput="b4-c7" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b3-c5c6c7c8" data-total15oumaiseixoxoutput="b3-c10" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-totaleixoy="b1b2b3-c7" data-totaleixoyoutput="b4-c7" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11" />
+                                <input type="number" min="0" data-total15oumaiseixox="b3-c5c6c7c8" data-total15oumaiseixoxoutput="b3-c10" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-totaleixoy="b1b2b3-c7" data-totaleixoyoutput="b4-c7" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" />
 
                                 <input type="number" min="0" readonly class="b4-c7 bgc-gray"/>
 
-                                <input type="number" min="0" data-total15oumaiseixox="b5-c5c6c7c8" data-total15oumaiseixoxoutput="b5-c10" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-totaleixoy="b5b6b7b8-c7" data-totaleixoyoutput="b9-c7" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" />
+                                <input type="number" min="0" data-total15oumaiseixox="b5-c5c6c7c8" data-total15oumaiseixoxoutput="b5-c10" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-totaleixoy="b5b6b7b8-c7" data-totaleixoyoutput="b9-c7" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b6-c5c6c7c8" data-total15oumaiseixoxoutput="b6-c10" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-totaleixoy="b5b6b7b8-c7" data-totaleixoyoutput="b9-c7" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" />
+                                <input type="number" min="0" data-total15oumaiseixox="b6-c5c6c7c8" data-total15oumaiseixoxoutput="b6-c10" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-totaleixoy="b5b6b7b8-c7" data-totaleixoyoutput="b9-c7" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b7-c5c6c7c8" data-total15oumaiseixoxoutput="b7-c10" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-totaleixoy="b5b6b7b8-c7" data-totaleixoyoutput="b9-c7" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" />
+                                <input type="number" min="0" data-total15oumaiseixox="b7-c5c6c7c8" data-total15oumaiseixoxoutput="b7-c10" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-totaleixoy="b5b6b7b8-c7" data-totaleixoyoutput="b9-c7" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b8-c5c6c7c8" data-total15oumaiseixoxoutput="b8-c10" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-totaleixoy="b5b6b7b8-c7" data-totaleixoyoutput="b9-c7" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11" />
+                                <input type="number" min="0" data-total15oumaiseixox="b8-c5c6c7c8" data-total15oumaiseixoxoutput="b8-c10" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-totaleixoy="b5b6b7b8-c7" data-totaleixoyoutput="b9-c7" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11" />
 
                                 <input type="number" min="0" readonly class="b9-c7 bgc-gray"/>
                             </div>
 
                             <div class="inputs-container col de-20-ou-mais-anos sexo-m">
-                                <input type="number" min="0" data-total15oumaiseixox="b1-c5c6c7c8" data-total15oumaiseixoxoutput="b1-c10" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-totaleixoy="b1b2b3-c8" data-totaleixoyoutput="b4-c8" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-totalb11="b1b10-c8" data-totalb11output="b11-c8" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11" />
+                                <input type="number" min="0" data-total15oumaiseixox="b1-c5c6c7c8" data-total15oumaiseixoxoutput="b1-c10" data-totalgeraleixox="b1-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b1-c11" data-totaleixoy="b1b2b3-c8" data-totaleixoyoutput="b4-c8" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11" data-totalb11="b1b10-c8" data-totalb11output="b11-c8" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11" />
 
-                                <input type="number" min="0" data-total15oumaiseixox="b2-c5c6c7c8" data-total15oumaiseixoxoutput="b2-c10" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-totaleixoy="b1b2b3-c8" data-totaleixoyoutput="b4-c8" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11"/>
+                                <input type="number" min="0" data-total15oumaiseixox="b2-c5c6c7c8" data-total15oumaiseixoxoutput="b2-c10" data-totalgeraleixox="b2-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b2-c11" data-totaleixoy="b1b2b3-c8" data-totaleixoyoutput="b4-c8" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11"/>
 
-                                <input type="number" min="0" data-total15oumaiseixox="b3-c5c6c7c8" data-total15oumaiseixoxoutput="b3-c10" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" da+ta-totalgeraleixoxoutput="b3-c11" data-totaleixoy="b1b2b3-c8" data-totaleixoyoutput="b4-c8" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b4-c11"/>
+                                <input type="number" min="0" data-total15oumaiseixox="b3-c5c6c7c8" data-total15oumaiseixoxoutput="b3-c10" data-totalgeraleixox="b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b3-c11" data-totaleixoy="b1b2b3-c8" data-totaleixoyoutput="b4-c8" data-total15oumaiseixoy="b1b2b3-c5c6c7c8" data-total15oumaiseixoyoutput="b4-c10" data-totalgeraleixoy="b1b2b3-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b4-c11"/>
 
                                 <input type="number" min="0" readonly class="b4-c8 bgc-gray"/>
 
-                                <input type="number" min="0" data-total15oumaiseixox="b5-c5c6c7c8" data-total15oumaiseixoxoutput="b5-c10" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-totaleixoy="b5b6b7b8-c8" data-totaleixoyoutput="b9-c8" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"/>
+                                <input type="number" min="0" data-total15oumaiseixox="b5-c5c6c7c8" data-total15oumaiseixoxoutput="b5-c10" data-totalgeraleixox="b5-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b5-c11" data-totaleixoy="b5b6b7b8-c8" data-totaleixoyoutput="b9-c8" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"/>
 
-                                <input type="number" min="0" data-total15oumaiseixox="b6-c5c6c7c8" data-total15oumaiseixoxoutput="b6-c10" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-totaleixoy="b5b6b7b8-c8" data-totaleixoyoutput="b9-c8" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"/>
+                                <input type="number" min="0" data-total15oumaiseixox="b6-c5c6c7c8" data-total15oumaiseixoxoutput="b6-c10" data-totalgeraleixox="b6-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b6-c11" data-totaleixoy="b5b6b7b8-c8" data-totaleixoyoutput="b9-c8" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"/>
 
-                                <input type="number" min="0" data-total15oumaiseixox="b7-c5c6c7c8" data-total15oumaiseixoxoutput="b7-c10" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-totaleixoy="b5b6b7b8-c8" data-totaleixoyoutput="b9-c8" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"/>
+                                <input type="number" min="0" data-total15oumaiseixox="b7-c5c6c7c8" data-total15oumaiseixoxoutput="b7-c10" data-totalgeraleixox="b7-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b7-c11" data-totaleixoy="b5b6b7b8-c8" data-totaleixoyoutput="b9-c8" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"/>
 
-                                <input type="number" min="0" data-total15oumaiseixox="b8-c5c6c7c8" data-total15oumaiseixoxoutput="b8-c10" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-totaleixoy="b5b6b7b8-c8" data-totaleixoyoutput="b9-c8" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8"data-totalgeraleixoyoutput="b9-c11"/>
+                                <input type="number" min="0" data-total15oumaiseixox="b8-c5c6c7c8" data-total15oumaiseixoxoutput="b8-c10" data-totalgeraleixox="b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b8-c11" data-totaleixoy="b5b6b7b8-c8" data-totaleixoyoutput="b9-c8" data-total15oumaiseixoy="b5b6b7b8-c5c6c7c8" data-total15oumaiseixoyoutput="b9-c10" data-totalgeraleixoy="b5b6b7b8-c1c2c3c4c5c6c7c8" data-totalgeraleixoyoutput="b9-c11"/>
 
                                 <input type="number" min="0" readonly class="b9-c8 bgc-gray" />
                             </div>
@@ -619,7 +616,7 @@
                             </div>
 
                             <div class="inputs-container col de-0-a-4-anos">
-                                <input type="number" min="0" data-total0a14eixox="b10-c1c2c3c4" data-total0a14eixoxoutput="b10-c9" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-totalb11="b1b10-c1" data-totalb11output="b11-c1" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11" />
+                                <input type="number" min="0" data-total0a14eixox="b10-c1c2c3c4" data-total0a14eixoxoutput="b10-c9" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-totalb11="b1b10-c1" data-totalb11output="b11-c1" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11" />
 
                                 <input type="number" min="0" readonly class="b11-c1" />
 
@@ -629,7 +626,7 @@
                             </div>
 
                             <div class="inputs-container col de-5-a-9-anos">
-                                <input type="number" min="0" data-total0a14eixox="b10-c1c2c3c4" data-total0a14eixoxoutput="b10-c9" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-totalb11="b1b10-c2" data-totalb11output="b11-c2" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11" />
+                                <input type="number" min="0" data-total0a14eixox="b10-c1c2c3c4" data-total0a14eixoxoutput="b10-c9" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-totalb11="b1b10-c2" data-totalb11output="b11-c2" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11" />
 
                                 <input type="number" min="0" readonly class="b11-c2" />
 
@@ -639,7 +636,7 @@
                             </div>
 
                             <div class="inputs-container col de-10-a-14-anos sexo-f">
-                                <input type="number" min="0" data-total0a14eixox="b10-c1c2c3c4" data-total0a14eixoxoutput="b10-c9" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-total10a19eixox="b10-c3c4c5c6" data-total10a19eixoxoutput="b10-c12" data-totalb11="b1b10-c3" data-totalb11output="b11-c3" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11" data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b10-c1c2c3c4" data-total0a14eixoxoutput="b10-c9" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-total10a19eixox="b10-c3c4c5c6" data-total10a19eixoxoutput="b10-c12" data-totalb11="b1b10-c3" data-totalb11output="b11-c3" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11" data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
 
                                 <input type="number" min="0" readonly class="b11-c3" />
 
@@ -649,7 +646,7 @@
                             </div>
 
                             <div class="inputs-container col de-10-a-14-anos sexo-m">
-                                <input type="number" min="0" data-total0a14eixox="b10-c1c2c3c4" data-total0a14eixoxoutput="b10-c9" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-total10a19eixox="b10-c3c4c5c6" data-total10a19eixoxoutput="b10-c12" data-totalb11="b1b10-c4" data-totalb11output="b11-c4" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11" data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
+                                <input type="number" min="0" data-total0a14eixox="b10-c1c2c3c4" data-total0a14eixoxoutput="b10-c9" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-total10a19eixox="b10-c3c4c5c6" data-total10a19eixoxoutput="b10-c12" data-totalb11="b1b10-c4" data-totalb11output="b11-c4" data-totalb11c0a14="b1b10-c1c2c3c4" data-totalb11c0a14output="b11-c9" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11" data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
 
                                 <input type="number" min="0" readonly class="b11-c4" />
 
@@ -659,7 +656,7 @@
                             </div>
 
                             <div class="inputs-container col de-15-a-19-anos sexo-f">
-                                <input type="number" min="0" data-total15oumaiseixox="b10-c5c6c7c8" data-total15oumaiseixoxoutput="b10-c10" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-total10a19eixox="b10-c3c4c5c6" data-total10a19eixoxoutput="b10-c12" data-totalb11="b1b10-c5" data-totalb11output="b11-c5" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11"  data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
+                                <input type="number" min="0" data-total15oumaiseixox="b10-c5c6c7c8" data-total15oumaiseixoxoutput="b10-c10" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-total10a19eixox="b10-c3c4c5c6" data-total10a19eixoxoutput="b10-c12" data-totalb11="b1b10-c5" data-totalb11output="b11-c5" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11"  data-totalb11c10a19="b1b10-c3c4c5c6" data-totalb11c10a19output="b11-c12" />
 
                                 <input type="number" min="0" readonly class="b11-c5" />
 
@@ -679,7 +676,7 @@
                             </div>
 
                             <div class="inputs-container col de-20-ou-mais-anos sexo-f">
-                                <input type="number" min="0" data-total15oumaiseixox="b10-c5c6c7c8" data-total15oumaiseixoxoutput="b10-c10" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-totalb11="b1b10-c7" data-totalb11output="b11-c7" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11" />
+                                <input type="number" min="0" data-total15oumaiseixox="b10-c5c6c7c8" data-total15oumaiseixoxoutput="b10-c10" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-totalb11="b1b10-c7" data-totalb11output="b11-c7" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11" />
 
                                 <input type="number" min="0" readonly class="b11-c7" />
 
@@ -689,7 +686,7 @@
                             </div>
 
                             <div class="inputs-container col de-20-ou-mais-anos sexo-m">
-                                <input type="number" min="0" data-total15oumaiseixox="b10-c5c6c7c8" data-total15oumaiseixoxoutput="b10-c10" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-totalb11="b1b10-c8" data-totalb11output="b11-c8" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8"data-totalgeralb11output="b11-c11"/>
+                                <input type="number" min="0" data-total15oumaiseixox="b10-c5c6c7c8" data-total15oumaiseixoxoutput="b10-c10" data-totalgeraleixox="b10-c1c2c3c4c5c6c7c8" data-totalgeraleixoxoutput="b10-c11" data-totalb11="b1b10-c8" data-totalb11output="b11-c8" data-totalb11c15oumais="b1b10-c5c6c7c8" data-totalb11c15oumaisoutput="b11-c10" data-totalgeralb11="b1b10-c1c2c3c4c5c6c7c8" data-totalgeralb11output="b11-c11"/>
 
                                 <input type="number" min="0" readonly class="b11-c8" />
 
@@ -801,7 +798,7 @@
                         </div>
                     </div>
 
-                    <div class="grade-extra iii">
+                    <div class="grade-extra iii bounding-reference">
                         <div class="header">
                             <span>TOTAL</span>
                         </div>
@@ -873,20 +870,6 @@
             </div>
 
             <aside class="manipulacao-do-menu">    
-                <!-- Caixa de pesquisa "Ir para" -->
-                <div class="pesquisa">
-                    <div class="caixa-de-pesquisa">
-                        <input type="number" placeholder="Introduza o número da linha" min="1" max="63" class="pesquisar-linha">    
-                        <button class="fechar" title="Fechar">&times;</button>
-                    </div>
-                    
-                    <div class="caixa-de-alerta query-out-of-range">
-                        <p>O número <b class="entered-num"></b> está fora do intervalo das linhas. A ficha tem no máximo 53 linhas a partir de 1.</p>
-                        
-                        <button>OK</button>
-                    </div>
-                </div> 
-    
                 <!-- Esvaziamento da ficha -->
                 <div class="esvaziamento">
                     <div class="caixa-de-confirmacao">
@@ -914,25 +897,41 @@
                         <h4>Dados adicionais</h4>
                         <ul class="limpadores-de-dados-adicionais">
                             <li>
-                                <input type="checkbox" id="us" checked data-for="nome-da-us" />
-                                <label for="us">Nome da US</label>
+                                <input type="checkbox" id="nome-da-provincia" checked data-for="provincia"/>
+                                <label for="nome-da-provincia">Província</label>
                             </li>
                             <li>
-                                <input type="checkbox" id="month" checked data-for="mes" />
-                                <label for="month">Mês</label>
+                                <input type="checkbox" id="nome-do-distrito" checked data-for="distrito"/>
+                                <label for="nome-do-distrito">Distrito</label>
                             </li>
                             <li>
-                                <input type="checkbox" id="nome" checked data-for="nome-do-ps"/>
-                                <label for="nome">Nome do Responsável pelo preenchimento</label>
+                                <input type="checkbox" id="nome-da-us" checked data-for="us"/>
+                                <label for="mome-da-us">Unidade Sanitária</label>
                             </li>
                             <li>
-                                <input type="checkbox" id="ocupacao" checked data-for="categoria"/>
-                                <label for="ocupacao">Categoria</label>
+                                <input type="checkbox" id="mueri" checked data-for="mes"/>
+                                <label for="mueri">Mês</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="muaka" checked data-for="ano"/>
+                                <label for="muaka">Ano</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="nid-da-us" checked data-for="nid"/>
+                                <label for="nid-da-us">NID da Unidade Sanitária</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="nome-do-ps" checked data-for="nome"/>
+                                <label for="nome-do-ps">Nome do Responsável pelo <br/> preenchimento</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="assinatura-do-ps" checked data-for="assinatura"/>
+                                <label for="assinatura-do-ps">Assinatura do Responsável pelo <br/> preenchimento</label>
                             </li>
 
                             <li>
-                                <input type="checkbox" id="date" checked data-for="data-de-elaboracao"/>
-                                <label for="date">Data</label>
+                                <input type="checkbox" id=" data-de-elaboracao" checked data-for="data"/>
+                                <label for=" data-de-elaboracao">Data de realização</label>
                             </li>
                             <li>
                                 <input type="checkbox" id="nota-do-resumo" checked data-for="nota"/>
@@ -953,7 +952,7 @@
     
                 <!-- Restrição à readonly cels -->
                 <div class="caixa-de-alerta restricao-de-acesso-celular">
-                    <p>Para proteger os resultados de prováveis alterações acidentais, as células dos totais têm o acesso interdito.</p>               
+                    <p>As células dos totais têm o acesso interdito para assegurar que os resultados não sejam acidentalmente modificados.</p>               
                     <button>OK</button>
                 </div>
     

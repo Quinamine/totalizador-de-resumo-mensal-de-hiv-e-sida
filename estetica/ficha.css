@@ -45,29 +45,81 @@ div.container input:focus {
     border-bottom: 2px solid var(--blue) !important;
 }
 
-/* CSS REUTILIZÁVEL */
-div.ficha,
-div.republica {
-    font-weight: bold;
-}
-div.container > header,
-div.ficha header {
-    display: grid;
-}
-
-div.republica,
-div.republica > div,
-div.ficha header span,
-div.col.de-enumeracao-das-linhas span,
-div.col.de-indicadores div {
-    display: flex;
-    align-items: center;
-}
-
 strong {
     text-decoration: underline;
 }
 
+/* CSS REUTILIZÁVEL */
+div.ficha,
+div.republica,
+div.container > header,
+div.container > header h1,
+div.contentor-de-us-mes-e-ano div.ano input,
+div.contentor-de-nid input {
+    font-weight: bold;
+}
+
+div.container > header,
+div.ficha header,
+.grade-col10, .grade-col3, .grade-col1,
+div.linha-de-nid-e-cabecalho,
+header.cabecalho-da-ficha > div:first-child,
+div.faixa-etaria-e-sexo,
+div.corpo-da-ficha,
+div.corpo-da-ficha div.col,
+div.grade-extra,
+div.corpo-da-ficha.ii 
+div.col-de-entradas-e-saidas,
+div.grade-extra div.body,
+div.grade-extra div.body div.col,
+div.grade-extra.ii div.col.inputs-container div {
+    display: grid;
+}
+
+div.republica, div.republica > div,
+div.ficha header span,
+div.col.de-enumeracao-das-linhas span,
+div.col.de-indicadores div,
+div.contentor-de-nid,
+div.grade-extra div.header,
+div.grade-extra.ii div.header span,
+footer.linha-de-assinatura div {
+    display: flex;
+    align-items: center;
+}
+
+div.col.de-enumeracao-das-linhas span,
+header.cabecalho-da-ficha span,
+div.col.de-indicadores div,
+div.col.inputs-container input  {
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+}
+
+header.cabecalho-da-ficha span.br,
+div.col.de-20-ou-mais-anos.sexo-m input,
+div.col.total-geral input,
+div.col.total-adolescentes input,
+div.grade-extra input,
+div.grade-extra.ii div.header span:first-child,
+div.grade-extra.ii div.col.inputs-container div:first-child {
+    border-right: 1px solid var(--border-color);
+}
+
+div.container > header input,
+div.contentor-de-nid input,
+div.col.de-enumeracao-das-linhas span:last-child,
+div.col.de-indicadores div:last-child,
+div.col.inputs-container input:last-child,
+div.corpo-da-ficha.ii 
+div.col-de-entradas-e-saidas div:first-child,
+footer.linha-de-assinatura input,
+footer.linha-de-assinatura input[type=date]:focus,
+div.container input[readonly]:focus {
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* INIT */
 div.container {
     max-width: 998px;
     min-width: 998px;
@@ -78,7 +130,6 @@ div.container {
 div.container > header {
     grid-template-columns: 284px 1fr;
     margin: 0 0 10px 20px;
-    font-weight: bold;
 }
 
 div.col1.emblema-e-republica {
@@ -129,7 +180,6 @@ div.container > header div.col2 {
 
 div.container > header h1 {
     font-size: 20.40px;
-    font-weight: bold;
     text-align: right;
     margin-bottom: 15px;
 }
@@ -138,9 +188,7 @@ div.container > header label {
     margin-right: 2px;
 }
 
-div.container > header input {
-    border-bottom: 1px solid var(--border-color);
-}
+
 
 div.contentor-de-provincia-e-distrito,
 div.contentor-de-us-mes-e-ano {
@@ -166,7 +214,6 @@ div.contentor-de-us-mes-e-ano div.mes input {
 
 div.contentor-de-us-mes-e-ano div.ano input {
     max-width: 80px;
-    font-weight: bold;
 }
 
 /* FICHA */
@@ -179,41 +226,30 @@ div.ficha {
 
 /* Grades Reutilizáveis */
 .grade-col10 {
-    display: grid;
     grid-template-columns: 50px 320px repeat(8, 50px);
 }
 
 .grade-col3 {
-    display: grid;
     grid-template-columns: repeat(3, 50px);
 }
 
 .grade-col1 {
-    display: grid;
     grid-template-columns: 50px;
 }
 
 /* CABEÇALHO DA FICHA */
 div.linha-de-nid-e-cabecalho {
-    display: grid;
     grid-template-columns: 370px 1fr;
 }
 
-div.contentor-de-nid {
-    display: flex;
-    align-items: center;
-}
 
 div.contentor-de-nid label {
     font-size: 14px;
 }
 
-
 div.contentor-de-nid input {
     min-width: 175px;
-    font-weight: bold;
     margin-left: 4px;
-    border-bottom: 1px solid var(--border-color);
     font-size: 14px;
 }
 
@@ -224,12 +260,10 @@ header.cabecalho-da-ficha  {
 
 /* HEADER ITEMS */
 header.cabecalho-da-ficha > div:first-child {
-    display: grid;
     grid-template-columns: repeat(2, 50px) repeat(3, 100px);
 }
 
 div.faixa-etaria-e-sexo {
-    display: grid;
     grid-template-columns: repeat(2, 50px);
 }
 
@@ -240,24 +274,18 @@ div.faixa-etaria-e-sexo span:first-child {
 header.cabecalho-da-ficha span {
     justify-content: center;
     text-align: center;
-    border-left: 1px solid var(--border-color);
-    border-top: 1px solid var(--border-color);
 }
 
-header.cabecalho-da-ficha span.br {
-    border-right: 1px solid var(--border-color);
-}
+
 
 /* CORPO DA PAGINA */
 div.corpo-da-ficha {
-    display: grid;
     grid-template-columns: 770px 150px 50px;
     grid-column-gap: 2px;
 }
 
 /* BODY ITEMS CHILDREN */
 div.corpo-da-ficha div.col {
-    display: grid;
     grid-template-rows: 47px 34px 47px;
 }
 
@@ -267,39 +295,15 @@ div.corpo-da-ficha div.col.inputs-container {
 
 div.col.de-enumeracao-das-linhas span {
     justify-content: center;
-    border-left: 1px solid var(--border-color);
-    border-top: 1px solid var(--border-color);
     font-family: 'Times New Roman', Times, serif;
-}
-
-div.col.de-enumeracao-das-linhas span:last-child {
-    border-bottom: 1px solid var(--border-color);
 }
 
 div.col.de-indicadores div {
     padding: 2px 4px;
-    border-left: 1px solid var(--border-color);
-    border-top: 1px solid var(--border-color);
-}
-
-div.col.de-indicadores div:last-child {
-    border-bottom: 1px solid var(--border-color);
 }
 
 div.col.inputs-container input {
-    border-left: 1px solid var(--border-color);
-    border-top: 1px solid var(--border-color);
     text-align: center;
-}
-
-div.col.inputs-container input:last-child {
-    border-bottom: 1px solid var(--border-color);
-}
-
-div.col.de-20-ou-mais-anos.sexo-m input,
-div.col.total-geral input,
-div.col.total-adolescentes input {
-    border-right: 1px solid var(--border-color);
 }
 
 /* GRADE 2 */
@@ -320,14 +324,9 @@ div.col-de-entradas-e-saidas {
     border: 1px solid var(--border-color);
     border-right: none;
     margin-right: -2px;
-    display: grid;
     grid-template-rows: repeat(2, calc(34px * 4));
 }
 
-div.corpo-da-ficha.ii 
-div.col-de-entradas-e-saidas div:first-child {
-    border-bottom: 1px solid var(--border-color);
-}
 
 div.col-de-entradas-e-saidas 
 div span {
@@ -344,7 +343,6 @@ div.corpo-da-ficha.iii div.col {
 
 /* GRADE  EXTRA */
 div.grade-extra {
-    display: grid;
     grid-template-columns: 772px 202px;
     grid-template-rows: 20px 1fr;
     margin-top: 8px;
@@ -354,8 +352,6 @@ div.grade-extra div.header {
     grid-column: 2/3;
     border: 1px solid var(--border-color);
     border-bottom: 0;
-    display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -366,32 +362,22 @@ div.grade-extra div.header span {
 div.grade-extra div.body { 
     grid-row: 2;
     grid-column: 1/3;
-    display: grid;
     grid-template-columns: 50px 722px 200px;
 }
 
 div.grade-extra div.body div.col { 
-    display: grid;
     grid-template-rows: repeat(3, 34px);
 }
 
 div.grade-extra input { 
     min-width: 100%;
-    border-right: 1px solid var(--border-color);
 }
 
 /* GRADE  EXTRA 2 */
 div.grade-extra.ii div.header span { 
     flex: 1;
     min-height: 100%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-div.grade-extra.ii div.header span:first-child,
-div.grade-extra.ii div.col.inputs-container div:first-child { 
-    border-right: 1px solid var(--border-color);
 }
 
 div.grade-extra.ii div.col.inputs-container {
@@ -400,7 +386,6 @@ div.grade-extra.ii div.col.inputs-container {
 
 div.grade-extra.ii div.col.inputs-container div  {
     flex: 1;
-    display: grid;
     grid-template-rows: repeat(3, 34px);
 }
 
@@ -415,10 +400,9 @@ footer.linha-de-assinatura {
 
 footer.linha-de-assinatura div {
     min-height: 45px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: column;
+    justify-content: space-between;
+   
 }
 
 footer.linha-de-assinatura label {
@@ -427,7 +411,6 @@ footer.linha-de-assinatura label {
 
 footer.linha-de-assinatura input,
 footer.linha-de-assinatura input[type=date]:focus {
-    border-bottom: 1px solid var(--border-color);
     min-width: 200px;
     text-align: center;
 }
@@ -444,7 +427,7 @@ div.nota {
     }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 998px) {
     divdiv.linha.nota {
         padding-left: 0px;
         padding-right: 0px;
