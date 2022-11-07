@@ -50,12 +50,12 @@ function eventos() {
             let celTotalParcialOutput;
             
             if(cel.dataset.total0a14eixox) {
-                celTotalParcialOutput = document.querySelector(`.${cel.dataset.total0a14eixox}`);
+                celTotalParcialOutput = document.querySelector(`.${cel.dataset.total0a14eixoxoutput}`);
             } else if(cel.dataset.total15oumaiseixox) {
-                celTotalParcialOutput = document.querySelector(`.${cel.dataset.total15oumaiseixox}`);
+                celTotalParcialOutput = document.querySelector(`.${cel.dataset.total15oumaiseixoxoutput}`);
             }
             
-            let celTotalGeralOutput = document.querySelector(`.${cel.dataset.totalgeraloutput}`);
+            let celTotalGeralOutput = document.querySelector(`.${cel.dataset.totalgeraleixoxoutput}`);
 
             if (cel.matches(".fundo-vermelho") || celTotalParcialOutput.matches(".fundo-vermelho") 
             || celTotalGeralOutput.matches(".fundo-vermelho"))  {

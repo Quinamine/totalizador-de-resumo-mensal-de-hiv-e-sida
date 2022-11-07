@@ -11,6 +11,7 @@
     --black-alpha-8: rgba(0, 0, 0, .8);
     --important-text-bgc: #f4f4f4;
     --gray: #888888;
+    --gray-dark: #555555;
     --gray-a: #aaaaaa;
     --gray-c: #cccccc;
     --gray-d: #dddddd;
@@ -26,6 +27,7 @@
     :root {
         --border-color: var(--fullblack);
         --text-color: var(--fullblack);
+        --gray-dark: var(--fullblack);
         --gray-a: var(--yt);
         --gray-d: var(--yt);
     }

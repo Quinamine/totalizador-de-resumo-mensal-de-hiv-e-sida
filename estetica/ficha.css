@@ -6,7 +6,7 @@ input, textarea {
     outline: none;
     color: var(--text-color);
     font-family:  sans-serif, Arial, Helvetica !important; /* Coerção para Firefox */
-    font-size: 12px;
+    font-size: 14px;
 }
 
 input::-webkit-outer-spin-button,
@@ -55,7 +55,8 @@ div.republica,
 div.container > header,
 div.container > header h1,
 div.contentor-de-us-mes-e-ano div.ano input,
-div.contentor-de-nid input {
+div.contentor-de-nid input,
+div.grade-extra input {
     font-weight: bold;
 }
 
@@ -88,11 +89,10 @@ footer.linha-de-assinatura div {
     align-items: center;
 }
 
-div.col.de-enumeracao-das-linhas span,
 header.cabecalho-da-ficha span,
-div.col.de-indicadores div,
-div.col.inputs-container input  {
-    border-left: 1px solid var(--border-color);
+div.col.de-enumeracao-das-linhas span:first-child,
+div.col.de-indicadores div:first-child,
+div.col.inputs-container input:first-child {
     border-top: 1px solid var(--border-color);
 }
 
@@ -108,15 +108,22 @@ div.grade-extra.ii div.col.inputs-container div:first-child {
 
 div.container > header input,
 div.contentor-de-nid input,
-div.col.de-enumeracao-das-linhas span:last-child,
-div.col.de-indicadores div:last-child,
-div.col.inputs-container input:last-child,
 div.corpo-da-ficha.ii 
 div.col-de-entradas-e-saidas div:first-child,
+div.col.de-enumeracao-das-linhas span,
+div.col.de-indicadores div,
+div.col.inputs-container input,
 footer.linha-de-assinatura input,
 footer.linha-de-assinatura input[type=date]:focus,
 div.container input[readonly]:focus {
     border-bottom: 1px solid var(--border-color) !important;
+}
+
+header.cabecalho-da-ficha span,
+div.col.de-enumeracao-das-linhas span,
+div.col.de-indicadores div,
+div.col.inputs-container input {
+    border-left: 1px solid var(--border-color) !important;
 }
 
 /* INIT */
@@ -126,21 +133,28 @@ div.container {
     margin: 30px auto 10px auto;
 }
 
+@media print {
+    div.container {
+        visibility: visible;
+    }
+}
+
 /* HEADER DO CONTAINER */
 div.container > header {
     grid-template-columns: 284px 1fr;
     margin: 0 0 10px 20px;
+    min-height: 100px;
 }
 
 div.col1.emblema-e-republica {
     max-height: 76px;
     display: flex;
+    visibility: hidden;
 }
 
 @media print {
-    div.emblema-e-republica {
-        display: flex;
-        align-items: center;
+    div.col1.emblema-e-republica {
+        visibility: visible;
     }
 }
 
@@ -186,9 +200,8 @@ div.container > header h1 {
 
 div.container > header label {
     margin-right: 2px;
+    color: var(--gray-dark);
 }
-
-
 
 div.contentor-de-provincia-e-distrito,
 div.contentor-de-us-mes-e-ano {
@@ -198,6 +211,7 @@ div.contentor-de-us-mes-e-ano {
 
 div.contentor-de-provincia-e-distrito {
     margin-bottom: 15px;
+    min-height: 20px;
 }
 
 div.contentor-de-provincia-e-distrito div.provincia {
@@ -242,9 +256,9 @@ div.linha-de-nid-e-cabecalho {
     grid-template-columns: 370px 1fr;
 }
 
-
 div.contentor-de-nid label {
     font-size: 14px;
+    color: var(--gray-dark);
 }
 
 div.contentor-de-nid input {
@@ -275,8 +289,6 @@ header.cabecalho-da-ficha span {
     justify-content: center;
     text-align: center;
 }
-
-
 
 /* CORPO DA PAGINA */
 div.corpo-da-ficha {
@@ -324,9 +336,8 @@ div.col-de-entradas-e-saidas {
     border: 1px solid var(--border-color);
     border-right: none;
     margin-right: -2px;
-    grid-template-rows: repeat(2, calc(34px * 4));
+    grid-template-rows: repeat(2, 135px);
 }
-
 
 div.col-de-entradas-e-saidas 
 div span {
@@ -392,7 +403,7 @@ div.grade-extra.ii div.col.inputs-container div  {
 /* RODAPÉ DA FICHA */
 footer.linha-de-assinatura {
     width: 100%;
-    padding: 26px 0 10px 20px;
+    padding: 26px 0 15px 20px;
     display: flex;
     justify-content: space-between;
     font-size: 15px;
@@ -407,6 +418,7 @@ footer.linha-de-assinatura div {
 
 footer.linha-de-assinatura label {
     font-family: 'Times New Roman', Times, serif;
+    color: var(--gray-dark);
 }
 
 footer.linha-de-assinatura input,
@@ -435,7 +447,7 @@ div.nota {
 }
 
 div.nota textarea {
-    font: 14px san-serif, Arial, Helvetica;
+    font-family: san-serif, Arial, Helvetica;
     width: 965px;
     margin-left: 20px;
     padding: 5px;

@@ -11,7 +11,7 @@ const storage  = {
     },
 
     salvarDadosAdicionais() {
-        const dadosAdicionais = document.querySelectorAll("div.container input[type=text], input[type=date], textarea#nota");
+        const dadosAdicionais = document.querySelectorAll("div.container input[type=text], input[type=date], textarea#nota, input#nid, input#ano");
 
         dadosAdicionais.forEach ( dado => {
             dado.addEventListener("input", () => localStorage.setItem(`trmhiv-${dado.id}`, `${dado.value}`));
@@ -143,7 +143,24 @@ const totalizacao = {
             const totalB11C10a19 = document.querySelectorAll(`.${cel.dataset.totalb11c10a19}`);
             const totalB11C10a19Output = document.querySelector(`.${cel.dataset.totalb11c10a19output}`);
             this.totalizarCelulas(totalB11C10a19, totalB11C10a19Output);
-        }        
+        }
+
+        // CÁLCULO DA LINHA B13   
+        if(cel.dataset.b13) {
+            this.calcularLinhaB13(cel);
+        }  
+
+        if(cel.parentElement.dataset.b13) {
+            this.calcularLinhaB13(cel.parentElement)
+        }   
+
+        // Calcular B13 das readonlyCels
+        const readonlyCels = document.querySelectorAll("div.inputs-container input[readonly]"); 
+        for (const c of readonlyCels) {
+            if(c.parentElement.dataset.b13) {
+                this.calcularLinhaB13(c.parentElement);
+            }
+        }
     },
 
     totalizarCelulas(celulasPorTotalizar, celulaDeSaida) {
@@ -152,6 +169,20 @@ const totalizacao = {
             total+=Number(cel.value);
         }
         celulaDeSaida.value = total;
+    },
+
+    calcularLinhaB13(eventTarget) {
+        let arrayDeClasses = eventTarget.dataset.b13.split("-m-");
+            // Elementos como [b4-c1, b12-c1, b9-c1]
+
+            let celB4 = document.querySelector(`.${arrayDeClasses[0]}`),
+            celB12 = document.querySelector(`.${arrayDeClasses[1]}`),
+            celB9 = document.querySelector(`.${arrayDeClasses[2]}`),
+            outputCel = document.querySelector(`.${eventTarget.dataset.b13output}`);
+
+            if(celB4.value !== "" || celB12.value !=="" || celB9.value !== "" ) {
+                outputCel.value = Number(celB4.value) + Number(celB12.value) - celB9.value;
+            }
     }
 }
 

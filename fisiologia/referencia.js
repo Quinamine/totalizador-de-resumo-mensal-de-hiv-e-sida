@@ -11,40 +11,71 @@ const referencia = {
             }
         }
         const numLinhaOutput = document.querySelector("output.ref-de-linha");
-        numLinhaOutput.textContent = celulaFocadaIndex+1;
+        
+        const linhasA = ["A.1", "A.2", "A.3"];
+        const linhasB = ["B.1", "B.2", "B.3", "B.4", "B.5", "B.6", "B.7", "B.8", "B.9"];
+        const linhasBGrade3 = ["B.10", "B.11", "B.12", "B.13"]
+        const linhasC = ["C.1", "C.2", "C.3"];
+        const linhasD = ["D.1", "D.2", "D.3"];
+        const linhasE = ["E.1", "E.2", "E.3"];
+
+        let numLinha;
+        if(celulaFocada.parentElement.matches(".la")) {
+            numLinha = linhasA[celulaFocadaIndex];
+        } else if (celulaFocada.parentElement.matches(".lb")) {
+            numLinha = linhasB[celulaFocadaIndex];
+        } else if (celulaFocada.parentElement.matches(".lb2")) {
+            numLinha = linhasBGrade3[celulaFocadaIndex];
+        } else if (celulaFocada.parentElement.matches(".lc")) {
+            numLinha = linhasC[celulaFocadaIndex];
+        } else if (celulaFocada.parentElement.matches(".ld")) {
+            numLinha = linhasD[celulaFocadaIndex];
+        } else if (celulaFocada.parentElement.matches(".le")) {
+            numLinha = linhasE[celulaFocadaIndex];
+        }
+
+        numLinhaOutput.textContent = numLinha;
     },
 
     retornarSexoEIdade(celulaFocada) {
-        const celulaFocadaParent = celulaFocada.parentElement;
-        const celulaFocadaGrandParent = celulaFocadaParent.parentElement;
-        const celulaFocadaParent_n_siblings = celulaFocadaGrandParent.querySelectorAll("div.inputs-container");
+        const divMaeDaCelulaFocada = celulaFocada.parentElement;
+        const divAvoDaCelulaFocada = divMaeDaCelulaFocada.parentElement;
+        const divsMaeETiasDaCelulaFocada = divAvoDaCelulaFocada.querySelectorAll("div.inputs-container");
 
-        let celulaFocadaParentIndex;
-        for (let i = 0; i < celulaFocadaParent_n_siblings.length; i++) {
-            if(celulaFocadaParent_n_siblings[i] === celulaFocadaParent) {
-                celulaFocadaParentIndex = i; 
+        let indiceDaDivMae;
+        for (let i = 0; i < divsMaeETiasDaCelulaFocada.length; i++) {
+            if(divsMaeETiasDaCelulaFocada[i] === divMaeDaCelulaFocada) {
+                indiceDaDivMae = i; 
             }
-        }
+        }               
         
-        const sexos = ["M", "F"];
-        const faixasEtarias = ["0 - 11 meses", "1 - 4 anos", "5 - 14 anos", "15 - 24 anos", "25 - 59 anos", "&ge; 60 anos"];
+        const faixasEtarias = ["0-4 anos", "5-9 anos", "10-14 anos", "10-14 anos", "15-19 anos", "15-19 anos", "20/ &plus; anos", "20/ &plus; anos"];
 
-        const sexoOutput = document.querySelector("output.ref-de-sexo");
+
+        let faixaEtaria = faixasEtarias[indiceDaDivMae];
+        let sexo;
+        if(indiceDaDivMae < 2) {sexo = "&minus;";} 
+        else if ((indiceDaDivMae % 2) === 0) {sexo = "F";} 
+        else {sexo = "M"; }
+
         const faixaEtariaOutput = document.querySelector("output.ref-de-faixa-etaria");
-
-        if((celulaFocadaParentIndex + 1) % 2 === 0) {
-            sexoOutput.textContent = sexos[0];
-        } else {
-            sexoOutput.textContent = sexos[1];
+        const sexoOutput = document.querySelector("output.ref-de-sexo");
+        
+        
+        if (divMaeDaCelulaFocada.matches(".lc") 
+        || divMaeDaCelulaFocada.matches(".le")) {
+            sexo = faixaEtaria = "&minus;";
+        } else if(divMaeDaCelulaFocada.matches(".ld.total-pediatrico")) {
+            faixaEtaria = "0-14 anos";
+            sexo = "&minus;";
+            
+        } else if(divMaeDaCelulaFocada.matches(".ld.total-adulto")) {
+            faixaEtaria = "15/ + anos";
+            sexo = "&minus;";
         }
 
-        if(celulaFocadaParentIndex < 2) celulaFocadaParentIndex = 0;
-        else if(celulaFocadaParentIndex < 4) celulaFocadaParentIndex = 1;
-        else if(celulaFocadaParentIndex < 6) celulaFocadaParentIndex = 2;
-        else if(celulaFocadaParentIndex < 10) celulaFocadaParentIndex = 3;
-        else if(celulaFocadaParentIndex < 12) celulaFocadaParentIndex = 4;
-        else if(celulaFocadaParentIndex < 14) celulaFocadaParentIndex = 5;
-        faixaEtariaOutput.innerHTML = faixasEtarias[celulaFocadaParentIndex];
+        faixaEtariaOutput.innerHTML = faixaEtaria;
+        sexoOutput.innerHTML = sexo;
     }, 
 
     resetarReferencia() {
