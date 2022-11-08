@@ -44,6 +44,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--gray-d);
 }
 
 @media print {
@@ -63,6 +64,7 @@ body.overflow-hidden {
 
 main {
     flex: 1;
+    background-color: var(--yt);
 }
 
 @media screen and (max-width: 998px) {
@@ -150,7 +152,7 @@ b, strong,.destaque {
 
 .destaque {
     padding: 5px 5px 5px 10px;
-    border-left: 6px solid var(--primary-color);
+    border-left: 6px solid var(--anchor-color);
     background-color: var(--important-text-bgc);
 }
 
@@ -181,10 +183,21 @@ body > footer {
 body > header {
     line-height: 2;
     box-shadow: 0 0 10px var(--gray-d);
-    position: sticky;
-    top: 0;
     background-color: var(--yt);
     z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+    body > header {
+        position: sticky;
+        top: 0;
+    }
+}
+
+@media print {
+    body > header {
+        position: initial;
+    }
 }
 
 div.linha {
@@ -229,22 +242,15 @@ div.linha.do-cabecalho a.logo {
 
     div.linha.do-cabecalho a.logo {
         line-height: 1.2;
-        margin-top: 5px;
+        margin-top: 8px;
         position: sticky;
         left: 0;
     }
 }
 
-div.linha.do-cabecalho a.logo span:nth-child(2) {
-    display: none;
-}
 
-@media screen and (max-width: 370px) {
-    div.linha.do-cabecalho a.logo span:nth-child(2) {
-        display: initial;
-    }
-
-    div.linha.do-cabecalho a.logo span:nth-child(1) {
+@media screen and (max-width: 358px) {
+    div.linha.do-cabecalho a.logo span {
         display: none;
     }
 }
@@ -291,6 +297,10 @@ section.menu ul li.partilha {
         justify-content: center;
     }
 
+    section.menu li.sobre {
+        display: none;
+    }
+
     section.menu li button {
         width: 100%;
     }
@@ -299,10 +309,6 @@ section.menu ul li.partilha {
 @media screen and (max-width: 700px) {
     section.menu {
         min-width: 506px;
-    }
-
-    section.menu li.sobre {
-        display: none;
     }
 }
 

@@ -21,6 +21,14 @@ input[type=number] {
     max-width: 50px;
 }
 
+input[type=number].fs-12 {
+    font-size: 12px;
+}
+
+input[type=number].fs-11 {
+    font-size: 11px;
+}
+
 input[type=text], input[type=date],
 input[readonly] {
     font-weight: bold !important;
@@ -41,11 +49,7 @@ input[type=number].fundo-vermelho {
     color: var(--yt);
 }
 
-div.container input:focus {
-    border-bottom: 2px solid var(--blue) !important;
-}
-
-strong {
+div.ficha strong {
     text-decoration: underline;
 }
 
@@ -137,6 +141,10 @@ div.container {
     div.container {
         visibility: visible;
     }
+}
+
+div.container input:focus {
+    border-bottom: 2px solid var(--blue) !important;
 }
 
 /* HEADER DO CONTAINER */
@@ -314,6 +322,14 @@ div.col.de-indicadores div {
     padding: 2px 4px;
 }
 
+@media screen and (min-width: 505px) and (max-width: 998px) {
+    div.corpo-da-ficha div.col.de-indicadores {
+        position: sticky;
+        left: -15px;
+        background-color: var(--yt);
+    }
+}
+
 div.col.inputs-container input {
     text-align: center;
 }
@@ -440,7 +456,7 @@ div.nota {
 }
 
 @media screen and (max-width: 998px) {
-    divdiv.linha.nota {
+    div.linha.nota {
         padding-left: 0px;
         padding-right: 0px;
     }

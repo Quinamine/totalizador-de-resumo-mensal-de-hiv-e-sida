@@ -1,81 +1,106 @@
 "use strict";
 
-const validacao = {
+const inputValidation = {
+    contarAlgarismosPorCelula(){
+        let numeroDeCelulasVermelhas = 0;
+        for (const cel of celulasDeGradesAeB) {
 
-    validarInput: () => {
-        for (const cel of inputCels) {
-            let numAlgarismos = cel.value.length;   
-            numAlgarismos > 7 ? 
-            cel.classList.add("fundo-vermelho") :
-            cel.classList.remove("fundo-vermelho");
+            this.adicionarOuRemoverFundoVermelho(cel, "-");
+            let numAlgarismos = cel.value.length;
+            if(numAlgarismos < 7) {
+                this.resetFontSize(cel);
+            } else if(numAlgarismos === 7) {
+                this.changeFontSize("fs-12");
+            }  else {
+                this.changeFontSize("fs-11");
+
+                if(numAlgarismos > 8) {
+                    cel.classList.add("fundo-vermelho");
+                    this.adicionarOuRemoverFundoVermelho(cel, "+");
+                    numeroDeCelulasVermelhas++;
+                }
+            } 
+        }
+        if(numeroDeCelulasVermelhas > 0) {
+            setTimeout(() => this.mostrarMotivoPelasCelulasVermelhas(), 1500);
         }
     },
 
-    mostrarAlertaVermelho: () => {
-        if(!sessionStorage.getItem("trmhiv-alertaVermelho")) {
+    resetFontSize(cel) { 
+        // reset
+        cel.classList.remove("fs-12");
+        cel.classList.remove("fs-11");
+    },
+
+    changeFontSize(fs) {
+        for (const c of celulasDeGradesAeB) {
+            // reset
+            this.resetFontSize(c);
+            // mudança
+            c.classList.add(`${fs}`);
+        }
+    },
+
+    adicionarOuRemoverFundoVermelho(cel, accao) {
+        accao === "+" ? cel.classList.add("fundo-vermelho") : cel.classList.remove("fundo-vermelho");
+    },
+    
+    mostrarMotivoPelasCelulasVermelhas() {
+        if(!sessionStorage.getItem("trmhiv-naoMostrarMaisMotivoDeRedCels")) {
             alertaVermelho.classList.add("on");
-            desfoqueDoFundo.on()
+            desfoqueDoFundo.on();
         }
     },
-
-    fecharAlertaVermelho: () => {
+    
+    omitirMotivoPelasCelulasVermelhas() {
         alertaVermelho.classList.remove("on");
-        desfoqueDoFundo.off()
+        desfoqueDoFundo.off();
     },
 
     salvarPreferenciaNaoMostrarMais: () => {
-        const checkboxPreference = document.querySelector("#nao-mostrar-mais");
-        if(checkboxPreference.checked) {
-            sessionStorage.setItem("trmhiv-alertaVermelho", "nao-mostrar-mais");
+        const checkboxNaoMostrarMais = document.querySelector("#nao-mostrar-mais");
+        if(checkboxNaoMostrarMais.checked) {
+            sessionStorage.setItem("trmhiv-naoMostrarMaisMotivoDeRedCels", "checked");
         } else {
-            sessionStorage.removeItem("trmhiv-alertaVermelho");
+            sessionStorage.removeItem("trmhiv-naoMostrarMaisMotivoDeRedCels");
         }
     }
 }
 
 // VARIÁVEIS GLOBAIS
-let inputCels, alertaVermelho;
-function inicializacao() {
-    inputCels = document.querySelectorAll("div.inputs-container input");
-    alertaVermelho = document.querySelector("div.razao-pelas-celulas-com-fundo-vermelho");
-}
-
-function eventos() {
-    // VALIDAR INPUT NO EVENTO DE ENTRADA DE DADOS
-    inputCels.forEach ( cel => {
-        cel.addEventListener("input", () => {
-            validacao.validarInput();
-
-            // Mostrar alerta se a 'cel' ficar vermelha ou a sua celula de saida de total parcial ou geral
-            let celTotalParcialOutput;
-            
-            if(cel.dataset.total0a14eixox) {
-                celTotalParcialOutput = document.querySelector(`.${cel.dataset.total0a14eixoxoutput}`);
-            } else if(cel.dataset.total15oumaiseixox) {
-                celTotalParcialOutput = document.querySelector(`.${cel.dataset.total15oumaiseixoxoutput}`);
-            }
-            
-            let celTotalGeralOutput = document.querySelector(`.${cel.dataset.totalgeraleixoxoutput}`);
-
-            if (cel.matches(".fundo-vermelho") || celTotalParcialOutput.matches(".fundo-vermelho") 
-            || celTotalGeralOutput.matches(".fundo-vermelho"))  {
-                    setTimeout(() => {
-                        validacao.mostrarAlertaVermelho();
-                    }, 2500);
-                }
-         });
-    });
-
-    // FECHAR ALERTA VERMELHO
-    const btnFecharAlertaVermelho = document.querySelector("button.close-redcels-obs");
-    btnFecharAlertaVermelho.addEventListener("click", () => {
-        validacao.fecharAlertaVermelho();
-        validacao.salvarPreferenciaNaoMostrarMais();
-    });
-}
-
+let celulasDeGradesAeB, alertaVermelho;
 window.addEventListener("load", () => {
-    inicializacao();
-    eventos();
-    validacao.validarInput();
+    celulasDeGradesAeB = document.querySelectorAll("div.corpo-da-ficha input");
+    alertaVermelho = document.querySelector("div.razao-pelas-celulas-com-fundo-vermelho");
+
+    celulasDeGradesAeB.forEach( cel => {
+        cel.addEventListener("input", () => {
+            setTimeout(() => inputValidation.contarAlgarismosPorCelula(), 250);
+        });
+    });
+
+    const celulasDeGradesCDeE = document.querySelectorAll("div.grade-extra input");
+    celulasDeGradesCDeE.forEach( cel => {
+        cel.addEventListener("input", () => {
+            if(cel.parentElement.matches(".ld")) {
+                cel.value.length > 13 ?
+                inputValidation.adicionarOuRemoverFundoVermelho(cel, "+") :
+                inputValidation.adicionarOuRemoverFundoVermelho(cel, "-");
+            }
+
+            else {
+                cel.value.length > 26 ?
+                inputValidation.adicionarOuRemoverFundoVermelho(cel, "+") :
+                inputValidation.adicionarOuRemoverFundoVermelho(cel, "-");
+            }
+        });
+    });
+
+    setTimeout(() => inputValidation.contarAlgarismosPorCelula(), 1000);
+
+    const btnFecharAlerta = document.querySelector("button.close-redcels-obs");
+    btnFecharAlerta.addEventListener("click", () => {
+        inputValidation.omitirMotivoPelasCelulasVermelhas();
+        inputValidation.salvarPreferenciaNaoMostrarMais();
+    });
 });

@@ -88,7 +88,7 @@ const referencia = {
 
 window.addEventListener("load", () => {
     // INVOCAÇÃO DAS FUNÇÕES 
-    inputCels.forEach ( cel => {
+    celulasDeTodasGrades.forEach ( cel => {
         if(!cel.matches("[readonly]")) {
             cel.addEventListener("focusin", () => {
                 referencia.retornarNumDeLinha(cel);

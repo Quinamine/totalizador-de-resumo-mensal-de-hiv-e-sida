@@ -2,11 +2,11 @@
 
 const storage  = {
     salvarFicha() {
-        for (let i = 0; i < inputCels.length; i++) {
+        for (let i = 0; i < celulasDeTodasGrades.length; i++) {
             // Salvar
-            inputCels[i].addEventListener("input", () => localStorage.setItem(`trmhiv-cel${i}`, `${inputCels[i].value}`));
+            celulasDeTodasGrades[i].addEventListener("input", () => localStorage.setItem(`trmhiv-cel${i}`, `${celulasDeTodasGrades[i].value}`));
             // Restaurar
-            inputCels[i].value = localStorage.getItem(`trmhiv-cel${i}`);
+            celulasDeTodasGrades[i].value = localStorage.getItem(`trmhiv-cel${i}`);
         }
     },
 
@@ -188,13 +188,15 @@ const totalizacao = {
 
 function escutarEventos() {
     // TOTALIZACAO
-    inputCels.forEach( cel => {
+    celulasDeTodasGrades.forEach( cel => {
         cel.addEventListener("input", () => totalizacao.filtrarCelulas(cel)); // T
         cel.value != "" && totalizacao.filtrarCelulas(cel); // No Load do Windows
     });
 }
 
+let celulasDeTodasGrades;
 window.addEventListener("load", () => {
+    celulasDeTodasGrades = document.querySelectorAll("div.inputs-container input");
     storage.salvarFicha();
     storage.salvarDadosAdicionais();
     storage.salvarDestaqueDeTotais();
