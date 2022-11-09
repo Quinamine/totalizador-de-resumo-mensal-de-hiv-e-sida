@@ -19,8 +19,6 @@
     --footer-bgc: var(--gray-d);
     --blue: #0060EE; 
     --blue-dark: #0f1c2e;
-    --purple: rgb(116, 116, 235);
-    --orange: #faa032;
 }
 
 @media print {
@@ -49,12 +47,14 @@ body {
 
 @media print {
     @page {
-        margin: 0.5cm;
+        margin: 0.5cm 0.5cm 1cm 0.5cm;
+        size: A4;
     }
     
     body {
         -webkit-print-color-adjust: exact;
         visibility: hidden;
+        background-color: var(--yt);
     }
 }
 

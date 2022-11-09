@@ -41,7 +41,7 @@ const menu = {
                 for (let i = 0; i < celulas.length; i++) {
                     celulas[i].value = "";
                     localStorage.removeItem(`trmhiv-cel${i}`);
-                    celulas[i].classList.remove("fundo-vermelho");
+                    inputValidation.adicionarOuRemoverFundoVermelho(celulas[i], "-");
                     inputValidation.resetFontSize(celulas[i]);
                 };
 
@@ -203,7 +203,7 @@ function eventListeners() {
             h1DoArtigoCookies.classList.remove("sticky");
             btnVoltar.classList.remove("with-h1-sticky");
         }
-    })
+    });
 
     // SALVAR COMO PDF
     document.querySelector("button.salvar-como-pdf").addEventListener("click", () => menu.salvarComoPdf());

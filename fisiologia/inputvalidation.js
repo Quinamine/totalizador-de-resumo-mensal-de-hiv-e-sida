@@ -15,7 +15,6 @@ const inputValidation = {
                 this.changeFontSize("fs-11");
 
                 if(numAlgarismos > 8) {
-                    cel.classList.add("fundo-vermelho");
                     this.adicionarOuRemoverFundoVermelho(cel, "+");
                     numeroDeCelulasVermelhas++;
                 }
@@ -79,6 +78,9 @@ window.addEventListener("load", () => {
         });
     });
 
+    // Validar no load do windows
+    setTimeout(() => inputValidation.contarAlgarismosPorCelula(), 1000);
+
     const celulasDeGradesCDeE = document.querySelectorAll("div.grade-extra input");
     celulasDeGradesCDeE.forEach( cel => {
         cel.addEventListener("input", () => {
@@ -95,8 +97,6 @@ window.addEventListener("load", () => {
             }
         });
     });
-
-    setTimeout(() => inputValidation.contarAlgarismosPorCelula(), 1000);
 
     const btnFecharAlerta = document.querySelector("button.close-redcels-obs");
     btnFecharAlerta.addEventListener("click", () => {
