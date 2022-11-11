@@ -196,9 +196,11 @@ function escutarEventos() {
 
 let celulasDeTodasGrades;
 window.addEventListener("load", () => {
-    celulasDeTodasGrades = document.querySelectorAll("div.inputs-container input");
-    storage.salvarFicha();
-    storage.salvarDadosAdicionais();
-    storage.salvarDestaqueDeTotais();
+    celulasDeTodasGrades = document.querySelectorAll("div.inputs-container input");    
+    if(typeof(Storage) !== "undefined") {
+        storage.salvarFicha();
+        storage.salvarDadosAdicionais();
+        storage.salvarDestaqueDeTotais();
+    }
     escutarEventos();
 });

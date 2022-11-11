@@ -22,25 +22,25 @@ const menu = {
 
                 if(celulasPreenchidas > 0) {
                     confirmacao.classList.add("on");
-                    desfoqueDoFundo.on()
+                    desfoqueDoFundo.on();
                 }
                 else {
                     const alerta = document.querySelector("div.caixa-de-alerta.ficha-vazia");
                     alerta.classList.add("on");
-                    desfoqueDoFundo.on()
+                    desfoqueDoFundo.on();
                 }
             },
 
             omitirCaixaDeConfirmacao: () => {
                 confirmacao.classList.remove("on");
-                desfoqueDoFundo.off()
+                desfoqueDoFundo.off();
             },
 
             limparDados: () => {   
 
                 for (let i = 0; i < celulas.length; i++) {
-                    celulas[i].value = "";
-                    localStorage.removeItem(`trmhiv-cel${i}`);
+                    celulas[i].value = "";      
+                    typeof(Storage) !== "undefined" && localStorage.removeItem(`trmhiv-cel${i}`);
                     inputValidation.adicionarOuRemoverFundoVermelho(celulas[i], "-");
                     inputValidation.resetFontSize(celulas[i]);
                 };
@@ -52,10 +52,15 @@ const menu = {
                         const IdDoDadoAdicional = limpador.dataset.for; 
                         const dadoAdicional = document.querySelector(`#${IdDoDadoAdicional}`);
                         dadoAdicional.value = "";
-                        localStorage.removeItem(`trmhiv-${IdDoDadoAdicional}`);
+                        typeof(Storage) !== "undefined" && localStorage.removeItem(`trmhiv-${IdDoDadoAdicional}`);
+
+                        // Eliminar o negrito deste elemento para o placeholder não ficar muito nítido
+                        if(IdDoDadoAdicional === "nota") {
+                            dadoAdicional.classList.remove("bold");
+                        }
                     }
                 }); 
-                desfoqueDoFundo.off()  
+                desfoqueDoFundo.off();
             }
         }
     },
@@ -210,7 +215,7 @@ function eventListeners() {
 
     // PARTILHAR
     let conteudo = {
-        title: "Totalizador de Resumo Mensal de HIV",
+        title: "Totalizador de Resumo Mensal de HIV/SIDA",
         text: "Totaliza automaticamente o respectivo resumo com base nos dados preenchidos pelo usuário (Profissional de Saúde).",
         url: "https://www.quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html"
     }
@@ -237,8 +242,12 @@ window.addEventListener("keyup", event => {
     
     if(key.toLowerCase() === "enter") {
         const caixasDeAlerta = document.querySelectorAll("div.caixa-de-alerta");
-        caixasDeAlerta.forEach ( caixa => caixa.classList.remove("on"));
-        desfoqueDoFundo.off()
+        caixasDeAlerta.forEach ( caixa => {
+            if(caixa.matches(".on")) {
+                caixa.classList.remove("on");
+                desfoqueDoFundo.off();
+            }
+        });
     }
 });
 

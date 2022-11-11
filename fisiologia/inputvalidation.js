@@ -56,7 +56,7 @@ const inputValidation = {
         desfoqueDoFundo.off();
     },
 
-    salvarPreferenciaNaoMostrarMais: () => {
+    salvarPreferenciaNaoMostrarMais() {
         const checkboxNaoMostrarMais = document.querySelector("#nao-mostrar-mais");
         if(checkboxNaoMostrarMais.checked) {
             sessionStorage.setItem("trmhiv-naoMostrarMaisMotivoDeRedCels", "checked");
