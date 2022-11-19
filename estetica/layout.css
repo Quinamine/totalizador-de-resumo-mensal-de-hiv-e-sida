@@ -369,6 +369,12 @@ body > footer {
     padding: 40px 0;
 }
 
+@media screen and (max-width: 1023px) {
+    body > footer {
+        padding: 20px 0;
+    }
+}
+
 div.linha.do-rodape {
     display: flex;
     align-items: flex-start;

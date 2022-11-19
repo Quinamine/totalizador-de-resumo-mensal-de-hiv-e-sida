@@ -9,12 +9,12 @@
 
 article section {
     font-size: 14px;
-    min-height: 94vh;
-    max-height: 94vh;
+    min-height: 90vh;
+    max-height: 90vh;
     overflow: auto;
     max-width: 700px;
     position: fixed;
-    top: calc(50vh - 94vh / 2);
+    top: calc(50vh - 90vh / 2);
     right: calc(50vw - 700px / 2);
     z-index: 50000;
     padding: 20px;
@@ -79,7 +79,7 @@ article section#sobre ul {
 article section button.fechar-artigo {
     font-size: 26px;
     position: fixed;
-    top: calc(50vh - 94vh / 2);
+    top: calc(50vh - 90vh / 2);
     right: calc(50vw - 700px / 2);
     width: 40px;
     height: 40px;

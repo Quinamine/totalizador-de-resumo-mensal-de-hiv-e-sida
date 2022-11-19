@@ -216,7 +216,7 @@ function eventListeners() {
     // PARTILHAR
     let conteudo = {
         title: "Totalizador de Resumo Mensal de HIV/SIDA",
-        text: "Totaliza automaticamente o respectivo resumo com base nos dados preenchidos pelo usuário (Profissional de Saúde).",
+        text: "É um serviço online gratuito que auxilia na elaboração do resumo mensal de HIV/SIDA totalizando-o automaticamente com base nos dados preenchidos pelo usuário (Profissional de Saúde).",
         url: "https://www.quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html"
     }
 
