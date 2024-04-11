@@ -456,7 +456,7 @@ input[data-totalgeraleixox]:focus,
 }
 
 .celula-saturada {
-    background-color: var(--cor-de-risco);
+    background-color: var(--cor-de-risco) !important;
     color: var(--yt)
 }
 
