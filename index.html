@@ -1,5 +1,5 @@
 <!doctypehtml>
-<html dir=ltr lang=pt-MZ>
+<html dir=ltr lang=pt-MZ id="root">
     <meta charset=UTF-8>
     <meta content="IE=edge" http-equiv=X-UA-Compatible>
     <meta content="width=device-width,initial-scale=1" name=viewport>
@@ -13,12 +13,13 @@
     <meta content="serviço online gratuito, que auxilia na elaboração, como o nome sugere, do resumo mensal de HIV/SIDA, por meio do cálculo automático dos totais, com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de HIV/SIDA actualmente vigente no Serviço Nacional de Saúde em Moçambique." property=og:description>
     <meta content=https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/imagens/totalizador-de-resumo-mensal-de-hiv.png property=og:image>
     <link href=favicon.ico rel="shortcut icon" type=image/x-icon>
-    <link href=estetica/reset.css rel=stylesheet>
-    <link href=estetica/layout.css rel=stylesheet>
-    <link href=estetica/ficha.css rel=stylesheet>
+    <link href=anatomia/reset.css rel=stylesheet>
+    <link href=anatomia/layout.css rel=stylesheet>
+    <link href=anatomia/ficha.css rel=stylesheet>
     <script src="fisiologia/menu.js"></script>
     <script src="fisiologia/main.js"></script>
     <script src="fisiologia/multifuncoes.js"></script>
+    <script src="fisiologia/referencia.js"></script>
     
     <script src="https://www.googletagmanager.com/gtag/js?id=G-0WQ21LVG42" async></script>
     <script>
@@ -31,7 +32,7 @@
     </script>
     <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades do Totalizador. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
 
-    <body id="html__body" class="body" ontouchstart="">
+    <body class="body" ontouchstart="">
         <header class="header">
             <div class="layout-row header__row --display-flex-y-center">
                 <a href=index.html class=header__logo>
@@ -112,7 +113,7 @@
                     <div class=ficha__linha-de-nid-e-header-do-body>
                         <div class="ficha__container-de-nid --display-flex-y-center">
                             <label for=nid>NID da Unidade Sanitária:</label>
-                            <input type=number min=0 id=nid class="ficha__campo-de-nid --border-b">
+                            <input type=number min=0 id=nid class="ficha__campo-de-nid input-adicional --border-b">
                         </div>
                         <header class=ficha__header-do-body>
                             <div class="header-do-body__col-de-faixas-etarias-e-sexo">
@@ -177,7 +178,7 @@
                     <div class="grid-dos-as ficha__grid-770-150-50">
                         <div class=ficha__grid-template-col-10>
 
-                            <div class="grid-dos-as__col ficha__col-de-linhas">
+                            <div class="grid-dos-as__col ficha__col-de-linhas ficha__col-de-linhas-a">
                                 <div class="--display-flex-xy-center --border-t --border-r --border-l">
                                     <span>A.1)</span>
                                  </div>
@@ -189,7 +190,7 @@
                                 </div>
                             </div>
 
-                            <div class="ficha__col-de-indicadores grid-dos-as__col">
+                            <div class="ficha__col-de-indicadores ficha__col-de-indicadores--pos-sticky grid-dos-as__col">
                                 <div class="ficha__container-de-indicador --display-flex-y-center --border-t">
                                     <span>
                                         Nº cumulativo de pacientes que iniciou Pré-TARV (cuidados HIV) nesta US <strong>até ao fim do mês anterior</strong>
@@ -212,7 +213,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="ficha__col-de-inputs de-0-a-4 anos grid-dos-as__col">
+                            <div class="ficha__col-de-inputs de-0-a-4 anos grid-dos-as__col" data-linhas="ficha__col-de-linhas-a" data-faixaetaria="0-4 anos" data-sexo="&minus;">
 
                                 <input type=number min=0 data-totaleixoy="a1a2-c1" data-totaleixoyoutput="a3-c1" data-subtotaleixox="a1-c1-a-c4" data-subtotaleixoxoutput="a1-c9" data-subtotaleixoy="a1a2-c1-a-c4" data-subtotaleixoyoutput="a3-c9" data-totalgeraleixox="a1-c1-a-c8" data-totalgeraleixoxoutput="a1-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" class="--border-t --border-r --border-l">
 
@@ -220,48 +221,48 @@
 
                                 <input type=number min=0 readonly class="a3-c1 --border">
                             </div>
-                            <div class="ficha__col-de-inputs de-5-a-9-anos grid-dos-as__col">
+                            <div class="ficha__col-de-inputs de-5-a-9-anos grid-dos-as__col" data-linhas="ficha__col-de-linhas-a" data-faixaetaria="5-9 anos" data-sexo="&minus;">
                                 <input type=number data-totaleixoy="a1a2-c2" data-totaleixoyoutput="a3-c2" data-subtotaleixox="a1-c1-a-c4" data-subtotaleixoxoutput="a1-c9" data-subtotaleixoy="a1a2-c1-a-c4" data-subtotaleixoyoutput="a3-c9" data-totalgeraleixox="a1-c1-a-c8" data-totalgeraleixoxoutput="a1-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" class="--border-t --border-r">
 
                                 <input type=number min=0 data-totaleixoy="a1a2-c2" data-totaleixoyoutput="a3-c2" data-subtotaleixox="a2-c1-a-c4" data-subtotaleixoxoutput="a2-c9" data-subtotaleixoy="a1a2-c1-a-c4" data-subtotaleixoyoutput="a3-c9" data-totalgeraleixox="a2-c1-a-c8" data-totalgeraleixoxoutput="a2-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="a3-c2 --border-t --border-r --border-b">
                             </div>
-                            <div class="ficha__col-de-inputs de-10-a-14-anos-sexo-f grid-dos-as__col">
+                            <div class="ficha__col-de-inputs de-10-a-14-anos-sexo-f grid-dos-as__col" data-linhas="ficha__col-de-linhas-a" data-faixaetaria="10-14 anos" data-sexo="F">
                                 <input type=number min=0 data-totaleixoy="a1a2-c3" data-totaleixoyoutput="a3-c3" data-subtotaleixox="a1-c1-a-c4" data-subtotaleixoxoutput="a1-c9" data-subtotaleixoy="a1a2-c1-a-c4" data-subtotaleixoyoutput="a3-c9" data-totalgeraleixox="a1-c1-a-c8" data-totalgeraleixoxoutput="a1-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" data-totalteeneixox="a1-c3-a-c6" data-totalteeneixoxoutput="a1-c12" data-totalteeneixoy="a1a2-c3-a-c6" data-totalteeneixoyoutput="a3-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 data-totaleixoy="a1a2-c3" data-totaleixoyoutput="a3-c3" data-subtotaleixox="a2-c1-a-c4" data-subtotaleixoxoutput="a2-c9" data-subtotaleixoy="a1a2-c1-a-c4" data-subtotaleixoyoutput="a3-c9" data-totalgeraleixox="a2-c1-a-c8" data-totalgeraleixoxoutput="a2-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" data-totalteeneixox="a2-c3-a-c6" data-totalteeneixoxoutput="a2-c12" data-totalteeneixoy="a1a2-c3-a-c6" data-totalteeneixoyoutput="a3-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="a3-c3 --border-t --border-r --border-b">
                             </div>
-                            <div class="ficha__col-de-inputs de-10-a-14-anos-sexo-m grid-dos-as__col">
+                            <div class="ficha__col-de-inputs de-10-a-14-anos-sexo-m grid-dos-as__col" data-linhas="ficha__col-de-linhas-a" data-faixaetaria="10-14 anos" data-sexo="M">
                                 <input type=number min=0 data-totaleixoy="a1a2-c4" data-totaleixoyoutput="a3-c4" data-subtotaleixox="a1-c1-a-c4" data-subtotaleixoxoutput="a1-c9" data-subtotaleixoy="a1a2-c1-a-c4" data-subtotaleixoyoutput="a3-c9" data-totalgeraleixox="a1-c1-a-c8" data-totalgeraleixoxoutput="a1-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" data-totalteeneixox="a1-c3-a-c6" data-totalteeneixoxoutput="a1-c12" data-totalteeneixoy="a1a2-c3-a-c6" data-totalteeneixoyoutput="a3-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 data-totaleixoy="a1a2-c4" data-totaleixoyoutput="a3-c4" data-subtotaleixox="a2-c1-a-c4" data-subtotaleixoxoutput="a2-c9" data-subtotaleixoy="a1a2-c1-a-c4" data-subtotaleixoyoutput="a3-c9" data-totalgeraleixox="a2-c1-a-c8" data-totalgeraleixoxoutput="a2-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" data-totalteeneixox="a2-c3-a-c6" data-totalteeneixoxoutput="a2-c12" data-totalteeneixoy="a1a2-c3-a-c6" data-totalteeneixoyoutput="a3-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="a3-c4 --border-t --border-r --border-b">
                             </div>
-                            <div class="ficha__col-de-inputs de-15-a-19-anos-sexo-f grid-dos-as__col">
+                            <div class="ficha__col-de-inputs de-15-a-19-anos-sexo-f grid-dos-as__col" data-linhas="ficha__col-de-linhas-a" data-faixaetaria="15-19 anos" data-sexo="F">
                                 <input type=number min=0 data-totaleixoy="a1a2-c5" data-totaleixoyoutput="a3-c5" data-subtotaleixox="a1-c5-a-c8" data-subtotaleixoxoutput="a1-c10" data-subtotaleixoy="a1a2-c5-a-c8" data-subtotaleixoyoutput="a3-c10" data-totalgeraleixox="a1-c1-a-c8" data-totalgeraleixoxoutput="a1-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" data-totalteeneixox="a1-c3-a-c6" data-totalteeneixoxoutput="a1-c12" data-totalteeneixoy="a1a2-c3-a-c6" data-totalteeneixoyoutput="a3-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 data-totaleixoy="a1a2-c5" data-totaleixoyoutput="a3-c5" data-subtotaleixox="a2-c5-a-c8" data-subtotaleixoxoutput="a2-c10" data-subtotaleixoy="a1a2-c5-a-c8" data-subtotaleixoyoutput="a3-c10" data-totalgeraleixox="a2-c1-a-c8" data-totalgeraleixoxoutput="a2-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" data-totalteeneixox="a2-c3-a-c6" data-totalteeneixoxoutput="a2-c12" data-totalteeneixoy="a1a2-c3-a-c6" data-totalteeneixoyoutput="a3-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="a3-c5 --border-t --border-r --border-b">
                             </div>
-                            <div class="ficha__col-de-inputs de-15-a-19-anos-sexo-m grid-dos-as__col">
+                            <div class="ficha__col-de-inputs de-15-a-19-anos-sexo-m grid-dos-as__col" data-linhas="ficha__col-de-linhas-a" data-faixaetaria="10-14 anos" data-sexo="M">
                                 <input type=number min=0 data-totaleixoy="a1a2-c6" data-totaleixoyoutput="a3-c6" data-subtotaleixox="a1-c5-a-c8" data-subtotaleixoxoutput="a1-c10" data-subtotaleixoy="a1a2-c5-a-c8" data-subtotaleixoyoutput="a3-c10" data-totalgeraleixox="a1-c1-a-c8" data-totalgeraleixoxoutput="a1-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" data-totalteeneixox="a1-c3-a-c6" data-totalteeneixoxoutput="a1-c12" data-totalteeneixoy="a1a2-c3-a-c6" data-totalteeneixoyoutput="a3-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 data-totaleixoy="a1a2-c6" data-totaleixoyoutput="a3-c6" data-subtotaleixox="a2-c5-a-c8" data-subtotaleixoxoutput="a2-c10" data-subtotaleixoy="a1a2-c5-a-c8" data-subtotaleixoyoutput="a3-c10" data-totalgeraleixox="a2-c1-a-c8" data-totalgeraleixoxoutput="a2-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" data-totalteeneixox="a2-c3-a-c6" data-totalteeneixoxoutput="a2-c12" data-totalteeneixoy="a1a2-c3-a-c6" data-totalteeneixoyoutput="a3-c12" class="--border-t --border-r">
                                 <input type=number min=0 readonly class="a3-c6 --border-t --border-r --border-b" >
                             </div>
-                            <div class="ficha__col-de-inputs de-20-ou-mais-anos-sexo-f grid-dos-as__col">
+                            <div class="ficha__col-de-inputs de-20-ou-mais-anos-sexo-f grid-dos-as__col" data-linhas="ficha__col-de-linhas-a" data-faixaetaria="20/ &plus; anos" data-sexo="F">
                                 <input type=number min=0 data-totaleixoy="a1a2-c7" data-totaleixoyoutput="a3-c7" data-subtotaleixox="a1-c5-a-c8" data-subtotaleixoxoutput="a1-c10" data-subtotaleixoy="a1a2-c5-a-c8" data-subtotaleixoyoutput="a3-c10" data-totalgeraleixox="a1-c1-a-c8" data-totalgeraleixoxoutput="a1-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" class="--border-t --border-r">
 
                                 <input type=number min=0 data-totaleixoy="a1a2-c7" data-totaleixoyoutput="a3-c7" data-subtotaleixox="a2-c5-a-c8" data-subtotaleixoxoutput="a2-c10" data-subtotaleixoy="a1a2-c5-a-c8" data-subtotaleixoyoutput="a3-c10" data-totalgeraleixox="a2-c1-a-c8" data-totalgeraleixoxoutput="a2-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="a3-c7 --border-t --border-r --border-b">
                             </div>
-                            <div class="ficha__col-de-inputs de-20-ou-mais-anos-sexo-m grid-dos-as__col">
+                            <div class="ficha__col-de-inputs de-20-ou-mais-anos-sexo-m grid-dos-as__col" data-linhas="ficha__col-de-linhas-a" data-faixaetaria="20/ &plus; anos" data-sexo="M">
                                 <input type=number min=0 data-totaleixoy="a1a2-c8" data-totaleixoyoutput="a3-c8" data-subtotaleixox="a1-c5-a-c8" data-subtotaleixoxoutput="a1-c10" data-subtotaleixoy="a1a2-c5-a-c8" data-subtotaleixoyoutput="a3-c10" data-totalgeraleixox="a1-c1-a-c8" data-totalgeraleixoxoutput="a1-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" class="--border-t --border-r">
 
                                 <input type=number min=0 data-totaleixoy="a1a2-c8" data-totaleixoyoutput="a3-c8" data-subtotaleixox="a2-c5-a-c8" data-subtotaleixoxoutput="a2-c10" data-subtotaleixoy="a1a2-c5-a-c8" data-subtotaleixoyoutput="a3-c10" data-totalgeraleixox="a2-c1-a-c8" data-totalgeraleixoxoutput="a2-c11" data-totalgeraleixoy="a1a2-c1-a-c8" data-totalgeraleixoyoutput="a3-c11" class="--border-t --border-r">
@@ -305,7 +306,7 @@
                             </div>
                         </div>
                         <div class=ficha__grid-template-col-10>
-                            <div class="grid-dos-bs__col ficha__col-de-linhas">
+                            <div class="grid-dos-bs__col ficha__col-de-linhas ficha__col-de-linhas-b">
                                 <div class="--display-flex-xy-center --border-t --border-r --border-l">
                                     <span>B.1)</span>
                                 </div>
@@ -387,150 +388,157 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="ficha__col-de-inputs de-0-a-4-anos grid-dos-bs__col" data-b13=b4-c1-m-b12-c1-m-b9-c1 data-b13output=b13-c1>
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c1" data-totaleixoyoutput="b4-c1" data-subtotaleixox="b1-c1-a-c4" data-subtotaleixoxoutput="b1-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" class="--border-t --border-r --border-l">
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c1" data-totaleixoyoutput="b4-c1" data-subtotaleixox="b2-c1-a-c4" data-subtotaleixoxoutput="b2-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" class="--border-t --border-r --border-l">
+                            <div class="ficha__col-de-inputs de-0-a-4-anos grid-dos-bs__col" data-linhas="ficha__col-de-linhas-b" data-faixaetaria="0-4 anos" data-sexo="&minus;">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c1" data-totaleixoyoutput="b4-c1" data-subtotaleixox="b1-c1-a-c4" data-subtotaleixoxoutput="b1-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-b11="b1b10-c1" data-b11output="b11-c1" data-b11subtotal="b1b10-c1-a-c4" data-b11subtotaloutput="b11-c9" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" data-b13="b12-c1+b4-c1-menos-b9-c1" data-b13output="b13-c1" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r --border-l">
 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c1" data-totaleixoyoutput="b4-c1" data-subtotaleixox="b3-c1-a-c4" data-subtotaleixoxoutput="b3-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" class="--border-t --border-r --border-l">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c1" data-totaleixoyoutput="b4-c1" data-subtotaleixox="b2-c1-a-c4" data-subtotaleixoxoutput="b2-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-b13="b12-c1+b4-c1-menos-b9-c1" data-b13output="b13-c1" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r --border-l">
+
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c1" data-totaleixoyoutput="b4-c1" data-subtotaleixox="b3-c1-a-c4" data-subtotaleixoxoutput="b3-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-b13="b12-c1+b4-c1-menos-b9-c1" data-b13output="b13-c1" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r --border-l">
 
                                 <input type=number min=0 readonly class="b4-c1 --border-t --border-r --border-l --destaque-padrao">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c1" data-totaleixoyoutput="b9-c1" data-subtotaleixox="b5-c1-a-c4" data-subtotaleixoxoutput="b5-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r --border-l">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c1" data-totaleixoyoutput="b9-c1" data-subtotaleixox="b5-c1-a-c4" data-subtotaleixoxoutput="b5-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c1+b4-c1-menos-b9-c1" data-b13output="b13-c1" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r --border-l">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c1" data-totaleixoyoutput="b9-c1" data-subtotaleixox="b6-c1-a-c4" data-subtotaleixoxoutput="b6-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r --border-l">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c1" data-totaleixoyoutput="b9-c1" data-subtotaleixox="b6-c1-a-c4" data-subtotaleixoxoutput="b6-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c1+b4-c1-menos-b9-c1" data-b13output="b13-c1" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r --border-l">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c1" data-totaleixoyoutput="b9-c1" data-subtotaleixox="b7-c1-a-c4" data-subtotaleixoxoutput="b7-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r --border-l">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c1" data-totaleixoyoutput="b9-c1" data-subtotaleixox="b7-c1-a-c4" data-subtotaleixoxoutput="b7-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c1+b4-c1-menos-b9-c1" data-b13output="b13-c1" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r --border-l">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c1" data-totaleixoyoutput="b9-c1" data-subtotaleixox="b8-c1-a-c4" data-subtotaleixoxoutput="b8-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r --border-l">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c1" data-totaleixoyoutput="b9-c1" data-subtotaleixox="b8-c1-a-c4" data-subtotaleixoxoutput="b8-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c1+b4-c1-menos-b9-c1" data-b13output="b13-c1" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r --border-l">
                                 <input type=number min=0 readonly class="b9-c1 --border --destaque-padrao">
                             </div>
-                            <div class="ficha__col-de-inputs de-5-a-9-anos grid-dos-bs__col" data-b13=b4-c2-m-b12-c2-m-b9-c2 data-b13output=b13-c2>
+                            <div class="ficha__col-de-inputs de-5-a-9-anos grid-dos-bs__col" data-linhas="ficha__col-de-linhas-b" data-faixaetaria="5-9 anos" data-sexo="&minus;">
                                 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c2" data-totaleixoyoutput="b4-c2" data-subtotaleixox="b1-c1-a-c4" data-subtotaleixoxoutput="b1-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" class="--border-t --border-r">
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c2" data-totaleixoyoutput="b4-c2" data-subtotaleixox="b2-c1-a-c4" data-subtotaleixoxoutput="b2-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c2" data-totaleixoyoutput="b4-c2" data-subtotaleixox="b1-c1-a-c4" data-subtotaleixoxoutput="b1-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-b11="b1b10-c2" data-b11output="b11-c2" data-b11subtotal="b1b10-c1-a-c4" data-b11subtotaloutput="b11-c9" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" data-b13="b12-c2+b4-c2-menos-b9-c2" data-b13output="b13-c2" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c2" data-totaleixoyoutput="b4-c2" data-subtotaleixox="b3-c1-a-c4" data-subtotaleixoxoutput="b3-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c2" data-totaleixoyoutput="b4-c2" data-subtotaleixox="b2-c1-a-c4" data-subtotaleixoxoutput="b2-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-b13="b12-c2+b4-c2-menos-b9-c2" data-b13output="b13-c2" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
+
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c2" data-totaleixoyoutput="b4-c2" data-subtotaleixox="b3-c1-a-c4" data-subtotaleixoxoutput="b3-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-b13="b12-c2+b4-c2-menos-b9-c2" data-b13output="b13-c2" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b4-c2 --border-t --border-r --destaque-padrao">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c2" data-totaleixoyoutput="b9-c2" data-subtotaleixox="b5-c1-a-c4" data-subtotaleixoxoutput="b5-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c2" data-totaleixoyoutput="b9-c2" data-subtotaleixox="b5-c1-a-c4" data-subtotaleixoxoutput="b5-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c2+b4-c2-menos-b9-c2" data-b13output="b13-c2" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c2" data-totaleixoyoutput="b9-c2" data-subtotaleixox="b6-c1-a-c4" data-subtotaleixoxoutput="b6-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c2" data-totaleixoyoutput="b9-c2" data-subtotaleixox="b6-c1-a-c4" data-subtotaleixoxoutput="b6-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c2+b4-c2-menos-b9-c2" data-b13output="b13-c2" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c2" data-totaleixoyoutput="b9-c2" data-subtotaleixox="b7-c1-a-c4" data-subtotaleixoxoutput="b7-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c2" data-totaleixoyoutput="b9-c2" data-subtotaleixox="b7-c1-a-c4" data-subtotaleixoxoutput="b7-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c2+b4-c2-menos-b9-c2" data-b13output="b13-c2" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c2" data-totaleixoyoutput="b9-c2" data-subtotaleixox="b8-c1-a-c4" data-subtotaleixoxoutput="b8-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c2" data-totaleixoyoutput="b9-c2" data-subtotaleixox="b8-c1-a-c4" data-subtotaleixoxoutput="b8-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c2+b4-c2-menos-b9-c2" data-b13output="b13-c2" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
+
                                 <input type=number min=0 readonly class="b9-c2 --border-t --border-r --border-b --destaque-padrao">
 
                             </div>
-                            <div class="ficha__col-de-inputs de-10-a-14-anos-sexo-f grid-dos-bs__col" data-b13=b4-c3-m-b12-c3-m-b9-c3 data-b13output=b13-c3>
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c3" data-totaleixoyoutput="b4-c3" data-subtotaleixox="b1-c1-a-c4" data-subtotaleixoxoutput="b1-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b1-c3-a-c6" data-totalteeneixoxoutput="b1-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12"  class="--border-t --border-r">
+                            <div class="ficha__col-de-inputs de-10-a-14-anos-sexo-f grid-dos-bs__col" data-linhas="ficha__col-de-linhas-b" data-faixaetaria="10-14 anos" data-sexo="F">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c3" data-totaleixoyoutput="b4-c3" data-subtotaleixox="b1-c1-a-c4" data-subtotaleixoxoutput="b1-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b1-c3-a-c6" data-totalteeneixoxoutput="b1-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" data-b11="b1b10-c3" data-b11output="b11-c3" data-b11subtotal="b1b10-c1-a-c4" data-b11subtotaloutput="b11-c9" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" data-b11totalteen="b1b10-c3-a-c6" data-b11totalteenoutput="b11-c12" data-b13="b12-c3+b4-c3-menos-b9-c3" data-b13output="b13-c3" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c3" data-totaleixoyoutput="b4-c3" data-subtotaleixox="b2-c1-a-c4" data-subtotaleixoxoutput="b2-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b2-c3-a-c6" data-totalteeneixoxoutput="b2-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c3" data-totaleixoyoutput="b4-c3" data-subtotaleixox="b2-c1-a-c4" data-subtotaleixoxoutput="b2-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b2-c3-a-c6" data-totalteeneixoxoutput="b2-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" data-b13="b12-c3+b4-c3-menos-b9-c3" data-b13output="b13-c3" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c3" data-totaleixoyoutput="b4-c3" data-subtotaleixox="b3-c1-a-c4" data-subtotaleixoxoutput="b3-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b3-c3-a-c6" data-totalteeneixoxoutput="b3-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c3" data-totaleixoyoutput="b4-c3" data-subtotaleixox="b3-c1-a-c4" data-subtotaleixoxoutput="b3-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b3-c3-a-c6" data-totalteeneixoxoutput="b3-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" data-b13="b12-c3+b4-c3-menos-b9-c3" data-b13output="b13-c3" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b4-c3 --border-t --border-r --destaque-padrao">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c3" data-totaleixoyoutput="b9-c3" data-subtotaleixox="b5-c1-a-c4" data-subtotaleixoxoutput="b5-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b5-c3-a-c6" data-totalteeneixoxoutput="b5-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c3" data-totaleixoyoutput="b9-c3" data-subtotaleixox="b5-c1-a-c4" data-subtotaleixoxoutput="b5-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b5-c3-a-c6" data-totalteeneixoxoutput="b5-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c3+b4-c3-menos-b9-c3" data-b13output="b13-c3" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c3" data-totaleixoyoutput="b9-c3" data-subtotaleixox="b6-c1-a-c4" data-subtotaleixoxoutput="b6-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b6-c3-a-c6" data-totalteeneixoxoutput="b6-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c3" data-totaleixoyoutput="b9-c3" data-subtotaleixox="b6-c1-a-c4" data-subtotaleixoxoutput="b6-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b6-c3-a-c6" data-totalteeneixoxoutput="b6-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c3+b4-c3-menos-b9-c3" data-b13output="b13-c3" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c3" data-totaleixoyoutput="b9-c3" data-subtotaleixox="b7-c1-a-c4" data-subtotaleixoxoutput="b7-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b7-c3-a-c6" data-totalteeneixoxoutput="b7-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c3" data-totaleixoyoutput="b9-c3" data-subtotaleixox="b7-c1-a-c4" data-subtotaleixoxoutput="b7-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b7-c3-a-c6" data-totalteeneixoxoutput="b7-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c3+b4-c3-menos-b9-c3" data-b13output="b13-c3" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c3" data-totaleixoyoutput="b9-c3" data-subtotaleixox="b8-c1-a-c4" data-subtotaleixoxoutput="b8-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b8-c3-a-c6" data-totalteeneixoxoutput="b8-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c3" data-totaleixoyoutput="b9-c3" data-subtotaleixox="b8-c1-a-c4" data-subtotaleixoxoutput="b8-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b8-c3-a-c6" data-totalteeneixoxoutput="b8-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c3+b4-c3-menos-b9-c3" data-b13output="b13-c3" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
+
                                 <input type=number min=0 readonly class="b9-c3 --border-t --border-r --border-b --destaque-padrao">
-                          </div>
-                            <div class="ficha__col-de-inputs de-10-a-14-anos-sexo-m grid-dos-bs__col" data-b13=b4-c4-m-b12-c4-m-b9-c4 data-b13output=b13-c4>                            
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c4" data-totaleixoyoutput="b4-c4" data-subtotaleixox="b1-c1-a-c4" data-subtotaleixoxoutput="b1-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b1-c3-a-c6" data-totalteeneixoxoutput="b1-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12"  class="--border-t --border-r">
+                            </div>
+                            <div class="ficha__col-de-inputs de-10-a-14-anos-sexo-m grid-dos-bs__col" data-linhas="ficha__col-de-linhas-b" data-faixaetaria="10-14 anos" data-sexo="M">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c4" data-totaleixoyoutput="b4-c4" data-subtotaleixox="b1-c1-a-c4" data-subtotaleixoxoutput="b1-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b1-c3-a-c6" data-totalteeneixoxoutput="b1-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" data-b11="b1b10-c4" data-b11output="b11-c4" data-b11subtotal="b1b10-c1-a-c4" data-b11subtotaloutput="b11-c9" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" data-b11totalteen="b1b10-c3-a-c6" data-b11totalteenoutput="b11-c12" data-b13="b12-c4+b4-c4-menos-b9-c4" data-b13output="b13-c4" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c4" data-totaleixoyoutput="b4-c4" data-subtotaleixox="b2-c1-a-c4" data-subtotaleixoxoutput="b2-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b2-c3-a-c6" data-totalteeneixoxoutput="b2-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c4" data-totaleixoyoutput="b4-c4" data-subtotaleixox="b2-c1-a-c4" data-subtotaleixoxoutput="b2-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b2-c3-a-c6" data-totalteeneixoxoutput="b2-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" data-b13="b12-c4+b4-c4-menos-b9-c4" data-b13output="b13-c4" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c4" data-totaleixoyoutput="b4-c4" data-subtotaleixox="b3-c1-a-c4" data-subtotaleixoxoutput="b3-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b3-c3-a-c6" data-totalteeneixoxoutput="b3-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c4" data-totaleixoyoutput="b4-c4" data-subtotaleixox="b3-c1-a-c4" data-subtotaleixoxoutput="b3-c9" data-subtotaleixoy="b1b2b3-c1-a-c4" data-subtotaleixoyoutput="b4-c9" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b3-c3-a-c6" data-totalteeneixoxoutput="b3-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" data-b13="b12-c4+b4-c4-menos-b9-c4" data-b13output="b13-c4" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b4-c4 --border-t --border-r --destaque-padrao">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c4" data-totaleixoyoutput="b9-c4" data-subtotaleixox="b5-c1-a-c4" data-subtotaleixoxoutput="b5-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b5-c3-a-c6" data-totalteeneixoxoutput="b5-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c4" data-totaleixoyoutput="b9-c4" data-subtotaleixox="b5-c1-a-c4" data-subtotaleixoxoutput="b5-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b5-c3-a-c6" data-totalteeneixoxoutput="b5-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c4+b4-c4-menos-b9-c4" data-b13output="b13-c4" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c4" data-totaleixoyoutput="b9-c4" data-subtotaleixox="b6-c1-a-c4" data-subtotaleixoxoutput="b6-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b6-c3-a-c6" data-totalteeneixoxoutput="b6-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c4" data-totaleixoyoutput="b9-c4" data-subtotaleixox="b6-c1-a-c4" data-subtotaleixoxoutput="b6-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b6-c3-a-c6" data-totalteeneixoxoutput="b6-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c4+b4-c4-menos-b9-c4" data-b13output="b13-c4" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c4" data-totaleixoyoutput="b9-c4" data-subtotaleixox="b7-c1-a-c4" data-subtotaleixoxoutput="b7-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b7-c3-a-c6" data-totalteeneixoxoutput="b7-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c4" data-totaleixoyoutput="b9-c4" data-subtotaleixox="b7-c1-a-c4" data-subtotaleixoxoutput="b7-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b7-c3-a-c6" data-totalteeneixoxoutput="b7-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c4+b4-c4-menos-b9-c4" data-b13output="b13-c4" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c4" data-totaleixoyoutput="b9-c4" data-subtotaleixox="b8-c1-a-c4" data-subtotaleixoxoutput="b8-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b8-c3-a-c6" data-totalteeneixoxoutput="b8-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c4" data-totaleixoyoutput="b9-c4" data-subtotaleixox="b8-c1-a-c4" data-subtotaleixoxoutput="b8-c9" data-subtotaleixoy="b5-a-b8-c1-a-c4" data-subtotaleixoyoutput="b9-c9" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b8-c3-a-c6" data-totalteeneixoxoutput="b8-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c4+b4-c4-menos-b9-c4" data-b13output="b13-c4" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
+
                                 <input type=number min=0 readonly class="b9-c4 --border-t --border-r --border-b --destaque-padrao">
                             </div>
-                            <div class="ficha__col-de-inputs de-15-a-19-anos-sexo-f grid-dos-bs__col" data-b13=b4-c5-m-b12-c5-m-b9-c5 data-b13output=b13-c5>                              
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c5" data-totaleixoyoutput="b4-c5" data-subtotaleixox="b1-c5-a-c8" data-subtotaleixoxoutput="b1-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b1-c3-a-c6" data-totalteeneixoxoutput="b1-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12"  class="--border-t --border-r">
+                            <div class="ficha__col-de-inputs de-15-a-19-anos-sexo-f grid-dos-bs__col" data-linhas="ficha__col-de-linhas-b" data-faixaetaria="15-19 anos" data-sexo="F">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c5" data-totaleixoyoutput="b4-c5" data-subtotaleixox="b1-c5-a-c8" data-subtotaleixoxoutput="b1-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b1-c3-a-c6" data-totalteeneixoxoutput="b1-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" data-totalteeneixoyoutput="b4-c12" data-b11="b1b10-c5" data-b11output="b11-c5" data-b11subtotal="b1b10-c5-a-c8" data-b11subtotaloutput="b11-c10" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" data-b11totalteen="b1b10-c3-a-c6" data-b11totalteenoutput="b11-c12" data-b13="b12-c5+b4-c5-menos-b9-c5" data-b13output="b13-c5" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c5" data-totaleixoyoutput="b4-c5" data-subtotaleixox="b2-c5-a-c8" data-subtotaleixoxoutput="b2-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b2-c3-a-c6" data-totalteeneixoxoutput="b2-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c5" data-totaleixoyoutput="b4-c5" data-subtotaleixox="b2-c5-a-c8" data-subtotaleixoxoutput="b2-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b2-c3-a-c6" data-totalteeneixoxoutput="b2-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" data-b13="b12-c5+b4-c5-menos-b9-c5" data-b13output="b13-c5" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c5" data-totaleixoyoutput="b4-c5" data-subtotaleixox="b3-c5-a-c8" data-subtotaleixoxoutput="b3-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b3-c3-a-c6" data-totalteeneixoxoutput="b3-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c5" data-totaleixoyoutput="b4-c5" data-subtotaleixox="b3-c5-a-c8" data-subtotaleixoxoutput="b3-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b3-c3-a-c6" data-totalteeneixoxoutput="b3-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" data-b13="b12-c5+b4-c5-menos-b9-c5" data-b13output="b13-c5" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b4-c5 --border-t --border-r --destaque-padrao">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c5" data-totaleixoyoutput="b9-c5" data-subtotaleixox="b5-c5-a-c8" data-subtotaleixoxoutput="b5-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b5-c3-a-c6" data-totalteeneixoxoutput="b5-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c5" data-totaleixoyoutput="b9-c5" data-subtotaleixox="b5-c5-a-c8" data-subtotaleixoxoutput="b5-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b5-c3-a-c6" data-totalteeneixoxoutput="b5-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c5+b4-c5-menos-b9-c5" data-b13output="b13-c5" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c5" data-totaleixoyoutput="b9-c5" data-subtotaleixox="b6-c5-a-c8" data-subtotaleixoxoutput="b6-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b6-c3-a-c6" data-totalteeneixoxoutput="b6-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c5" data-totaleixoyoutput="b9-c5" data-subtotaleixox="b6-c5-a-c8" data-subtotaleixoxoutput="b6-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b6-c3-a-c6" data-totalteeneixoxoutput="b6-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c5+b4-c5-menos-b9-c5" data-b13output="b13-c5" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c5" data-totaleixoyoutput="b9-c5" data-subtotaleixox="b7-c5-a-c8" data-subtotaleixoxoutput="b7-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b7-c3-a-c6" data-totalteeneixoxoutput="b7-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c5" data-totaleixoyoutput="b9-c5" data-subtotaleixox="b7-c5-a-c8" data-subtotaleixoxoutput="b7-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b7-c3-a-c6" data-totalteeneixoxoutput="b7-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c5+b4-c5-menos-b9-c5" data-b13output="b13-c5" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c5" data-totaleixoyoutput="b9-c5" data-subtotaleixox="b8-c5-a-c8" data-subtotaleixoxoutput="b8-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b8-c3-a-c6" data-totalteeneixoxoutput="b8-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c5" data-totaleixoyoutput="b9-c5" data-subtotaleixox="b8-c5-a-c8" data-subtotaleixoxoutput="b8-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b8-c3-a-c6" data-totalteeneixoxoutput="b8-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c5+b4-c5-menos-b9-c5" data-b13output="b13-c5" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
+                                
                                 <input type=number min=0 readonly class="b9-c5 --border-t --border-r --border-b --destaque-padrao">
 
                             </div>
-                            <div class="ficha__col-de-inputs de-15-a-19-anos-sexo-m grid-dos-bs__col" data-b13=b4-c6-m-b12-c6-m-b9-c6 data-b13output=b13-c6>
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c6" data-totaleixoyoutput="b4-c6" data-subtotaleixox="b1-c5-a-c8" data-subtotaleixoxoutput="b1-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b1-c3-a-c6" data-totalteeneixoxoutput="b1-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12"  class="--border-t --border-r">
+                            <div class="ficha__col-de-inputs de-15-a-19-anos-sexo-m grid-dos-bs__col" data-linhas="ficha__col-de-linhas-b" data-faixaetaria="15-19 anos" data-sexo="M">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c6" data-totaleixoyoutput="b4-c6" data-subtotaleixox="b1-c5-a-c8" data-subtotaleixoxoutput="b1-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b1-c3-a-c6" data-totalteeneixoxoutput="b1-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" data-b11="b1b10-c6" data-b11output="b11-c6" data-b11subtotal="b1b10-c5-a-c8" data-b11subtotaloutput="b11-c10" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" data-b11totalteen="b1b10-c3-a-c6" data-b11totalteenoutput="b11-c12" data-b13="b12-c6+b4-c6-menos-b9-c6" data-b13output="b13-c6" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c6" data-totaleixoyoutput="b4-c6" data-subtotaleixox="b2-c5-a-c8" data-subtotaleixoxoutput="b2-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b2-c3-a-c6" data-totalteeneixoxoutput="b2-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c6" data-totaleixoyoutput="b4-c6" data-subtotaleixox="b2-c5-a-c8" data-subtotaleixoxoutput="b2-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b2-c3-a-c6" data-totalteeneixoxoutput="b2-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" data-b13="b12-c6+b4-c6-menos-b9-c6" data-b13output="b13-c6" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c6" data-totaleixoyoutput="b4-c6" data-subtotaleixox="b3-c5-a-c8" data-subtotaleixoxoutput="b3-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b3-c3-a-c6" data-totalteeneixoxoutput="b3-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c6" data-totaleixoyoutput="b4-c6" data-subtotaleixox="b3-c5-a-c8" data-subtotaleixoxoutput="b3-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-totalteeneixox="b3-c3-a-c6" data-totalteeneixoxoutput="b3-c12" data-totalteeneixoy="b1b2b3-c3-a-c6" data-totalteeneixoyoutput="b4-c12" data-b13="b12-c6+b4-c6-menos-b9-c6" data-b13output="b13-c6" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b4-c6 --border-t --border-r --destaque-padrao">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c6" data-totaleixoyoutput="b9-c6" data-subtotaleixox="b5-c5-a-c8" data-subtotaleixoxoutput="b5-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b5-c3-a-c6" data-totalteeneixoxoutput="b5-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c6" data-totaleixoyoutput="b9-c6" data-subtotaleixox="b5-c5-a-c8" data-subtotaleixoxoutput="b5-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b5-c3-a-c6" data-totalteeneixoxoutput="b5-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c6+b4-c6-menos-b9-c6" data-b13output="b13-c6" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c6" data-totaleixoyoutput="b9-c6" data-subtotaleixox="b6-c5-a-c8" data-subtotaleixoxoutput="b6-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b6-c3-a-c6" data-totalteeneixoxoutput="b6-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c6" data-totaleixoyoutput="b9-c6" data-subtotaleixox="b6-c5-a-c8" data-subtotaleixoxoutput="b6-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b6-c3-a-c6" data-totalteeneixoxoutput="b6-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c6+b4-c6-menos-b9-c6" data-b13output="b13-c6" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c6" data-totaleixoyoutput="b9-c6" data-subtotaleixox="b7-c5-a-c8" data-subtotaleixoxoutput="b7-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b7-c3-a-c6" data-totalteeneixoxoutput="b7-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c6" data-totaleixoyoutput="b9-c6" data-subtotaleixox="b7-c5-a-c8" data-subtotaleixoxoutput="b7-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b7-c3-a-c6" data-totalteeneixoxoutput="b7-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c6+b4-c6-menos-b9-c6" data-b13output="b13-c6" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c6" data-totaleixoyoutput="b9-c6" data-subtotaleixox="b8-c5-a-c8" data-subtotaleixoxoutput="b8-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b8-c3-a-c6" data-totalteeneixoxoutput="b8-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c6" data-totaleixoyoutput="b9-c6" data-subtotaleixox="b8-c5-a-c8" data-subtotaleixoxoutput="b8-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-totalteeneixox="b8-c3-a-c6" data-totalteeneixoxoutput="b8-c12" data-totalteeneixoy="b5-a-b8-c3-a-c6" data-totalteeneixoyoutput="b9-c12" data-b13="b12-c6+b4-c6-menos-b9-c6" data-b13output="b13-c6" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
+
                                 <input type=number min=0 readonly class="b9-c6 --border-t --border-r --border-b --destaque-padrao">
                             </div>
-                            <div class="ficha__col-de-inputs de-20-ou-mais-anos-sexo-f grid-dos-bs__col" data-b13=b4-c7-m-b12-c7-m-b9-c7 data-b13output=b13-c7>
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c7" data-totaleixoyoutput="b4-c7" data-subtotaleixox="b1-c5-a-c8" data-subtotaleixoxoutput="b1-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" class="--border-t --border-r">
+                            <div class="ficha__col-de-inputs de-20-ou-mais-anos-sexo-f grid-dos-bs__col" data-linhas="ficha__col-de-linhas-b" data-faixaetaria="20/ &plus; anos" data-sexo="F">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c7" data-totaleixoyoutput="b4-c7" data-subtotaleixox="b1-c5-a-c8" data-subtotaleixoxoutput="b1-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-b11="b1b10-c7" data-b11output="b11-c7" data-b11subtotal="b1b10-c5-a-c8" data-b11subtotaloutput="b11-c10" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" data-b13="b12-c7+b4-c7-menos-b9-c7" data-b13output="b13-c7" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c7" data-totaleixoyoutput="b4-c7" data-subtotaleixox="b2-c5-a-c8" data-subtotaleixoxoutput="b2-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c7" data-totaleixoyoutput="b4-c7" data-subtotaleixox="b2-c5-a-c8" data-subtotaleixoxoutput="b2-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-b13="b12-c7+b4-c7-menos-b9-c7" data-b13output="b13-c7" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
                               
-                                 <input type=number min=0 data-totaleixoy="b1b2b3-c7" data-totaleixoyoutput="b4-c7" data-subtotaleixox="b3-c5-a-c8" data-subtotaleixoxoutput="b3-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" class="--border-t --border-r">
+                                 <input type=number min=0 data-totaleixoy="b1b2b3-c7" data-totaleixoyoutput="b4-c7" data-subtotaleixox="b3-c5-a-c8" data-subtotaleixoxoutput="b3-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-b13="b12-c7+b4-c7-menos-b9-c7" data-b13output="b13-c7" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b4-c7 --border-t --border-r --destaque-padrao">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c7" data-totaleixoyoutput="b9-c7" data-subtotaleixox="b5-c5-a-c8" data-subtotaleixoxoutput="b5-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c7" data-totaleixoyoutput="b9-c7" data-subtotaleixox="b5-c5-a-c8" data-subtotaleixoxoutput="b5-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c7+b4-c7-menos-b9-c7" data-b13output="b13-c7" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c7" data-totaleixoyoutput="b9-c7" data-subtotaleixox="b6-c5-a-c8" data-subtotaleixoxoutput="b6-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c7" data-totaleixoyoutput="b9-c7" data-subtotaleixox="b6-c5-a-c8" data-subtotaleixoxoutput="b6-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c7+b4-c7-menos-b9-c7" data-b13output="b13-c7" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
                               
-                                 <input type=number min=0 data-totaleixoy="b5-a-b8-c7" data-totaleixoyoutput="b9-c7" data-subtotaleixox="b7-c5-a-c8" data-subtotaleixoxoutput="b7-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r">
+                                 <input type=number min=0 data-totaleixoy="b5-a-b8-c7" data-totaleixoyoutput="b9-c7" data-subtotaleixox="b7-c5-a-c8" data-subtotaleixoxoutput="b7-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c7+b4-c7-menos-b9-c7" data-b13output="b13-c7" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
-                                 <input type=number min=0 data-totaleixoy="b5-a-b8-c7" data-totaleixoyoutput="b9-c7" data-subtotaleixox="b8-c5-a-c8" data-subtotaleixoxoutput="b8-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r">
+                                 <input type=number min=0 data-totaleixoy="b5-a-b8-c7" data-totaleixoyoutput="b9-c7" data-subtotaleixox="b8-c5-a-c8" data-subtotaleixoxoutput="b8-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c7+b4-c7-menos-b9-c7" data-b13output="b13-c7" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b9-c7 --border-t --border-r --border-b --destaque-padrao">
                             </div>
-                            <div class="ficha__col-de-inputs de-20-ou-mais-anos-sexo-m grid-dos-bs__col" data-b13=b4-c8-m-b12-c8-m-b9-c8 data-b13output=b13-c8>
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c8" data-totaleixoyoutput="b4-c8" data-subtotaleixox="b1-c5-a-c8" data-subtotaleixoxoutput="b1-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" class="--border-t --border-r">
+                            <div class="ficha__col-de-inputs de-20-ou-mais-anos-sexo-m grid-dos-bs__col" data-linhas="ficha__col-de-linhas-b" data-faixaetaria="20/ &plus; anos" data-sexo="M">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c8" data-totaleixoyoutput="b4-c8" data-subtotaleixox="b1-c5-a-c8" data-subtotaleixoxoutput="b1-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b1-c1-a-c8" data-totalgeraleixoxoutput="b1-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-b11="b1b10-c8" data-b11output="b11-c8" data-b11subtotal="b1b10-c5-a-c8" data-b11subtotaloutput="b11-c10" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" data-b13="b12-c8+b4-c8-menos-b9-c8" data-b13output="b13-c8" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c8" data-totaleixoyoutput="b4-c8" data-subtotaleixox="b2-c5-a-c8" data-subtotaleixoxoutput="b2-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c8" data-totaleixoyoutput="b4-c8" data-subtotaleixox="b2-c5-a-c8" data-subtotaleixoxoutput="b2-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b2-c1-a-c8" data-totalgeraleixoxoutput="b2-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-b13="b12-c8+b4-c8-menos-b9-c8" data-b13output="b13-c8" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
                               
-                                <input type=number min=0 data-totaleixoy="b1b2b3-c8" data-totaleixoyoutput="b4-c8" data-subtotaleixox="b3-c5-a-c8" data-subtotaleixoxoutput="b3-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b1b2b3-c8" data-totaleixoyoutput="b4-c8" data-subtotaleixox="b3-c5-a-c8" data-subtotaleixoxoutput="b3-c10" data-subtotaleixoy="b1b2b3-c5-a-c8" data-subtotaleixoyoutput="b4-c10" data-totalgeraleixox="b3-c1-a-c8" data-totalgeraleixoxoutput="b3-c11" data-totalgeraleixoy="b1b2b3-c1-a-c8" data-totalgeraleixoyoutput="b4-c11" data-b13="b12-c8+b4-c8-menos-b9-c8" data-b13output="b13-c8" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b4-c8 --border-t --border-r --destaque-padrao">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c8" data-totaleixoyoutput="b9-c8" data-subtotaleixox="b5-c5-a-c8" data-subtotaleixoxoutput="b5-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c8" data-totaleixoyoutput="b9-c8" data-subtotaleixox="b5-c5-a-c8" data-subtotaleixoxoutput="b5-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b5-c1-a-c8" data-totalgeraleixoxoutput="b5-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c8+b4-c8-menos-b9-c8" data-b13output="b13-c8" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c8" data-totaleixoyoutput="b9-c8" data-subtotaleixox="b6-c5-a-c8" data-subtotaleixoxoutput="b6-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c8" data-totaleixoyoutput="b9-c8" data-subtotaleixox="b6-c5-a-c8" data-subtotaleixoxoutput="b6-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b6-c1-a-c8" data-totalgeraleixoxoutput="b6-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c8+b4-c8-menos-b9-c8" data-b13output="b13-c8" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
                               
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c8" data-totaleixoyoutput="b9-c8" data-subtotaleixox="b7-c5-a-c8" data-subtotaleixoxoutput="b7-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c8" data-totaleixoyoutput="b9-c8" data-subtotaleixox="b7-c5-a-c8" data-subtotaleixoxoutput="b7-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b7-c1-a-c8" data-totalgeraleixoxoutput="b7-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c8+b4-c8-menos-b9-c8" data-b13output="b13-c8" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
 
-                                <input type=number min=0 data-totaleixoy="b5-a-b8-c8" data-totaleixoyoutput="b9-c8" data-subtotaleixox="b8-c5-a-c8" data-subtotaleixoxoutput="b8-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-totaleixoy="b5-a-b8-c8" data-totaleixoyoutput="b9-c8" data-subtotaleixox="b8-c5-a-c8" data-subtotaleixoxoutput="b8-c10" data-subtotaleixoy="b5-a-b8-c5-a-c8" data-subtotaleixoyoutput="b9-c10" data-totalgeraleixox="b8-c1-a-c8" data-totalgeraleixoxoutput="b8-c11" data-totalgeraleixoy="b5-a-b8-c1-a-c8" data-totalgeraleixoyoutput="b9-c11" data-b13="b12-c8+b4-c8-menos-b9-c8" data-b13output="b13-c8" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="--border-t --border-r">
                                 <input type=number min=0 readonly class="b9-c8 --border-t --border-r --border-b --destaque-padrao">
                             </div>
                         </div>
@@ -586,7 +594,7 @@
 
                     <div class="grid-dos-bs-2 ficha__grid-770-150-50">
                         <div class=ficha__grid-template-col-10>
-                            <div class="ficha__col-de-linhas grid-dos-bs-2__col">
+                            <div class="ficha__col-de-linhas ficha__col-de-linhas-b2 grid-dos-bs-2__col">
                                 <div class="--display-flex-xy-center --border-t --border-r --border-l">
                                     <span>B.10)</span>
                                 </div>
@@ -600,7 +608,7 @@
                                     <span>B.13)</span>
                                 </div>                              
                             </div>
-                            <div class="ficha__col-de-indicadores grid-dos-bs-2__col">
+                            <div class="ficha__col-de-indicadores ficha__col-de-indicadores--pos-sticky grid-dos-bs-2__col">
                                 <div class="ficha__container-de-indicador --display-flex-y-center --border-t">
                                     <span>
                                         Nº cumulativo de pacientes que iniciou TARV<br>
@@ -637,74 +645,74 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="ficha__col-de-inputs de-0-a-4-anos grid-dos-bs-2__col">
-                                <input type=number min=0 data-subtotaleixox="b10-c1-a-c4" data-subtotaleixoxoutput="b10-c9" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" class="--border-t --border-r --border-l">
+                            <div class="ficha__col-de-inputs de-0-a-4-anos grid-dos-bs-2__col" data-linhas="ficha__col-de-linhas-b2" data-faixaetaria="0-4 anos" data-sexo="&minus;">
+                                <input type=number min=0 data-subtotaleixox="b10-c1-a-c4" data-subtotaleixoxoutput="b10-c9" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" data-b11="b1b10-c1" data-b11output="b11-c1" data-b11subtotal="b1b10-c1-a-c4" data-b11subtotaloutput="b11-c9" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" class="--border-t --border-r --border-l">
                                 
                                 <input type=number min=0 readonly class="b11-c1 --border-t --border-r --border-l">
 
-                                <input type=number min=0 data-subtotaleixox="b12-c1-a-c4" data-subtotaleixoxoutput="b12-c9" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" class="--border-t --border-r --border-l">
+                                <input type=number min=0 data-subtotaleixox="b12-c1-a-c4" data-subtotaleixoxoutput="b12-c9" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" data-b13="b12-c1+b4-c1-menos-b9-c1" data-b13output="b13-c1" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="b12-c1 --border-t --border-r --border-l">
 
                                 <input type=number min=0 readonly class="b13-c1 --border">
                             </div>
-                            <div class="ficha__col-de-inputs de-5-a-9-anos grid-dos-bs-2__col">
-                                <input type=number min=0 data-subtotaleixox="b10-c1-a-c4" data-subtotaleixoxoutput="b10-c9" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" class="--border-t --border-r">
+                            <div class="ficha__col-de-inputs de-5-a-9-anos grid-dos-bs-2__col" data-linhas="ficha__col-de-linhas-b2" data-faixaetaria="5-9 anos" data-sexo="&minus;">
+                                <input type=number min=0 data-subtotaleixox="b10-c1-a-c4" data-subtotaleixoxoutput="b10-c9" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" data-b11="b1b10-c2" data-b11output="b11-c2" data-b11subtotal="b1b10-c1-a-c4" data-b11subtotaloutput="b11-c9" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b11-c2 --border-t --border-r">
 
-                                <input type=number min=0 data-subtotaleixox="b12-c1-a-c4" data-subtotaleixoxoutput="b12-c9" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-subtotaleixox="b12-c1-a-c4" data-subtotaleixoxoutput="b12-c9" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" data-b13="b12-c2+b4-c2-menos-b9-c2" data-b13output="b13-c2" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="b12-c2 --border-t --border-r">
 
                                 <input type=number min=0 readonly class="b13-c2 --border-t --border-r --border-b">
                             </div>
-                            <div class="ficha__col-de-inputs de-10-a-14-anos-sexo-f grid-dos-bs-2__col ">
-                                <input type=number min=0 data-subtotaleixox="b10-c1-a-c4" data-subtotaleixoxoutput="b10-c9" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" data-totalteeneixox="b10-c3-a-c6" data-totalteeneixoxoutput="b10-c12" class="--border-t --border-r">
+                            <div class="ficha__col-de-inputs de-10-a-14-anos-sexo-f grid-dos-bs-2__col" data-linhas="ficha__col-de-linhas-b2" data-faixaetaria="10-14 anos" data-sexo="F">
+                                <input type=number min=0 data-subtotaleixox="b10-c1-a-c4" data-subtotaleixoxoutput="b10-c9" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" data-totalteeneixox="b10-c3-a-c6" data-totalteeneixoxoutput="b10-c12" data-b11="b1b10-c3" data-b11output="b11-c3" data-b11subtotal="b1b10-c1-a-c4" data-b11subtotaloutput="b11-c9" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" data-b11totalteen="b1b10-c3-a-c6" data-b11totalteenoutput="b11-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b11-c3 --border-t --border-r">
 
-                                <input type=number min=0 data-subtotaleixox="b12-c1-a-c4" data-subtotaleixoxoutput="b12-c9" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" data-totalteeneixox="b12-c3-a-c6" data-totalteeneixoxoutput="b12-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-subtotaleixox="b12-c1-a-c4" data-subtotaleixoxoutput="b12-c9" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" data-totalteeneixox="b12-c3-a-c6" data-totalteeneixoxoutput="b12-c12" data-b13="b12-c3+b4-c3-menos-b9-c3" data-b13output="b13-c3" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="b12-c3 --border-t --border-r">
 
                                 <input type=number min=0 readonly class="b13-c3 --border-t --border-r --border-b">
                             </div>
-                            <div class="ficha__col-de-inputs de-10-a-14-anos-sexo-m grid-dos-bs-2__col">
-                                <input type=number min=0 data-subtotaleixox="b10-c1-a-c4" data-subtotaleixoxoutput="b10-c9" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" data-totalteeneixox="b10-c3-a-c6" data-totalteeneixoxoutput="b10-c12" class="--border-t --border-r">
+                            <div class="ficha__col-de-inputs de-10-a-14-anos-sexo-m grid-dos-bs-2__col" data-linhas="ficha__col-de-linhas-b2" data-faixaetaria="10-14 anos" data-sexo="M">
+                                <input type=number min=0 data-subtotaleixox="b10-c1-a-c4" data-subtotaleixoxoutput="b10-c9" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" data-totalteeneixox="b10-c3-a-c6" data-totalteeneixoxoutput="b10-c12" data-b11="b1b10-c4" data-b11output="b11-c4" data-b11subtotal="b1b10-c1-a-c4" data-b11subtotaloutput="b11-c9" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" data-b11totalteen="b1b10-c3-a-c6" data-b11totalteenoutput="b11-c12" data-b13="b12-c4+b4-c4-menos-b9-c4" data-b13output="b13-c4" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b11-c4 --border-t --border-r">
 
-                                 <input type=number min=0 data-subtotaleixox="b12-c1-a-c4" data-subtotaleixoxoutput="b12-c9" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" data-totalteeneixox="b12-c3-a-c6" data-totalteeneixoxoutput="b12-c12" class="--border-t --border-r">
+                                 <input type=number min=0 data-subtotaleixox="b12-c1-a-c4" data-subtotaleixoxoutput="b12-c9" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" data-totalteeneixox="b12-c3-a-c6" data-totalteeneixoxoutput="b12-c12" data-b13="b12-c4+b4-c4-menos-b9-c4" data-b13output="b13-c4" data-b13subtotal="b12-c9+b4-c9-menos-b9-c9" data-b13subtotaloutput="b13-c9" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="b12-c4 --border-t --border-r">
 
                                 <input type=number min=0 readonly class="b13-c4 --border-t --border-r --border-b">
                             </div>
-                            <div class="ficha__col-de-inputs de-15-a-19-anos-sexo-f grid-dos-bs-2__col">
-                                <input type=number min=0 data-subtotaleixox="b10-c5-a-c8" data-subtotaleixoxoutput="b10-c10" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" data-totalteeneixox="b10-c3-a-c6" data-totalteeneixoxoutput="b10-c12" class="--border-t --border-r">
+                            <div class="ficha__col-de-inputs de-15-a-19-anos-sexo-f grid-dos-bs-2__col" data-linhas="ficha__col-de-linhas-b2" data-faixaetaria="15-19 anos" data-sexo="F">
+                                <input type=number min=0 data-subtotaleixox="b10-c5-a-c8" data-subtotaleixoxoutput="b10-c10" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" data-totalteeneixox="b10-c3-a-c6" data-totalteeneixoxoutput="b10-c12" data-b11="b1b10-c5" data-b11output="b11-c5" data-b11subtotal="b1b10-c5-a-c8" data-b11subtotaloutput="b11-c10" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" data-b11totalteen="b1b10-c3-a-c6" data-b11totalteenoutput="b11-c12" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b11-c5 --border-t --border-r">
 
-                                <input type=number min=0 data-subtotaleixox="b12-c5-a-c8" data-subtotaleixoxoutput="b12-c10" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" data-totalteeneixox="b12-c3-a-c6" data-totalteeneixoxoutput="b12-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-subtotaleixox="b12-c5-a-c8" data-subtotaleixoxoutput="b12-c10" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" data-totalteeneixox="b12-c3-a-c6" data-totalteeneixoxoutput="b12-c12" data-b13="b12-c5+b4-c5-menos-b9-c5" data-b13output="b13-c5" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="b12-c5 --border-t --border-r">
 
                                 <input type=number min=0 readonly class="b13-c5 --border-t --border-r --border-b">
                             </div>
-                            <div class="ficha__col-de-inputs de-15-a-19-anos-sexo-m grid-dos-bs-2__col">
-                                <input type=number min=0 data-subtotaleixox="b10-c5-a-c8" data-subtotaleixoxoutput="b10-c10" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" data-totalteeneixox="b10-c3-a-c6" data-totalteeneixoxoutput="b10-c12" class="--border-t --border-r">
+                            <div class="ficha__col-de-inputs de-15-a-19-anos-sexo-m grid-dos-bs-2__col" data-linhas="ficha__col-de-linhas-b2" data-faixaetaria="15-19 anos" data-sexo="M">
+                                <input type=number min=0 data-subtotaleixox="b10-c5-a-c8" data-subtotaleixoxoutput="b10-c10" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" data-totalteeneixox="b10-c3-a-c6" data-totalteeneixoxoutput="b10-c12" data-b11="b1b10-c6" data-b11output="b11-c6" data-b11subtotal="b1b10-c5-a-c8" data-b11subtotaloutput="b11-c10" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" data-b11totalteen="b1b10-c3-a-c6" data-b11totalteenoutput="b11-c12" class="--border-t --border-r">
                                 <input type=number min=0 readonly class="b11-c6 --border-t --border-r">
 
-                                <input type=number min=0 data-subtotaleixox="b12-c5-a-c8" data-subtotaleixoxoutput="b12-c10" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" data-totalteeneixox="b12-c3-a-c6" data-totalteeneixoxoutput="b12-c12" class="--border-t --border-r">
+                                <input type=number min=0 data-subtotaleixox="b12-c5-a-c8" data-subtotaleixoxoutput="b12-c10" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" data-totalteeneixox="b12-c3-a-c6" data-totalteeneixoxoutput="b12-c12" data-b13="b12-c6+b4-c6-menos-b9-c6" data-b13output="b13-c6" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" data-b13totalteen="b12-c12+b4-c12-menos-b9-c12" data-b13totalteenoutput="b13-c12" class="b12-c6 --border-t --border-r">
 
                                 <input type=number min=0 readonly class="b13-c6 --border-t --border-r --border-b">
                             </div>
-                            <div class="ficha__col-de-inputs de-20-ou-mais-anos-sexo-f grid-dos-bs-2__col">
-                                <input type=number min=0 data-subtotaleixox="b10-c5-a-c8" data-subtotaleixoxoutput="b10-c10" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" class="--border-t --border-r">
+                            <div class="ficha__col-de-inputs de-20-ou-mais-anos-sexo-f grid-dos-bs-2__col" data-linhas="ficha__col-de-linhas-b2" data-faixaetaria="20/ &plus; anos" data-sexo="F">
+                                <input type=number min=0 data-subtotaleixox="b10-c5-a-c8" data-subtotaleixoxoutput="b10-c10" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" data-b11="b1b10-c7" data-b11output="b11-c7" data-b11subtotal="b1b10-c5-a-c8" data-b11subtotaloutput="b11-c10" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b11-c7 --border-t --border-r">
 
-                                <input type=number min=0 data-subtotaleixox="b12-c5-a-c8" data-subtotaleixoxoutput="b12-c10" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-subtotaleixox="b12-c5-a-c8" data-subtotaleixoxoutput="b12-c10" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" data-b13="b12-c7+b4-c7-menos-b9-c7" data-b13output="b13-c7" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="b12-c7 --border-t --border-r">
 
                                 <input type=number min=0 readonly class="b13-c7 --border-t --border-r --border-b">
                             </div>
-                            <div class="ficha__col-de-inputs de-20-ou-mais-anos-sexo-m grid-dos-bs-2__col">
-                                <input type=number min=0 data-subtotaleixox="b10-c5-a-c8" data-subtotaleixoxoutput="b10-c10" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" class="--border-t --border-r">
+                            <div class="ficha__col-de-inputs de-20-ou-mais-anos-sexo-m grid-dos-bs-2__col" data-linhas="ficha__col-de-linhas-b2" data-faixaetaria="20/ &plus; anos" data-sexo="M">
+                                <input type=number min=0 data-subtotaleixox="b10-c5-a-c8" data-subtotaleixoxoutput="b10-c10" data-totalgeraleixox="b10-c1-a-c8" data-totalgeraleixoxoutput="b10-c11" data-b11="b1b10-c8" data-b11output="b11-c8" data-b11subtotal="b1b10-c5-a-c8" data-b11subtotaloutput="b11-c10" data-b11totalgeral="b1b10-c1-a-c8" data-b11totalgeraloutput="b11-c11" class="--border-t --border-r">
 
                                 <input type=number min=0 readonly class="b11-c8 --border-t --border-r">
 
-                                <input type=number min=0 data-subtotaleixox="b12-c5-a-c8" data-subtotaleixoxoutput="b12-c10" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" class="--border-t --border-r">
+                                <input type=number min=0 data-subtotaleixox="b12-c5-a-c8" data-subtotaleixoxoutput="b12-c10" data-totalgeraleixox="b12-c1-a-c8" data-totalgeraleixoxoutput="b12-c11" data-b13="b12-c8+b4-c8-menos-b9-c8" data-b13output="b13-c8" data-b13subtotal="b12-c10+b4-c10-menos-b9-c10" data-b13subtotaloutput="b13-c10" data-b13totalgeral="b12-c11+b4-c11-menos-b9-c11" data-b13totalgeraloutput="b13-c11" class="b12-c8 --border-t --border-r">
 
                                 <input type=number min=0  readonly class="b13-c8 --border-t --border-r --border-b">
                             </div>
@@ -713,19 +721,19 @@
                             <div class="ficha__col-de-inputs total-0-a-14-anos grid-dos-bs-2__col">
                                 <input type=number min=0 readonly class="b10-c9 --border-t --border-r --border-l">
                                 <input type=number min=0 readonly class="b11-c9 --border-t --border-r --border-l">
-                                <input type=number min=0 readonly data-b13=b4-c9-m-b12-c9-m-b9-c9 data-b13output=b13-c9 class="b12-c9 --border-t --border-r --border-l" >
-                                <input type=number min=0 readonly class= "b13-c9 --border">
+                                <input type=number min=0 readonly class="b12-c9 --border-t --border-r --border-l" >
+                                <input type=number min=0 readonly class="b13-c9 --border">
                             </div>
                             <div class="ficha__col-de-inputs total-15-ou-mais-anos grid-dos-bs-2__col">
                                 <input type=number min=0 readonly class="b10-c10 --border-t --border-r">
                                 <input type=number min=0 readonly class="b11-c10 --border-t --border-r">
-                                <input type=number min=0 readonly data-b13=b4-c10-m-b12-c10-m-b9-c10 data-b13output=b13-c10 class="b12-c10 --border-t --border-r class=b12-c10">
+                                <input type=number min=0 readonly class="b12-c10 --border-t --border-r class=b12-c10">
                                 <input type=number min=0 readonly class="b13-c10 --border-t --border-r --border-b">
                             </div>
                             <div class="ficha__col-de-inputs total-geral grid-dos-bs-2__col">
                                 <input type=number min=0 readonly class="b10-c11 --border-t --border-r" >
                                 <input type=number min=0 readonly class="b11-c11 --border-t --border-r">
-                                <input type=number min=0 readonly data-b13=b4-c11-m-b12-c11-m-b9-c11 data-b13output=b13-c11 class="b12-c11 --border-t --border-r">
+                                <input type=number min=0 readonly class="b12-c11 --border-t --border-r">
                                 <input type=number min=0 readonly class="b13-c11 --border-t --border-r --border-b">
                             </div>
                         </div>
@@ -733,7 +741,7 @@
                             <div class="ficha__col-de-inputs total-adolescentes grid-dos-bs-2__col">
                                 <input type=number min=0 readonly class="b10-c12 --border-t --border-r --border-l">
                                 <input type=number min=0 readonly class="b11-c12 --border-t --border-r --border-l">
-                                <input type=number min=0 readonly data-b13=b4-c12-m-b12-c12-m-b9-c12 data-b13output=b13-c12 class="b12-c12 --border-t --border-r --border-l">
+                                <input type=number min=0 readonly class="b12-c12 --border-t --border-r --border-l">
                                 <input type=number min=0 readonly class="b13-c12 --border">
                             </div>
                         </div>
@@ -744,7 +752,7 @@
                             <span>TOTAL</span>
                         </div>
                         <div class=grid-extra__body>
-                            <div class="ficha__col-de-linhas grid-extra__col">
+                            <div class="ficha__col-de-linhas ficha__col-de-linhas-c grid-extra__col">
                                 <div class="--display-flex-xy-center --border-t --border-r --border-l">
                                     <span>C.1)</span>
                                 </div>
@@ -769,7 +777,7 @@
                                     <span>Dos novos inscritos em cuidados durante o mês (A.2), subgrupo que foi diagnosticado com TB activa</span>
                                 </div>
                             </div>
-                            <div class="ficha__col-de-inputs grid-extra__col-de-inputs grid-extra__col">
+                            <div class="ficha__col-de-inputs grid-extra__col-de-inputs grid-extra__col" data-linhas="ficha__col-de-linhas-c" data-faixaetaria="&minus;" data-sexo="&minus;">
                                 <input type=number min=0 class="grid-extra__input --border-t --border-r --border-l">
                                 <input type=number min=0 class="grid-extra__input --border-t --border-r --border-l">
                                 <input type=number min=0 class="grid-extra__input --border">
@@ -787,7 +795,7 @@
                             </div>
                         </div>
                         <div class=grid-extra__body>
-                            <div class="ficha__col-de-linhas grid-extra__col">
+                            <div class="ficha__col-de-linhas ficha__col-de-linhas-d grid-extra__col">
                                 <div class="--display-flex-xy-center --border-t --border-r --border-l">
                                     <span>D.1)</span>
                                 </div>
@@ -831,12 +839,12 @@
                                 </div>
                             </div>
                             <div class="ficha__col-de-inputs grid-dos-ds__col-de-inputs">
-                                <div class="total-pediatrico grid-extra__col grid-dos-ds__col-de-inputs-total">
+                                <div class="total-pediatrico grid-extra__col grid-dos-ds__col-de-inputs-total" data-linhas="ficha__col-de-linhas-d" data-faixaetaria="0-14 anos" data-sexo="&minus;">
                                     <input type=number min=0 class="grid-extra__input --border-t --border-l">
                                     <input type=number min=0 class="grid-extra__input --border-t --border-l">
                                     <input type=number min=0 class="grid-extra__input --border-t --border-l --border-b">
                                 </div>
-                                <div class="total-adulto grid-extra__col grid-dos-ds__col-de-inputs-total">
+                                <div class="total-adulto grid-extra__col grid-dos-ds__col-de-inputs-total" data-linhas="ficha__col-de-linhas-d" data-faixaetaria="15/ &plus; anos" data-sexo="&minus;">
                                     <input type=number min=0 class="grid-extra__input --border-t --border-r --border-l">
                                     <input type=number min=0 class="grid-extra__input --border-t --border-r --border-l">
                                     <input type=number min=0 class="grid-extra__input --border">
@@ -850,7 +858,7 @@
                             <span>TOTAL</span>
                         </div>
                         <div class=grid-extra__body>
-                            <div class="ficha__col-de-linhas grid-extra__col">
+                            <div class="ficha__col-de-linhas ficha__col-de-linhas-e grid-extra__col">
                                 <div class="--display-flex-xy-center --border-t --border-r --border-l">
                                     <span>E.1)</span>
                                 </div>
@@ -878,7 +886,7 @@
                                     <span>Nº de pacientes que vieram pelo menos, à uma consulta durante o ANO (Notificação anual!)</span>
                                 </div>
                             </div>
-                            <div class="ficha__col-de-inputs grid-extra__col-de-inputs grid-extra__col">
+                            <div class="ficha__col-de-inputs grid-extra__col-de-inputs grid-extra__col" data-linhas="ficha__col-de-linhas-e" data-faixaetaria="&minus;" data-sexo="&minus;">
                                 <input type=number min=0 class="grid-extra__input --border-t --border-r --border-l">
                                 <input type=number min=0 class="grid-extra__input --border-t --border-r --border-l">
                                 <input type=number min=0 class="grid-extra__input --border">
@@ -889,26 +897,26 @@
                 <footer class=ficha__rodape>
                     <div class="ficha__rodape__col">
                         <label for=nome class="ficha__rodape__label">Nome</label>
-                        <input id=nome class="ficha__rodape__input --border-b">
+                        <input id=nome class="ficha__rodape__input input-adicional --border-b">
                     </div>
                     <div class="ficha__rodape__col">
                         <label for=assinatura class="ficha__rodape__label">Nome</label>
-                        <input id=assinatura class="ficha__rodape__input --border-b">
+                        <input id=assinatura class="ficha__rodape__input input-adicional  --border-b">
                     </div>
                     <div class="ficha__rodape__col">
                         <label for=data class="ficha__rodape__label">Data</label>
-                        <input type=date id=data class="ficha__rodape__input --border-b">
+                        <input type=date id=data class="ficha__rodape__input input-adicional --border-b">
                     </div>
                 </footer>
             </div>
 
             <div class="main__container-de-campo-de-nota layout-row">
-                <textarea class="main__campo-de-nota input-adicional" id="comentarios" placeholder="Comentários sobre o resumo... Este campo só será impresso se tiver algum conteúdo." rows=3></textarea>
+                <textarea class="main__campo-de-nota input-adicional input-adicional--font-light" id="comentarios" placeholder="Comentários sobre o resumo... Este campo só será impresso se tiver algum conteúdo." rows=3></textarea>
             </div>
 
             <div class="reference-container">
                 <div class="layout-row reference-row">
-                    <span class="reference-row__label">Indicador:</span> 
+                    <span class="reference-row__label">Linha:</span> 
                     <output class="reference-row__output reference-row__output-indicador --display-flex-xy-center"></output>
 
                     <span class="reference-row__label">Faixa etária:</span> 
@@ -924,7 +932,7 @@
             <div class="dialog-box-default dialog-box-alerta-sobre-aqd">
                 <h3 class="dialog-box-default__titulo">Totalizador de Resumo Mensal de HIV/SIDA</h3>
                 <p class="dialog-box-default__p">
-                    A utilização do totalizador é, de facto, uma garantia de um resumo correctamente totalizado, porém, isso, simplesmente, não define a qualidade do resumo. Você é o único responsável pela veracidade, lógica e concordância dos dados preenchidos e, portanto, pela qualidade do resumo. O totalizador só se limita a calcular os totais baseando-se, exactamente, nos dados que você fornece.
+                    A utilização do totalizador é, de facto, uma garantia de um resumo correctamente totalizado, porém, isso simplesmente, não define a qualidade do resumo. Você é o único responsável pela veracidade, lógica e concordância dos dados preenchidos e, portanto, pela qualidade do resumo. O totalizador só se limita a calcular os totais baseando-se exactamente nos dados que você fornece.
                 </p>
                 <div class="dialog-box-default__btn-container">
                     <button class="dialog-box-default__btn dialog-box-aqd__btn">Entendi</button>
@@ -942,8 +950,9 @@
             </div>
 
             <div class="dialog-box-ir-para --display-flex-y-center">
-                <input type=number min=1 class=dialog-box-ir-para__input-linha max=63 placeholder="Ir para a linha (número da linha)">
-                <button class=dialog-box-ir-para__btn title=Fechar>×</button>
+                <input type=text class=dialog-box-ir-para__input-linha max=63 placeholder="Referência da linha (ex.: B.10)">
+                <button class="dialog-box-ir-para__btn-ir">Ir</button>
+                <button class=dialog-box-ir-para__btn-fechar title=Fechar>×</button>
             </div>
             <div class="dialog-box-esvaziar-ficha">
                 <h3 class="dialog-box-esvaziar-ficha__titulo --fw-700">Esvaziar ficha</h3>
@@ -962,20 +971,30 @@
                 <h4 class="dialog-box-esvaziar-ficha__titulo --fw-700">Dados adicionais</h4>
                 <ul class=dialog-box-esvaziar-ficha__ul-dados-adicionais>
                     <li>
-                        <input type=checkbox checked id="checkbox-us" data-inputadicionalid=nome-da-us>
-                        <label for=checkbox-us>Nome da US</label>
+                        <input type=checkbox checked id="checkbox-prov" data-inputadicionalid=provincia>
+                        <label for=checkbox-prov>Província</label>
+                    <li>
+                        <input type=checkbox checked id="checkbox-distrito" data-inputadicionalid=distrito>
+                        <label for=checkbox-distrito>Distrito</label>
+                    <li>
+                        <input type=checkbox checked id="checkbox-us" data-inputadicionalid=us>
+                        <label for=checkbox-us>Unidade Sanitária</label>
                     <li>
                         <input type=checkbox id=checkbox-mes checked data-inputadicionalid=mes>
                         <label for=checkbox-mes>Mês</label>
                     <li>
+                        <input type=checkbox id=checkbox-ano checked data-inputadicionalid=ano>
+                        <label for=checkbox-ano>Ano</label>
+                    <li>
+                        <input type=checkbox checked id="checkbox-nid" data-inputadicionalid=nid>
+                        <label for=checkbox-nid>NID da Unidade Sanitária</label>
+                    <li>
+                        <input type=checkbox id=checkbox-nome checked data-inputadicionalid=nome>
+                        <label for=checkbox-nome>Nome</label>
+                    <li>
                         <input type=checkbox id=checkbox-assinatura checked data-inputadicionalid=assinatura>
                         <label for=checkbox-assinatura>
-                            Nome do Responsável pelo preenchimento
-                        </label>
-                    <li>
-                        <input type=checkbox id=checkbox-categoria checked data-inputadicionalid=categoria>
-                        <label for=checkbox-categoria>
-                            Categoria
+                            Nome (Assinatura)
                         </label>
                     <li>
                         <input type=checkbox id=checkbox-data checked data-inputadicionalid=data>
@@ -1016,10 +1035,10 @@
                 <ul class="artigo__lista artigo__ul">
                     <li>Um telemóvel ou computador com acesso à internet.</li>
                     <li>Ter colhido os dados de todos os indicadores da ficha nas fontes primárias (livro(s) de registo) da sua Unidade Sanitária.</li>
-                    <li>E por fim, preencher os dados nas células correspondentes quanto ao indicador e variáveis (sexo e faixa etária), e consequentemente os respectivos totais são, correcta e automaticamente, calculados em tempo real.</li>
+                    <li>E por fim, preencher os dados nas células correspondentes quanto ao indicador e variáveis (sexo e faixa etária), e consequentemente os respectivos totais são, em tempo real, correcta e automaticamente calculados.</li>
                 </ul>
 
-                <p class="artigo__p--destaque">A utilização do totalizador é, de facto, uma garantia de um resumo correctamente totalizado, porém, isso, por si só, não define a qualidade do resumo. Você é o único responsável pela veracidade, lógica e concordância dos dados preenchidos e, portanto, pela qualidade do resumo. O totalizador só se limita a calcular os totais baseando-se, exactamente, nos dados que você fornece.</p>
+                <p class="artigo__p--destaque">A utilização do totalizador é, de facto, uma garantia de um resumo correctamente totalizado, porém, isso simplesmente, não define a qualidade do resumo. Você é o único responsável pela veracidade, lógica e concordância dos dados preenchidos e, portanto, pela qualidade do resumo. O totalizador só se limita a calcular os totais baseando-se exactamente nos dados que você fornece.</p>
 
                 <h3 class="artigo__titulo artigo__titulo-nivel-2">Qual é o destino dos dados que eu insiro?</h3>
 
@@ -1040,8 +1059,7 @@
                     
                 <ul class="artigo__lista artigo__ul">
                     <li>Não alerta sobre discrepância de dados, portanto, a análise da qualidade e lógica do resumo é inteiramente dependente do usuário;</li>
-                    <li>Disponibilidade remota (é necessário um telemóvel ou computador com acesso à internet para ser acessado);</li>
-                    <li>Pode necessitar de custos monetários (mínimos) para sua impressão.</li>
+                    <li>Disponibilidade remota (é necessário um telemóvel ou computador com acesso à internet para ser acessado).</li>
                 </ul>
                 <button class="artigo__btn-fechar artigo-sobre__btn-fechar" title="Fechar">&times;</button>
             </article>
@@ -1055,18 +1073,18 @@
                 </details>
                 <details>
                     <summary >Ir para a linha...</summary>
-                    <p>Abre um campo, no qual pode digitar um número de linha entre 1 à 53 e, uma vez digitado o número, a página rola até a linha correspondente ao número.</p>
+                    <p>Abre um campo no qual pode digitar um número de linha, no formato <b>LETRApontoNÚMERO</b> (ex.: <b>B.10</b>) e, uma vez digitado o número, a página rola até a linha correspondente ao número.</p>
                 </details>
                 <details>
                     <summary>Esvaziar ficha</summary>
                     <p>Comando para limpar as células da ficha após a confirmação da acção na caixa de diálogo que abre.</p>
                     
-                    <p>Também permite esvaziar campos adicionais (US, Mês, Nome, Categoria, etc.) de forma seletiva. Para tal, na caixa de diálogo de confirmação, as "checkboxes" dos dados adicionais são, por padrão, marcadas com o sinal de "✔", indicando, deste modo, que o conteúdo contido nos respectivos campos será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
+                    <p>Permite também esvaziar campos adicionais (Província, Distrito, US, etc.) de forma seletiva. Para tal, na caixa de diálogo de confirmação, as "checkboxes" dos dados adicionais são, por padrão, marcadas com o sinal de "✔", indicando, deste modo, que o conteúdo contido nos respectivos campos será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
 
                     <figure class="details__moldura details-esvaziar-ficha__moldura">
                         <img src="imagens/caixa-de-dialogo-para-esvaziamento-da-ficha.png" alt="Caixa de diálogo de esvaziamento da ficha" class="artigo__img"/>
 
-                        <figcaption class="details__moldura__legenda"><b>Legenda:</b> Caixa de diálogo de esvaziamento da ficha. Neste caso, o campo de <b>Nome da US</b> é único que seria preservado (por ter sua checkbox desmarcada). Todos os outros cujas "checkboxes" estão marcadas, teriam seus campos esvaziados.</figcaption>
+                        <figcaption class="details__moldura__legenda"><b>Legenda:</b> Caixa de diálogo de esvaziamento da ficha. Neste caso, os campos de <b>Provínica, Distrito e Unidade Sanitária</b> seriam preservados (por ter suas checkboxes desmarcadas). Todos os outros cujas "checkboxes" estão marcadas, teriam seus campos esvaziados.</figcaption>
                     </figure>
 
                 </details>
@@ -1151,13 +1169,13 @@
                             <a href=https://quinamin.github.io/requisicao-balancete/index.html target=_blank class="footer__nav-link">Requisição/Balancete</a>
                     </ul>
                 </nav>
-                <p class="footer__info footer__info-created-by">
+                <p class="footer__p footer__p-created-by">
                     Criado com atenção e 💙 por <a href=https://quinamine.github.io/aderito-felix-quinamine/index.html title="Acessar biografia &raquo;">Adérito Félix Quinamine</a>
                     | © <span class="footer__current-year"></span> - Totalizador de Resumo Mensal de HIV/SIDA
                 </p>
-                <a href=#html__body class=footer__link-back-to-top>Voltar ao topo</a>
+                <a href=#root class=footer__link-back-to-top>Voltar ao topo</a>
             </div>
-            <p class="footer__info footer__info-available-since">Disponível desde  . Última actualização: Abril/2024.</p>
+            <p class="footer__p footer__p-available-since">Disponível desde 22/07/2022. Última actualização: Abril/2024.</p>
         </footer>
         <div class="desfoque"></div>
     </body>

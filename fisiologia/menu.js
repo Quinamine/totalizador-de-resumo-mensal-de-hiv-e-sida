@@ -17,7 +17,7 @@ const menu = {
         return {
             dialogBox: document.querySelector(".dialog-box-ir-para"),
             inputNumLinha: document.querySelector(".dialog-box-ir-para__input-linha"),
-            numerosDeLinha: document.querySelectorAll(".ficha__num-de-linha"),
+            numerosDeLinha: document.querySelectorAll(".ficha__col-de-linhas span"),
 
             abrirDialogBox() { 
                 menu.irParaLinha().dialogBox.classList.add("--open");
@@ -31,35 +31,36 @@ const menu = {
             },
 
             goToLn(numLinha) {
-                if(numLinha < 1 || numLinha > 53) {
-                    const lnNoFound = "Nenhuma linha correspondente encontrada. Certifique-se de que o número digitado esteja no intervalo de 1 à 53."
-                    alertarSobre(lnNoFound);
-                    this.removeLnHighlight();
+                this.removeLnHighlight(); 
+                numLinha = numLinha.toUpperCase();
+                let nL = this.numerosDeLinha;
 
-                } else {
-                    numLinha = Number(numLinha) - 1;
-
-                    this.highlightLnFound(this.numerosDeLinha[numLinha]);
-
-                    if(window.innerWidth > 1304) {
-                        numLinha -= 3;
-                     }
-                   
-                    numLinha > 3 ? 
-                        this.numerosDeLinha[numLinha].scrollIntoView() 
-                        : document.body.scrollIntoView();
-                    
+                let numLinhaMatches = false;
+                for(let i = 0; i < nL.length; i++) {
+                    if(nL[i].textContent === numLinha || 
+                        nL[i].textContent === `${numLinha})`) {
+                            numLinhaMatches = true;
+                            let newIndex = i;
+                            if(window.innerWidth > 998) newIndex -= 2;
+                            i > 2 ? nL[newIndex].scrollIntoView() : document.body.scrollIntoView();         
+                            nL[i].parentElement.classList.add("ficha__num-de-linha", "--highlight");
+                    }
+                }  
+              
+                if(!numLinhaMatches) {
+                    const msg = `Sem correspondência. Certifique-se de que a referência digitada tenha o seguinte formato: "LETRApontoNÚMERO" (exemplo: B.10).`;
+                    alertarSobre(msg);
                 }
             },
 
             highlightLnFound(lnFound) {
                 this.removeLnHighlight();
-                lnFound.classList.add("--highlight");
+                lnFound.classList.add("ficha__num-de-linha", "--highlight");
             },
 
             removeLnHighlight() {
                 for(const num of this.numerosDeLinha) {
-                    num.classList.remove("--highlight");
+                    num.parentElement.classList.remove("ficha__num-de-linha", "--highlight");
                 }
             }
         }
@@ -69,7 +70,7 @@ const menu = {
         return {  
             dialogBox: document.querySelector(".dialog-box-esvaziar-ficha"),
             abrirDialogBox() { 
-                const gridInputs  = document.querySelectorAll("[data-totalgeraleixox], [readonly]");
+                const gridInputs  = document.querySelectorAll("[data-totalgeraleixox], [readonly], .grid-extra__input");
 
                 let inputFilled = 0;
                 for(const input of gridInputs) {
@@ -93,7 +94,7 @@ const menu = {
             },
 
             confirmar() {
-                const gridInputs  = document.querySelectorAll("[data-totalgeraleixox], [readonly]");
+                const gridInputs  = document.querySelectorAll("[data-totalgeraleixox], [readonly], .grid-extra__input");
                 const dadosAdicionais__checkboxes = document.querySelectorAll("[data-inputadicionalid]");
        
                 for (let i = 0; i < gridInputs.length; i++) {
@@ -169,14 +170,17 @@ function eventos() {
     const btnAbrirIrPara = document.querySelector(".header__nav__btn-ir-para");
     btnAbrirIrPara.addEventListener("click", menu.irParaLinha().abrirDialogBox);
 
-    const btnFecharIrPara = document.querySelector(".dialog-box-ir-para__btn");
+    const btnFecharIrPara = document.querySelector(".dialog-box-ir-para__btn-fechar");
     btnFecharIrPara.addEventListener("click", menu.irParaLinha().fecharDialogBox);
 
-    const inputNumLinha = document.querySelector(".dialog-box-ir-para__input-linha");
-    inputNumLinha.addEventListener("input", () => {
-        inputNumLinha.value !== "" ? 
-            menu.irParaLinha().goToLn(inputNumLinha.value) 
-            : menu.irParaLinha().removeLnHighlight();
+    const irPara__btnIr = document.querySelector(".dialog-box-ir-para__btn-ir");
+    irPara__btnIr.addEventListener("click", () => { 
+        const inputNumLinha = document.querySelector(".dialog-box-ir-para__input-linha");
+        if(inputNumLinha.value === "") {
+            alertarSobre("Por favor, preencha o campo com a referência da linha para a qual deseja rolar.");
+            inputNumLinha.focus();
+        } else {menu.irParaLinha().goToLn(inputNumLinha.value);}
+         
     });
 
     // Fechar dialog-boxes-default
@@ -236,9 +240,9 @@ function eventos() {
 
     // PARTILHAR 
     const data = {
-        title: "Totalizador de Resumo Mensal de Consultas",
-        text: "O Totalizador de Resumo Mensal de Consultas é um serviço online gratuito, que auxilia na elaboração, como o nome sugere, do resumo mensal de consultas externas, por meio do cálculo automático dos totais, com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de consultas externas actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
-        url: "https://quinamine.github.io/totalizador-de-resumo-mensal-de-consultas/index.html"
+        title: "Totalizador de Resumo Mensal de HIV/SIDA",
+        text: "O Totalizador de Resumo Mensal de HIV/SIDA é um serviço online gratuito, que auxilia na elaboração, como o nome sugere, do resumo mensal de HIV/SIDA, por meio do cálculo automático dos totais, com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de HIV/SIDA actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
+        url: "https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html"
     }
 
     const btnPartilhar = document.querySelector(".header__nav__btn-partilhar");

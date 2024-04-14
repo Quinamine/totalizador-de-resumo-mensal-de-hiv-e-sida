@@ -2,7 +2,7 @@
 
 const backup = {
     saveGridInputs() {
-        const gridInputs = document.querySelectorAll("[data-totalgeraleixox]");
+        const gridInputs = document.querySelectorAll("[data-totalgeraleixox], .grid-extra__input");
 
         for (let i = 0; i < gridInputs.length; i++) {
             
@@ -72,6 +72,58 @@ const totalizador = {
             const totalTeenEixoxoutput = document.querySelector(`.${input.dataset.totalteeneixoxoutput}`);
             totalTeenEixoxoutput.value = this.somar(totalTeenEixox);
         }
+
+        if(input.dataset.b11) {
+            input.classList.add(`${input.dataset.b11}`);
+            const b11 = document.querySelectorAll(`.${input.dataset.b11}`);
+            const b11output = document.querySelector(`.${input.dataset.b11output}`);
+            b11output.value = this.somar(b11);
+        }
+
+        if(input.dataset.b11subtotal) {
+            input.classList.add(`${input.dataset.b11subtotal}`);
+            const b11Subtotal = document.querySelectorAll(`.${input.dataset.b11subtotal}`);
+            const b11SubtotalOutput = document.querySelector(`.${input.dataset.b11subtotaloutput}`);
+            b11SubtotalOutput.value = this.somar(b11Subtotal);
+        }
+
+        if(input.dataset.b11totalgeral) {
+            input.classList.add(`${input.dataset.b11totalgeral}`);
+            const b11TotalGeral = document.querySelectorAll(`.${input.dataset.b11totalgeral}`);
+            const b11TotalGeralOutput = document.querySelector(`.${input.dataset.b11totalgeraloutput}`);
+            b11TotalGeralOutput.value = this.somar(b11TotalGeral);
+        }
+
+        if(input.dataset.b11totalteen) {
+            input.classList.add(`${input.dataset.b11totalteen}`);
+            const b11TotalTeen = document.querySelectorAll(`.${input.dataset.b11totalteen}`);
+            const b11TotalTeenOutput = document.querySelector(`.${input.dataset.b11totalteenoutput}`);
+            b11TotalTeenOutput.value = this.somar(b11TotalTeen);
+        }
+
+
+        if(input.dataset.b13) {
+            let b12maisB4menosB9 = input.dataset.b13;
+            const b13Output = document.querySelector(`.${input.dataset.b13output}`);
+            b13Output.value = this.calcularLinhaB13(b12maisB4menosB9);
+
+            // Calcular Subtotal B13
+            b12maisB4menosB9 = input.dataset.b13subtotal;
+            const b13SubtotalOutput = document.querySelector(`.${input.dataset.b13subtotaloutput}`);
+            b13SubtotalOutput.value = this.calcularLinhaB13(b12maisB4menosB9);
+
+            // Calcular Total Geral B13
+            b12maisB4menosB9 = input.dataset.b13totalgeral;
+            let b13TotalgeralOutput = document.querySelector(`.${input.dataset.b13totalgeraloutput}`);
+            b13TotalgeralOutput.value = this.calcularLinhaB13(b12maisB4menosB9);
+        }
+
+        if(input.dataset.b13totalteen) {
+            // Calcular Total Teen B13
+            let b12maisB4menosB9 = input.dataset.b13totalteen;
+            let b13TotalTeenOutput = document.querySelector(`.${input.dataset.b13totalteenoutput}`);
+            b13TotalTeenOutput.value = this.calcularLinhaB13(b12maisB4menosB9);
+        }
     },
     
     somar(celulasPorTotalizar) {
@@ -80,6 +132,21 @@ const totalizador = {
             soma += Number(c.value);
         }
         return soma;
+    },
+
+    calcularLinhaB13(b12maisB4menosB9) {
+        let b4menosB9 = b12maisB4menosB9.split("+")[1];
+        let b4Class = b4menosB9.split("-menos-")[0];
+        let b9Class = b4menosB9.split("-menos-")[1];
+        let b12Class = b12maisB4menosB9.split("+")[0];
+
+        let b4 = document.querySelector(`.${b4Class}`);
+        let b9 = document.querySelector(`.${b9Class}`);
+        let b12 = document.querySelector(`.${b12Class}`);
+
+        let b13 = Number(b4.value) + Number(b12.value) - Number(b9.value);
+        return b13;
+       
     }
 }
 

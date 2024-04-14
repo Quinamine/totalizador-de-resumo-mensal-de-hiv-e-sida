@@ -11,7 +11,7 @@
     --fullblack: #000000;
     --black--alpha-5: rgba(0, 0, 0, .5);
     --black--alpha-8: rgba(0, 0, 0, .8);
-    --important-text-bgc: #f4f4f4;
+    --cor-de-realce: #dce4f4;
     --gray: #888888;
     --gray--5: #555555;
     --gray--a: #aaaaaa;
@@ -26,7 +26,7 @@
 
     /* Tamanhos */
     --layout-width: 998px;
-    --input-font-size: 12px;
+    --input-font-size: 14px;
     --border-style: 1px solid var(--cor-de-borda);
 }
 
@@ -118,7 +118,7 @@
     margin: 0 auto
 }
 
-@media screen and (max-width: 1304px) {
+@media screen and (max-width: 998px) {
     .layout-row {
         padding-left: 15px;
         padding-right: 15px
@@ -251,11 +251,12 @@
     background-color: inherit;
     font-size: 12px;
     display: inline-block;
-    padding: 12px
+    padding: 12px;
+    color: var(--cor-de-texto);
 }
 
 /* Main */
-@media screen and (max-width: 1304px ) {
+@media screen and (max-width: 998px ) {
     .main {
         max-width:100%;
         overflow: auto;
@@ -279,7 +280,7 @@ input[data-totalgeraleixox]:focus,
     min-height: 79px
 }
  
-@media screen and (max-width: 1304px ) {
+@media screen and (max-width: 998px ) {
     .main__container-de-campo-de-nota{
         padding-left: 0;
         padding-right: 0
@@ -294,7 +295,6 @@ input[data-totalgeraleixox]:focus,
 
 .main__campo-de-nota {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
     line-height: 1.5;
     min-width: 880px;
     padding: 5px;
@@ -368,18 +368,25 @@ input[data-totalgeraleixox]:focus,
     }
 }
 
-.footer__info {
+.footer__p {
     text-align: center;
     line-height: 1.5;
     border-top: 1px dotted var(--gray--a);
 }
 
-.footer__info-created-by {
+.footer__p-created-by {
     width: 100%;
     padding: 15px 0;
 }
 
-.footer__info-available-since {  
+@media screen and (min-width:  1024px) {
+    .footer__p-created-by {
+        border-right: 1px dotted var(--gray--a);
+        border-left: 1px dotted var(--gray--a);
+    }
+}
+
+.footer__p-available-since {  
     padding: 15px 15px 40px 15px;
     color: var(--gray--5);
 }
@@ -414,9 +421,9 @@ input[data-totalgeraleixox]:focus,
 
 .reference-row {
     display: grid;
-    grid-template-columns: 53px 200px 68px 100px 33px 35px;
+    grid-template-columns: 35px 50px 68px 100px 33px 35px;
     align-items: center;
-    min-height: 28px;
+    min-height: 22px;
 }
 
 .reference-row__output {
@@ -435,6 +442,7 @@ input[data-totalgeraleixox]:focus,
     color: var(--yt);
 }
 
+/*
 @media screen and (max-width: 767px) {
     .reference-row {
         grid-template-columns: 200px 75px 20px;
@@ -448,7 +456,7 @@ input[data-totalgeraleixox]:focus,
     .reference-row__label {
         display: none;
     }
-}
+}*/
 
 /* Manipulacao com JS */
 .--realcar-totais {
@@ -458,6 +466,10 @@ input[data-totalgeraleixox]:focus,
 .celula-saturada {
     background-color: var(--cor-de-risco) !important;
     color: var(--yt)
+}
+
+.--font-small {
+    font-size: 12px
 }
 
 /* Artigos comuns */
@@ -578,7 +590,7 @@ input[data-totalgeraleixox]:focus,
 
 .artigo__p--destaque {
     padding: 15px;
-    background: var(--cor-do-rodape);
+    background-color: var(--cor-de-realce);
     border-left: 3px solid var(--cor-de-link);
     font-weight: 700;
     color: #555;
@@ -758,6 +770,7 @@ details mark {
 .btn__output-autoclose-time {
     display: inline-block;
     width: 23px;
+    cursor: pointer;
 }
 
 /* Caixa de diálogo ir para */
@@ -784,13 +797,32 @@ details mark {
     border: 2px solid var(--cor-primaria);
     background-color: var(--gray--d);
     text-align: left;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .dialog-box-ir-para__input-linha:focus {
     border-color: var(--purple);
 }
 
-.dialog-box-ir-para__btn {
+.dialog-box-ir-para__btn-ir {
+    font-weight: bold;
+    margin: 0 2px;
+    border-radius: 1px;
+    font-size: 14px;
+}
+
+.dialog-box-ir-para__btn-ir:hover {
+    background-color: var(--yt);
+    border-radius: 2px;
+}
+
+
+.dialog-box-ir-para__btn-ir:active {
+    opacity: .7;
+}
+
+.dialog-box-ir-para__btn-fechar {
     width: 24px;
     height: 20px;
     font-weight: 700;
@@ -800,9 +832,23 @@ details mark {
     margin-left: 2px
 }
 
-.dialog-box-ir-para__btn:hover {
+.dialog-box-ir-para__btn-fechar:hover {
     background-color: var(--cor-de-risco);
     border-radius: 2px
+}
+
+@media screen and (max-width: 1023px) {
+    .dialog-box-ir-para__btn-ir {
+        width: 35px;
+    }
+
+    .dialog-box-ir-para__btn-fechar {
+        width: 30px;
+    }
+
+    .dialog-box-ir-para {
+        right: calc(50vw - 276px / 2);
+    }
 }
 
 .dialog-box-esvaziar-ficha {
@@ -941,7 +987,7 @@ details mark {
 }
 
 .desfoque.on {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;

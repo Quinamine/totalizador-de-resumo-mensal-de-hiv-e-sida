@@ -82,6 +82,7 @@
     justify-content: space-between
 }
 
+
 .ficha__linha-de-prov-e-distrito {
     margin-bottom: 15px;
     min-height: 20px
@@ -105,7 +106,8 @@
 }
 
 .ficha__campo-de-ano {
-    max-width: 80px
+    max-width: 80px;
+    text-align: left !important;
 }
 
 /* CORPO DA FICHA */
@@ -128,6 +130,13 @@
     text-align: center;
 }
 
+.body__header-2 {
+    position: sticky;
+    top: 0;
+    background-color: var(--yt);
+    z-index: 1000;
+}
+
 .header-do-body__col-de-faixas-etarias-e-sexo {
     display: grid;
     grid-template-columns: repeat(2, 50px) repeat(3, calc(50px * 2));
@@ -143,13 +152,19 @@
 }
 
 .ficha__campo-de-nid {
-    min-width: 175px;
+    width: 177px;
     margin-left: 4px;
+    text-align: left !important;
 }
 
 /* CORPO DA FICHA PROPRIAMENTE DITO */
 .ficha__col-de-linhas {
     font-family: 'Times New Roman',Times,serif;
+}
+
+.ficha__num-de-linha.--highlight {
+    background-color: var(--orange);
+    color: var(--yt);
 }
 
 .ficha__grid-770-150-50 {
@@ -177,6 +192,16 @@
 .grid-dos-as__col {
     display: grid;
     grid-template-rows: 47px 34px 47px;
+}
+
+@media screen and (min-width: 450px) and (max-width: 998px){
+    .ficha__col-de-indicadores--pos-sticky {
+        position: sticky;
+        left: -15px;
+        background-color: var(--yt);
+        border-right: var(--border-style);
+        margin-right: -1px;
+    }
 }
 
 .ficha__container-de-indicador {
@@ -310,4 +335,23 @@
 .grid-extra__input:focus,
 .ficha__rodape__input:focus {
     border-bottom: 2px solid var(--blue);
+}
+.grid-extra__input:focus,
+.ficha__rodape__input:focus {
+    border-bottom: 2px solid var(--blue);
+}
+
+.grid-extra__input,
+.input-adicional {
+    font-weight: 700;
+}
+
+.input-adicional--font-light {
+    font-weight: initial;
+}
+
+@media print {
+    .input-adicional--font-light {
+        font-weight: 700;
+    }
 }

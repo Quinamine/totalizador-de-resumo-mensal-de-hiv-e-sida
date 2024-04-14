@@ -33,7 +33,12 @@ function destacarCelulasSaturadas() {
 
     let celulasSaturadas = 0;
     for(const c of celulas) {
-        if(c.value.length > 7) {
+        c.classList.remove("--font-small");
+        c.classList.remove("celula-saturada");
+        
+        if(c.value.length === 7) {
+            c.classList.add("--font-small");
+        } else if(c.value.length > 7) {
             c.classList.add("celula-saturada");
             celulasSaturadas++;
         }
@@ -102,6 +107,7 @@ function clonarHeader() {
     const previousSibling = document.querySelector(".grid-dos-as");
     const newNode = header.cloneNode(true);
   
+    newNode.classList.add("body__header-2");
     previousSibling.insertAdjacentElement("afterEnd", newNode)
 }
 

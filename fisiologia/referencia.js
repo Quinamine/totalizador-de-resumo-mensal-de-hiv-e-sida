@@ -1,1 +1,53 @@
-"use strict";const referencia={retornarNumDeLinha(e){let t=e.parentElement.children,n;for(let r=0;r<t.length;r++)t[r]===e&&(n=r);let a=document.querySelector("output.ref-de-linha"),l;e.parentElement.matches(".la")?l=["A.1","A.2","A.3"][n]:e.parentElement.matches(".lb")?l=["B.1","B.2","B.3","B.4","B.5","B.6","B.7","B.8","B.9"][n]:e.parentElement.matches(".lb2")?l=["B.10","B.11","B.12","B.13"][n]:e.parentElement.matches(".lc")?l=["C.1","C.2","C.3"][n]:e.parentElement.matches(".ld")?l=["D.1","D.2","D.3"][n]:e.parentElement.matches(".le")&&(l=["E.1","E.2","E.3"][n]),a.textContent=l},retornarSexoEIdade(e){let t=e.parentElement,n=t.parentElement,r=n.querySelectorAll("div.inputs-container"),a;for(let l=0;l<r.length;l++)r[l]===t&&(a=l);let o=["0-4 anos","5-9 anos","10-14 anos","10-14 anos","15-19 anos","15-19 anos","20/ &plus; anos","20/ &plus; anos"][a],s;s=a<2?"&minus;":a%2==0?"F":"M";let c=document.querySelector("output.ref-de-faixa-etaria"),i=document.querySelector("output.ref-de-sexo");t.matches(".lc")||t.matches(".le")?s=o="&minus;":t.matches(".ld.total-pediatrico")?(o="0-14 anos",s="&minus;"):t.matches(".ld.total-adulto")&&(o="15/ + anos",s="&minus;"),c.innerHTML=o,i.innerHTML=s},resetarReferencia(){let e=document.querySelectorAll("div.coluna-de-referencia output");for(let t of e)t.textContent=""}};window.addEventListener("load",()=>{celulasDeTodasGrades.forEach(e=>{e.matches("[readonly]")||(e.addEventListener("focusin",()=>{referencia.retornarNumDeLinha(e),referencia.retornarSexoEIdade(e)}),e.addEventListener("focusout",()=>{referencia.resetarReferencia()}))})}),window.addEventListener("scroll",()=>{let e=document.querySelector("div.linha-de-referencia"),t=document.querySelector(".bounding-reference");t.getBoundingClientRect().bottom<0?e.classList.add("off"):e.classList.remove("off")});
+"use strict"
+
+const referencia = {
+    retornarLinha(input) {
+        const linhasAfins = document.querySelectorAll(`.${input.parentElement.dataset.linhas} span`);
+        const inputParent__children = input.parentElement.children;
+
+        let inputIndex;
+        for (let i = 0; i < inputParent__children.length; i++) {
+            if(input === inputParent__children[i]) {
+                inputIndex = i;
+            }
+        }
+
+        const linhaOutput = document.querySelector(".reference-row__output-indicador");
+        linhaOutput.value = linhasAfins[inputIndex].textContent;
+        
+    },
+
+    retornarFaixaEtaria(input) {
+        const faixaEtariaOutput = document.querySelector(".reference-row__output-idade");
+
+        let faixaEtaria = input.parentElement.dataset.faixaetaria;
+        faixaEtariaOutput.value = faixaEtaria;
+    },
+
+    retornarSexo(input) {
+        const faixaEtariaOutput = document.querySelector(".reference-row__output-sexo");
+
+        let sexo = input.parentElement.dataset.sexo;
+        faixaEtariaOutput.value = sexo;
+    },
+
+    retornarVazio() {
+        const outputs = document.querySelectorAll(".reference-row__output");
+        for (const o of outputs) o.value = "";
+    }
+}
+
+function events() {
+    const gridInputs = document.querySelectorAll("[data-totalgeraleixox], .grid-extra__input");
+    gridInputs.forEach( gi => {
+        gi.addEventListener("focus", () => {
+            referencia.retornarLinha(gi);
+            referencia.retornarFaixaEtaria(gi);
+            referencia.retornarSexo(gi);
+        });
+    });
+
+    gridInputs.forEach( gi => gi.addEventListener("focusout", referencia.retornarVazio));
+}
+
+window.onload = events;
