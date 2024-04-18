@@ -25,7 +25,7 @@
     --reference-bgc: var(--black--alpha-8);
 
     /* Tamanhos */
-    --layout-width: 998px;
+    --layout-width: 995px;
     --input-font-size: 14px;
     --border-style: 1px solid var(--cor-de-borda);
 }
@@ -118,7 +118,7 @@
     margin: 0 auto
 }
 
-@media screen and (max-width: 998px) {
+@media screen and (max-width: 995px) {
     .layout-row {
         padding-left: 15px;
         padding-right: 15px
@@ -256,7 +256,7 @@
 }
 
 /* Main */
-@media screen and (max-width: 998px ) {
+@media screen and (max-width: 995px) {
     .main {
         max-width:100%;
         overflow: auto;
@@ -280,7 +280,7 @@ input[data-totalgeraleixox]:focus,
     min-height: 79px
 }
  
-@media screen and (max-width: 998px ) {
+@media screen and (max-width: 995px) {
     .main__container-de-campo-de-nota{
         padding-left: 0;
         padding-right: 0
@@ -410,7 +410,7 @@ input[data-totalgeraleixox]:focus,
     left: 0;
     width: 100%;
     background-color: var(--reference-bgc);
-    z-index: 999;
+    z-index: 1;
 }
 
 @media print {
@@ -481,7 +481,7 @@ input[data-totalgeraleixox]:focus,
     position: fixed;
     top: calc(50vh - 90vh / 2);
     right: calc(50vw - 700px / 2);
-    z-index: 50000;
+    z-index: 1000;
     background-color: var(--yt);
     font-size: 13.5px;
     line-height: 1.5;
@@ -510,7 +510,7 @@ input[data-totalgeraleixox]:focus,
         height: 100vh;
         right: 0;
         top: 42px;
-        z-index: 100000;
+        z-index: 1000;
         padding: 0 0 100px 0;
     }
 }
@@ -695,7 +695,7 @@ details mark {
     position: fixed;
     right: calc(50vw - (var(--layout-width) + 15px) / 2);
     bottom: -164px;
-    z-index: 50000;
+    z-index: 1000;
     visibility: hidden;
     transition: bottom 150ms;
 }
@@ -783,7 +783,7 @@ details mark {
     right: calc(50vw - 257px / 2);
     visibility: hidden;
     transition: top .2s linear;
-    z-index: 999;
+    z-index: 888;
 }
 
 .dialog-box-ir-para.--open {
@@ -861,7 +861,7 @@ details mark {
     background: var(--yt);
     top: calc(50vh - 443px / 2);
     right: calc(50vw - 375px / 2);
-    z-index: 50000;
+    z-index: 1000;
     position: fixed;
     overflow: auto;
     display: none;
@@ -992,7 +992,7 @@ details mark {
     position: fixed;
     top: 0;
     background-color: var(--black--alpha-5);
-    z-index: 5000;
+    z-index: 999;
 }
 
 @media print {

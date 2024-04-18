@@ -134,7 +134,7 @@
     position: sticky;
     top: 0;
     background-color: var(--yt);
-    z-index: 1000;
+    z-index: 777;
 }
 
 .header-do-body__col-de-faixas-etarias-e-sexo {

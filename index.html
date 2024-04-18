@@ -19,6 +19,7 @@
     <script src="fisiologia/menu.js"></script>
     <script src="fisiologia/main.js"></script>
     <script src="fisiologia/multifuncoes.js"></script>
+    <script src="fisiologia/db.js"></script>
     <script src="fisiologia/referencia.js"></script>
     
     <script src="https://www.googletagmanager.com/gtag/js?id=G-0WQ21LVG42" async></script>
@@ -76,7 +77,7 @@
                         </figure>
                         <div class="ficha__box-descricao-de-emblema">
                             <span>República de Moçambique</span>
-                            <span>Ministério da Sáude</span>
+                            <span>Ministério da Saúde</span>
                             <span>Serviço Nacional de Saúde</span>
                             <span class="ficha__mod-sis-h04-a">Mod. SIS H04-A</span>
                         </div>
@@ -85,26 +86,30 @@
                         <h1 class="ficha__titulo">Ficha de Resumo Mensal para a Unidade Sanitária - HIV / SIDA</h1>
                         <div class="ficha__linha-de-prov-e-distrito">
                             <div class="ficha__container-de-prov">
-                                <label for=provincia>Província:</label>
-                                <input id=provincia class="ficha__campo-de-prov input-adicional --border-b">
+                                <label for=input-provincia>Província:</label>
+                                <input id=input-provincia list="datalist__provincias" class="ficha__campo-de-prov input-adicional --border-b">
+                                <datalist id="datalist__provincias"></datalist>
                             </div>
                             <div>
-                                <label for=distrito>Distrito:</label>
-                                <input id=distrito class="ficha__campo-de-distrito input-adicional --border-b">
+                                <label for=input-distrito>Distrito:</label>
+                                <input id=input-distrito list="datalist__distritos" class="ficha__campo-de-distrito input-adicional --border-b">
+                                <datalist id="datalist__distritos"></datalist>
                             </div>
                         </div>
                         <div class="ficha__linha-de-us-e-data">
                             <div>
-                                <label for=us>Unidade Sanitária:</label>
-                                <input id=us class="ficha__campo-de-us input-adicional --border-b">
+                                <label for=input-us>Unidade Sanitária:</label>
+                                <input id=input-us list="datalist__us" class="ficha__campo-de-us input-adicional --border-b">
+                                <datalist id="datalist__us"></datalist>
                             </div>
                             <div>
-                                <label for=mes>Mês:</label>
-                                <input id=mes class="ficha__campo-de-mes input-adicional --border-b">
+                                <label for=input-mes>Mês:</label>
+                                <input id=input-mes list="datalist__meses" class="ficha__campo-de-mes input-adicional --border-b">
+                                <datalist id=datalist__meses></datalist>
                             </div>
                             <div>
-                                <label for=ano>Ano:</label>
-                                <input type=number id=ano class="ficha__campo-de-ano input-adicional --border-b">
+                                <label for=input-ano>Ano:</label>
+                                <input type=number id=input-ano list="anos" class="ficha__campo-de-ano input-adicional --border-b">
                             </div>
                         </div>
                     </div>
@@ -112,8 +117,8 @@
                 <div class="ficha__body">
                     <div class=ficha__linha-de-nid-e-header-do-body>
                         <div class="ficha__container-de-nid --display-flex-y-center">
-                            <label for=nid>NID da Unidade Sanitária:</label>
-                            <input type=number min=0 id=nid class="ficha__campo-de-nid input-adicional --border-b">
+                            <label for=input-nid>NID da Unidade Sanitária:</label>
+                            <input type=number min=0 id=input-nid class="ficha__campo-de-nid input-adicional --border-b">
                         </div>
                         <header class=ficha__header-do-body>
                             <div class="header-do-body__col-de-faixas-etarias-e-sexo">
@@ -896,22 +901,22 @@
                 </div>
                 <footer class=ficha__rodape>
                     <div class="ficha__rodape__col">
-                        <label for=nome class="ficha__rodape__label">Nome</label>
-                        <input id=nome class="ficha__rodape__input input-adicional --border-b">
+                        <label for=input-nome class="ficha__rodape__label">Nome</label>
+                        <input id=input-nome class="ficha__rodape__input input-adicional --border-b">
                     </div>
                     <div class="ficha__rodape__col">
-                        <label for=assinatura class="ficha__rodape__label">Nome</label>
-                        <input id=assinatura class="ficha__rodape__input input-adicional  --border-b">
+                        <label for=input-assinatura class="ficha__rodape__label">Nome</label>
+                        <input id=input-assinatura class="ficha__rodape__input input-adicional  --border-b">
                     </div>
                     <div class="ficha__rodape__col">
-                        <label for=data class="ficha__rodape__label">Data</label>
-                        <input type=date id=data class="ficha__rodape__input input-adicional --border-b">
+                        <label for=input-data class="ficha__rodape__label">Data</label>
+                        <input type=date id=input-data class="ficha__rodape__input input-adicional --border-b">
                     </div>
                 </footer>
             </div>
 
             <div class="main__container-de-campo-de-nota layout-row">
-                <textarea class="main__campo-de-nota input-adicional input-adicional--font-light" id="comentarios" placeholder="Comentários sobre o resumo... Este campo só será impresso se tiver algum conteúdo." rows=3></textarea>
+                <textarea class="main__campo-de-nota input-adicional input-adicional--font-light" id="input-comentarios" placeholder="Comentários sobre o resumo... Este campo só será impresso se tiver algum conteúdo." rows=3></textarea>
             </div>
 
             <div class="reference-container">
@@ -951,7 +956,7 @@
 
             <div class="dialog-box-ir-para --display-flex-y-center">
                 <input type=text class=dialog-box-ir-para__input-linha max=63 placeholder="Referência da linha (ex.: B.10)">
-                <button class="dialog-box-ir-para__btn-ir">Ir</button>
+                <button class="dialog-box-ir-para__btn-ir" title="Ir para a linha">Ir</button>
                 <button class=dialog-box-ir-para__btn-fechar title=Fechar>×</button>
             </div>
             <div class="dialog-box-esvaziar-ficha">
@@ -971,36 +976,36 @@
                 <h4 class="dialog-box-esvaziar-ficha__titulo --fw-700">Dados adicionais</h4>
                 <ul class=dialog-box-esvaziar-ficha__ul-dados-adicionais>
                     <li>
-                        <input type=checkbox checked id="checkbox-prov" data-inputadicionalid=provincia>
+                        <input type=checkbox checked id="checkbox-prov" data-inputadicionalid=input-provincia>
                         <label for=checkbox-prov>Província</label>
                     <li>
-                        <input type=checkbox checked id="checkbox-distrito" data-inputadicionalid=distrito>
+                        <input type=checkbox checked id="checkbox-distrito" data-inputadicionalid=input-distrito>
                         <label for=checkbox-distrito>Distrito</label>
                     <li>
-                        <input type=checkbox checked id="checkbox-us" data-inputadicionalid=us>
+                        <input type=checkbox checked id="checkbox-us" data-inputadicionalid=input-us>
                         <label for=checkbox-us>Unidade Sanitária</label>
                     <li>
-                        <input type=checkbox id=checkbox-mes checked data-inputadicionalid=mes>
+                        <input type=checkbox id=checkbox-mes checked data-inputadicionalid=input-mes>
                         <label for=checkbox-mes>Mês</label>
                     <li>
-                        <input type=checkbox id=checkbox-ano checked data-inputadicionalid=ano>
+                        <input type=checkbox id=checkbox-ano checked data-inputadicionalid=input-ano>
                         <label for=checkbox-ano>Ano</label>
                     <li>
-                        <input type=checkbox checked id="checkbox-nid" data-inputadicionalid=nid>
+                        <input type=checkbox checked id="checkbox-nid" data-inputadicionalid=input-nid>
                         <label for=checkbox-nid>NID da Unidade Sanitária</label>
                     <li>
-                        <input type=checkbox id=checkbox-nome checked data-inputadicionalid=nome>
+                        <input type=checkbox id=checkbox-nome checked data-inputadicionalid=input-nome>
                         <label for=checkbox-nome>Nome</label>
                     <li>
-                        <input type=checkbox id=checkbox-assinatura checked data-inputadicionalid=assinatura>
+                        <input type=checkbox id=checkbox-assinatura checked data-inputadicionalid=input-assinatura>
                         <label for=checkbox-assinatura>
                             Nome (Assinatura)
                         </label>
                     <li>
-                        <input type=checkbox id=checkbox-data checked data-inputadicionalid=data>
+                        <input type=checkbox id=checkbox-data checked data-inputadicionalid=input-data>
                         <label for=checkbox-data>Data</label>
                     <li>
-                        <input type=checkbox id=checkbox-comentarios checked data-inputadicionalid=comentarios>
+                        <input type=checkbox id=checkbox-comentarios checked data-inputadicionalid=input-comentarios>
                         <label for=checkbox-comentarios>Comentários</label>
                 </ul>
                 <div class=dialog-box-esvaziar-ficha__btns-container>
@@ -1042,7 +1047,7 @@
 
                 <h3 class="artigo__titulo artigo__titulo-nivel-2">Qual é o destino dos dados que eu insiro?</h3>
 
-                <p>São guardados localmente (no navegador que estiver a usar), por meio de um recurso chamado <a href="http://" target="_blank">Webstorage</a> e você tem total controle sobre esses, podendo mantê-los ou apagá-los por meio da opção "<b>Esvaziar ficha</b>" no menu do totalizador ou esvaziando o histórico (inclusíve os cookies) do seu navegador.</p>
+                <p>São guardados localmente (no navegador que estiver a usar), por meio de um recurso chamado <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API" target="_blank">Web Storage</a> e você tem total controle sobre esses, podendo mantê-los ou apagá-los por meio da opção "<b>Esvaziar ficha</b>" no menu do totalizador ou esvaziando o histórico (inclusíve os cookies) do seu navegador.</p>
 
                 <h3 class="artigo__titulo artigo__titulo-nivel-2">Vantagens do totalizador</h3>
 
