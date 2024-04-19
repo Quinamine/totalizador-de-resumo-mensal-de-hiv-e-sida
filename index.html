@@ -34,13 +34,13 @@
     <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades do Totalizador. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
 
     <body class="body" ontouchstart="">
-        <header class="header">
+        <header class="header --no-print">
             <div class="layout-row header__row --display-flex-y-center">
                 <a href=index.html class=header__logo>
                     Totalizador de Resumo <span class="logo-word--hide-on-screen-s">Mensal</span>
                     de HIV/SIDA
                 </a>
-                <nav class="header__nav --display-flex-y-center">
+                <div role="navigation" class="header__nav --display-flex-y-center">
                     <ul class="header__nav__ul --display-flex-y-center">
                         <li class="header__nav__li header__nav__li-realcartotais">
                             <input type=checkbox id="checkbox-realcar-totais" class="header__checkbox header__child--cursor">
@@ -65,7 +65,7 @@
                         <li class="header__nav__li header__li--hide-on-desktop">
                             <button class="header__nav__btn header__nav__btn-partilhar">Partilhar...</button>
                     </ul>
-                </nav>
+                </div>
             </div>
         </header>
         <main class="main">
@@ -82,34 +82,35 @@
                             <span class="ficha__mod-sis-h04-a">Mod. SIS H04-A</span>
                         </div>
                     </div>
-                    <div class="ficha__col-de-titulo-e-local">
+                    <div class="ficha__header__col-de-titulo-e-local">
                         <h1 class="ficha__titulo">Ficha de Resumo Mensal para a Unidade Sanitária - HIV / SIDA</h1>
                         <div class="ficha__linha-de-prov-e-distrito">
                             <div class="ficha__container-de-prov">
                                 <label for=input-provincia>Província:</label>
-                                <input id=input-provincia list="datalist__provincias" class="ficha__campo-de-prov input-adicional --border-b">
-                                <datalist id="datalist__provincias"></datalist>
+                                <input id=input-provincia list="datalist-provincias" class="ficha__campo-de-prov input-adicional --border-b">
+                                <datalist id="datalist-provincias"></datalist>
                             </div>
                             <div>
                                 <label for=input-distrito>Distrito:</label>
-                                <input id=input-distrito list="datalist__distritos" class="ficha__campo-de-distrito input-adicional --border-b">
-                                <datalist id="datalist__distritos"></datalist>
+                                <input id=input-distrito list="datalist-distritos" class="ficha__campo-de-distrito input-adicional --border-b">
+                                <datalist id="datalist-distritos"></datalist>
                             </div>
                         </div>
                         <div class="ficha__linha-de-us-e-data">
                             <div>
                                 <label for=input-us>Unidade Sanitária:</label>
-                                <input id=input-us list="datalist__us" class="ficha__campo-de-us input-adicional --border-b">
-                                <datalist id="datalist__us"></datalist>
+                                <input id=input-us list="datalist-us" class="ficha__campo-de-us input-adicional --border-b">
+                                <datalist id="datalist-us"></datalist>
                             </div>
                             <div>
                                 <label for=input-mes>Mês:</label>
-                                <input id=input-mes list="datalist__meses" class="ficha__campo-de-mes input-adicional --border-b">
-                                <datalist id=datalist__meses></datalist>
+                                <input id=input-mes list="datalist-meses" class="ficha__campo-de-mes input-adicional --border-b">
+                                <datalist id=datalist-meses></datalist>
                             </div>
                             <div>
                                 <label for=input-ano>Ano:</label>
-                                <input type=number id=input-ano list="anos" class="ficha__campo-de-ano input-adicional --border-b">
+                                <input type=number id=input-ano list="datalist-ano" class="ficha__campo-de-ano input-adicional --border-b">
+                                <datalist id="datalist-ano"></datalist>
                             </div>
                         </div>
                     </div>
@@ -752,7 +753,7 @@
                         </div>
                     </div>
 
-                    <div class="ficha__grid-extra grid-dos-cs">
+                    <div class="grid-dos-cs ficha__grid-extra ">
                         <div class="grid-extra__header --display-flex-xy-center --border-t --border-r --border-l">
                             <span>TOTAL</span>
                         </div>
@@ -790,7 +791,7 @@
                         </div>
                     </div>
 
-                    <div class="ficha__grid-extra grid-dos-ds">
+                    <div class="grid-dos-ds ficha__grid-extra ">
                         <div class="grid-extra__header grid-dos-ds__header --border-t --border-r --border-l">
                             <div class="--border-r --display-flex-xy-center">
                                 <span>0-14 anos</span>
@@ -919,7 +920,7 @@
                 <textarea class="main__campo-de-nota input-adicional input-adicional--font-light" id="input-comentarios" placeholder="Comentários sobre o resumo... Este campo só será impresso se tiver algum conteúdo." rows=3></textarea>
             </div>
 
-            <div class="reference-container">
+            <div class="reference-container --no-print">
                 <div class="layout-row reference-row">
                     <span class="reference-row__label">Linha:</span> 
                     <output class="reference-row__output reference-row__output-indicador --display-flex-xy-center"></output>
@@ -933,7 +934,7 @@
             </div>
         </main>
         
-        <section class="dialog-boxes">
+        <section class="dialog-boxes --no-print">
             <div class="dialog-box-default dialog-box-alerta-sobre-aqd">
                 <h3 class="dialog-box-default__titulo">Totalizador de Resumo Mensal de HIV/SIDA</h3>
                 <p class="dialog-box-default__p">
@@ -1015,7 +1016,7 @@
             </div>
         </section>
 
-        <section class="sessao-de-artigos">
+        <section class="sessao-de-artigos --no-print">
             <article class="artigo artigo-sobre" id="sobre">
                 <h2 class="artigo__titulo artigo__titulo-nivel-1">Visão geral sobre o totalizador</h2>
                 <figure>
@@ -1084,7 +1085,7 @@
                     <summary>Esvaziar ficha</summary>
                     <p>Comando para limpar as células da ficha após a confirmação da acção na caixa de diálogo que abre.</p>
                     
-                    <p>Permite também esvaziar campos adicionais (Província, Distrito, US, etc.) de forma seletiva. Para tal, na caixa de diálogo de confirmação, as "checkboxes" dos dados adicionais são, por padrão, marcadas com o sinal de "✔", indicando, deste modo, que o conteúdo contido nos respectivos campos será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
+                    <p>Permite também esvaziar campos adicionais (Província, Distrito, US, etc.) de forma seletiva. Para tal, na caixa de diálogo de confirmação, as "checkboxes" dos dados adicionais são, por padrão, marcadas com o sinal de "✔", indicando, desse modo, que o conteúdo contido nos respectivos campos será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
 
                     <figure class="details__moldura details-esvaziar-ficha__moldura">
                         <img src="imagens/caixa-de-dialogo-para-esvaziamento-da-ficha.png" alt="Caixa de diálogo de esvaziamento da ficha" class="artigo__img"/>
@@ -1143,7 +1144,7 @@
                 <button class="artigo__btn-fechar artigo-ajuda__btn-fechar" title="Fechar">&times;</button>
             </article>
         </section>
-        <footer class="footer">
+        <footer class="footer --no-print">
             <div class="layout-row footer__row">
                 <nav class=footer__nav>
                     <h4 class="footer__nav-title">Hiperligações para outros serviços afins</h4>

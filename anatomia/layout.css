@@ -149,12 +149,6 @@
     z-index: 1;
 }
 
-@media print {
-    .header {
-        display: none;
-    }
-}
-
 .header__logo {
     font-size: 1rem;
     color: var(--fullblack);
@@ -331,12 +325,6 @@ input[data-totalgeraleixox]:focus,
     }
  }
 
-@media print {
-    .footer {
-        display: none;
-    }
-}
-
 .footer__row {
     display: flex;
     flex-direction: column;
@@ -411,12 +399,6 @@ input[data-totalgeraleixox]:focus,
     width: 100%;
     background-color: var(--reference-bgc);
     z-index: 1;
-}
-
-@media print {
-    .reference-container {
-        display: none;
-    }
 }
 
 .reference-row {
@@ -999,5 +981,9 @@ details mark {
     @page {
         margin: .5cm;
         size: A4 portrait;
+    }
+
+    .--no-print {
+        display: none;
     }
 }

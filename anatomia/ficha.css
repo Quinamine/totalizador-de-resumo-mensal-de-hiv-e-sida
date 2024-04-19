@@ -60,7 +60,7 @@
     margin-top: 5px;
 }
 
-.ficha__col-de-titulo-e-local {
+.ficha__header__col-de-titulo-e-local {
     font-size: 14px;
     font-weight: bold;
     min-height: 101px;
@@ -135,6 +135,12 @@
     top: 0;
     background-color: var(--yt);
     z-index: 777;
+}
+
+@media print {
+    .body__header-2 {
+        position: static;
+    }
 }
 
 .header-do-body__col-de-faixas-etarias-e-sexo {

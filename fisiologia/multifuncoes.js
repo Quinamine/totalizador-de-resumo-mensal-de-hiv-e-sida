@@ -61,7 +61,6 @@ function removerDestaqueDeRedCells() {
     for (const c of celulas) c.classList.remove("celula-saturada");
 }
 
-
 const aqd = {
     mostrarAviso() {
         if(!sessionStorage.getItem(`${keyPrefix}-aviso-aqd`)) {
