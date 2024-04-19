@@ -232,7 +232,8 @@
 }
  
 .header__label {
-    padding: 10px 10px 10px 0
+    padding: 10px 10px 10px 0;
+    font-size: 12px;
 }
 
 .header__checkbox {
@@ -398,12 +399,12 @@ input[data-totalgeraleixox]:focus,
     left: 0;
     width: 100%;
     background-color: var(--reference-bgc);
-    z-index: 1;
+    z-index: 888;
 }
 
 .reference-row {
     display: grid;
-    grid-template-columns: 35px 50px 68px 100px 33px 35px;
+    grid-template-columns: 34px 48px 68px 84px 33px 35px;
     align-items: center;
     min-height: 22px;
 }
