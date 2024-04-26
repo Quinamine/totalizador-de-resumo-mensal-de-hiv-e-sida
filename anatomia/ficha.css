@@ -1,14 +1,4 @@
-﻿/* Header do layout */
-
-@media screen and (min-width: 998px) {
-    .header {
-        position: sticky;
-        top: 0;
-        background-color: var(--yt);
-    }
-}
-
-.ficha {
+﻿.ficha {
     max-width: var(--layout-width);
     min-width: var(--layout-width);
     margin: 30px auto 10px;
@@ -130,16 +120,12 @@
     text-align: center;
 }
 
-.body__header-2 {
-    position: sticky;
-    top: 0;
-    background-color: var(--yt);
-    z-index: 777;
-}
-
-@media print {
+@media screen {
     .body__header-2 {
-        position: static;
+        position: sticky;
+        top: 0;
+        background-color: var(--yt);
+        z-index: 777;
     }
 }
 
@@ -347,17 +333,6 @@
     border-bottom: 2px solid var(--blue);
 }
 
-.grid-extra__input,
-.input-adicional {
+.grid-extra__input {
     font-weight: 700;
-}
-
-.input-adicional--font-light {
-    font-weight: initial;
-}
-
-@media print {
-    .input-adicional--font-light {
-        font-weight: 700;
-    }
 }

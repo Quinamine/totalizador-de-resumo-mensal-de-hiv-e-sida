@@ -18,7 +18,7 @@ const moz = {
         },  
         chiure: {
             us: ["CS Catapua", "CS Chiúre Velho", "CS Marera",  "CS Mazeze", "CS M'mala", "CS Muege", "CS Nakoto",
-            "CS Namogelia", "CS Ocua", "CS Samora Machel", "H.D. Chiúre", "P.S. Bilibiza"],
+            "CS Namogelia", "CS Ocua", "CS Samora Machel", "HD Chiúre", "PS Bilibiza"],
 
             codigos: ["01020409","01020407","01020417","01020410","01020412","01020414","01020415","01020413","01020411","01020404","01020406","01020408"]
         },
@@ -28,7 +28,7 @@ const moz = {
             codigos: ["01020506","01020507","01020508"]
         }, 
         macomia: {
-            us: ["CS Chai","CS Macomia", "CS Mucojo", "CS Naunde", "CS Nguida", "CS Quiterajo", "P.S. Piquewe"],
+            us: ["CS Chai","CS Macomia", "CS Mucojo", "CS Naunde", "CS Nguida", "CS Quiterajo", "PS Piquewe"],
 
             codigos: ["01020614","01020612","01020607","01020610","01020609","01020608","01020611"]
         },
@@ -245,7 +245,7 @@ const moz = {
             codigos: ["01031208", "01031207", "01031211", "01031219", "01031213", "01031218", "01031215", "01031209", "01031216", "01031217", "01031206"] 
         },
         monapo: {
-            us: ["CS Carapira", "CS Chihiri", "CS Itocolo", "Cs Jagaia", "CS Mecuco", "CS Monapo", "CS Monapo Rio", "CS Muatuca", "CS Mucujua", "CS Murruto", "CS Napala", "CS Natete", "CS Netia", "CS Ramiane", "H.D. Monapo", "PS Maserpane", "PS Metocheria"],
+            us: ["CS Carapira", "CS Chihiri", "CS Itocolo", "Cs Jagaia", "CS Mecuco", "CS Monapo", "CS Monapo Rio", "CS Muatuca", "CS Mucujua", "CS Murruto", "CS Napala", "CS Natete", "CS Netia", "CS Ramiane", "HD Monapo", "PS Maserpane", "PS Metocheria"],
 
             codigos: ["01031307", "01031312", "01031309", "01031313", "01031314", "01031306", "01031318", "01031310", "01031319", "01031321", "01031320", "01031308", "01031311", "01031317", "01031300", "01031315", "01031316"]
         },
@@ -279,7 +279,7 @@ const moz = {
             codigos: ["01031903", "0103191", "01031910", "01031906", "01031907", "01031909", "01031908"]
         },
         nampula: {
-            us: ["CS Penitenciária", "PS Mutauanha", "CS Mucuache", "CS Muhala Expansão", "CS Maratane", "CS Anchilo", "HG Marrere", "CS 1 de Maio", "CS Napipine", "CS O.T.M.", "CS Niarro", "HM Nampula", "CS Saua Saua", "PS Anexo (Psiquiatrico)", "CS Mucova", "CS Namicopo", "CS Namachilo (MOMALA)", "CS Namiepe", "CS Namiconha", "CS 25 de Setembro", "CS Naholoco", "CS Mental", "CS Namutequeliua", "CS Mutavarex"],
+            us: ["CS Penitenciária", "PS Mutauanha", "CS Mucuache", "CS Muhala Expansão", "CS Maratane", "CS Anchilo", "HG Marrere", "CS 1 de Maio", "CS Napipine", "CS O.T.M.", "CS Niarro", "HM Nampula", "CS Saua Saua", "PS Anexo (Psiquiátrico)", "CS Mucova", "CS Namicopo", "CS Namachilo (MOMALA)", "CS Namiepe", "CS Namiconha", "CS 25 de Setembro", "CS Naholoco", "CS Mental", "CS Namutequeliua", "CS Mutavarex"],
 
             codigos: ["01030119", "01030111", "01030122", "01030117", "01032019", "01032007", "01030107", "01030108", "01030109", "01030114", "01030121", "01030102", "01032020", "01030110", "01032021", "01030113", "01032014", "01030110", "01032015", "01030106", "01032013", "01030116", "01030112", "01030120"]
         },
@@ -299,7 +299,7 @@ const moz = {
         distritos: ["Alto Molócuè", "Chinde", "Derre", "Gilé", "Gurué", "Inhassunge", "ILE", "Luabo", "Lugela", "Maganja da Costa", "Milange", "Mocuba", "Mocubela", "Molumbo", "Mopeia", "Morrumbala", "Mulevala", "Namacurra", "Namarroi", "Nicoadala", "Pebane", "Quelimane"],
 
         altoMolocue: { 
-            us: ["CS Alto Molócuè", "CS Bonifacio Groveta", "CS Caiaia", "CS Chapala", "CS Cololo", "CS Ecole", "CS Malua", "CS Mouia", "CS Mugema", "CS Mutala", "CS Nacuaca", "CS Nauela", "CS Nivava", "CS Novanana", "HD Alto Mulocue", "PS Nimala"],
+            us: ["CS Alto Molócuè", "CS Bonifácio Groveta", "CS Caiaia", "CS Chapala", "CS Cololo", "CS Ecole", "CS Malua", "CS Mouia", "CS Mugema", "CS Mutala", "CS Nacuaca", "CS Nauela", "CS Nivava", "CS Novanana", "HD Alto Molócuè", "PS Nimala"],
 
             codigos: ["01040206", "01040299", "01040207", "01040208", "01040236", "01040216", "01040265", "01040211", "01040215", "01040212", "01040255", "01040213", "01040214", "01040237", "01040200", "01040256"]
         },
@@ -721,7 +721,7 @@ const moz = {
             codigos: ["01091106", "01091112", "01091108", "01091109", "01091116", "01091110", "01091111", "01091107"]
         },
         cidadeDeXaiXai: {
-            us: ["CS Chilaulene", "CS Cidade de Xai - Xai", "CS Marien Nguabi", "CS Patrice Lumumba", "CS Zimilene", "HP Xai Xai", "PS FIR", "PS Marien Nguabi", "PS Praia"], 
+            us: ["CS Chilaulene", "CS Cidade de Xai-Xai", "CS Marien Nguabi", "CS Patrice Lumumba", "CS Zimilene", "HP Xai-Xai", "PS FIR", "PS Marien Nguabi", "PS Praia"], 
             codigos: ["", "01090107", "01090106", "01090108", "", "01090100", "01090114", "01090113", "01090109"]
         },
         xaiXaiExtinto: {
@@ -731,11 +731,11 @@ const moz = {
         }
     },
     
-    maputoprovíncia: {
+    maputoprovincia: {
         distritos: ["Boane", "Magude", "Manhiça", "Marracuene", "Matola", "Matutuíne", "Moamba", "Namaacha"],
 
         boane: {
-            us: ["CS Beleluane", "CS Boane", "CS Campoane", "CS Escola prática de Formação de Sargentos", "CS Josina Machel", "CS Mabanja", "CS Mahanhane", "CS Mahubo", "CS Massaca", "CS Mulotana", "CS Picoco", "PS Águas de Maputo", "PS Casa Gaiato", "PS Matola-Rio", "PS Pequenos Libombos"],
+            us: ["CS Beleluane", "CS Boane", "CS Campoane", "CS Escola Prática de Formação de Sargentos", "CS Josina Machel", "CS Mabanja", "CS Mahanhane", "CS Mahubo", "CS Massaca", "CS Mulotana", "CS Picoco", "PS Águas de Maputo", "PS Casa Gaiato", "PS Matola-Rio", "PS Pequenos Libombos"],
             codigos: ["01100210", "01100206", "01100207", "01100217", "01100219", "01100211", "01100205", "01100208", "01100209", "01100218", "01100216", "01100215", "01100214", "01100212", "01100213"]
         },
         magude: {
@@ -743,7 +743,7 @@ const moz = {
             codigos: ["01100315", "01100312", "01100314", "01100306", "01100310", "01100311", "01100313", "01100308", "01100309"]
         },
         manhica: {
-            us: ["CS 3 de Fevereiro", "CS Calanga", "CS Chibucutso", "CS Escola Pratica do Exército de Munguine", "CS Ilha Josina", "CS Malavela", "CS Maluana", "CS Manhiça", "CS Maragra", "CS Mirona", "CS Munguine", "CS Nwamatibjana", "CS Taninga", "CS Xinavane", "HD Manhiça", "HR Xinavane", "PS Chibututuine"],
+            us: ["CS 3 de Fevereiro", "CS Calanga", "CS Chibucutso", "CS Escola Prática do Exército de Munguine", "CS Ilha Josina", "CS Malavela", "CS Maluana", "CS Manhiça", "CS Maragra", "CS Mirona", "CS Munguine", "CS Nwamatibjana", "CS Taninga", "CS Xinavane", "HD Manhiça", "HR Xinavane", "PS Chibututuine"],
 
             codigos: ["01100415", "01100410", "01100417", "01100420", "01100414", "01100408", "01100409", "01100402", "01100406", "01100416", "01100411", "01100413", "01100412", "01100419", "01100407", "01100400", "01100418"]
         },
@@ -815,7 +815,7 @@ const moz = {
 }
 
 function formatarString(str) {
-    str = str.replaceAll(/[-\.\s]/gi, "").toLowerCase();
+    str = str.replaceAll(/[-()\.\s]/gi, "").toLowerCase();
     str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     return str;
 }

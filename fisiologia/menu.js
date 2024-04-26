@@ -122,8 +122,8 @@ const menu = {
     },
 
     abrirArtigo(artigo) {
-        const artigoSobre = document.querySelector(".artigo-sobre");
-        const artigoAjuda = document.querySelector(".artigo-ajuda");
+        const artigoSobre = document.querySelector(".artigo--sobre");
+        const artigoAjuda = document.querySelector(".artigo--ajuda");
         const body = document.querySelector(".body");
 
         artigo === "sobre" ? 
@@ -135,8 +135,8 @@ const menu = {
     },
 
     fecharArtigo(artigo) {
-        const artigoSobre = document.querySelector(".artigo-sobre");
-        const artigoAjuda = document.querySelector(".artigo-ajuda");
+        const artigoSobre = document.querySelector(".artigo--sobre");
+        const artigoAjuda = document.querySelector(".artigo--ajuda");
         const body = document.querySelector(".body");
 
         artigo === "sobre" && artigoSobre.classList.remove("--open");
@@ -167,7 +167,7 @@ function eventos() {
     }
 
     // IR PARA LINHA
-    const btnAbrirIrPara = document.querySelector(".header__nav__btn-ir-para");
+    const btnAbrirIrPara = document.querySelector(".header__nav__btn--ir-para");
     btnAbrirIrPara.addEventListener("click", menu.irParaLinha().abrirDialogBox);
 
     const btnFecharIrPara = document.querySelector(".dialog-box-ir-para__btn-fechar");
@@ -194,28 +194,28 @@ function eventos() {
     });
 
     // ESVAZIAR FICHA 
-    const btnEsvaziarFicha = document.querySelector(".header__nav__btn-esvaziar-ficha");
+    const btnEsvaziarFicha = document.querySelector(".header__nav__btn--esvaziar-ficha");
     btnEsvaziarFicha.addEventListener("click", menu.esvaziarFicha().abrirDialogBox);
 
-    const btnCancelar = document.querySelector(".dialog-box-esvaziar-ficha__btn-cancelar");
+    const btnCancelar = document.querySelector(".dialog-box-esvaziar-ficha__btn--cancelar");
     btnCancelar.addEventListener("click", menu.esvaziarFicha().fecharDialogBox);
 
-    const btnConfirmar = document.querySelector(".dialog-box-esvaziar-ficha__btn-confirmar");
+    const btnConfirmar = document.querySelector(".dialog-box-esvaziar-ficha__btn--confirmar");
     btnConfirmar.addEventListener("click", menu.esvaziarFicha().confirmar);
 
     // IMPRIMIR 
-    const btnImprimir = document.querySelector(".header__nav__btn-imprimir");
+    const btnImprimir = document.querySelector(".header__nav__btn--imprimir");
     btnImprimir.addEventListener("click", menu.imprimirFicha);
 
     // Artigos
-    const btnAbrirSobre = document.querySelector(".header__nav__btn-sobre");
+    const btnAbrirSobre = document.querySelector(".header__nav__btn--sobre");
     btnAbrirSobre.addEventListener("click", () => menu.abrirArtigo("sobre"));
 
-    const btnFecharSobre = document.querySelector(".artigo-sobre__btn-fechar")
+    const btnFecharSobre = document.querySelector(".artigo__btn-fechar--sobre")
     btnFecharSobre.addEventListener("click", () => menu.fecharArtigo("sobre"));
 
     window.addEventListener("resize", () => {
-        const artigoSobre = document.querySelector(".artigo-sobre");
+        const artigoSobre = document.querySelector(".artigo--sobre");
 
         const itsMobile = window.innerWidth < 1024;
         const articleIsOpen = artigoSobre.matches(".--open");
@@ -232,10 +232,10 @@ function eventos() {
         }       
     });
 
-    const btnAbrirAjuda = document.querySelector(".header__nav__btn-ajuda");
+    const btnAbrirAjuda = document.querySelector(".header__nav__btn--ajuda");
     btnAbrirAjuda.addEventListener("click", () => menu.abrirArtigo("ajuda"));
 
-    const btnFecharAjuda = document.querySelector(".artigo-ajuda__btn-fechar")
+    const btnFecharAjuda = document.querySelector(".artigo__btn-fechar--ajuda")
     btnFecharAjuda.addEventListener("click", () => menu.fecharArtigo("ajuda"));
 
     // PARTILHAR 
@@ -245,7 +245,7 @@ function eventos() {
         url: "https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html"
     }
 
-    const btnPartilhar = document.querySelector(".header__nav__btn-partilhar");
+    const btnPartilhar = document.querySelector(".header__nav__btn--partilhar");
     btnPartilhar.addEventListener("click", () => {
         try {
             navigator.share(data).then(()=>console.log("Totalizador partilhado com sucesso."))
@@ -258,5 +258,14 @@ function eventos() {
 };
 
 window.addEventListener("load", eventos);
+
+window.addEventListener("keydown", event => {
+
+    // CONTROL = 17 && p = 80
+    if(event.ctrlKey && event.keyCode === 80) {
+        event.preventDefault();
+        menu.imprimirFicha();
+    }
+})
 
 
