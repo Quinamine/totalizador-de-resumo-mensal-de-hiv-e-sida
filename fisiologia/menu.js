@@ -32,23 +32,22 @@ const menu = {
 
             goToLn(numLinha) {
                 this.removeLnHighlight(); 
-                numLinha = numLinha.toUpperCase();
+                numLinha = formatarString(numLinha)
                 let nL = this.numerosDeLinha;
 
                 let numLinhaMatches = false;
                 for(let i = 0; i < nL.length; i++) {
-                    if(nL[i].textContent === numLinha || 
-                        nL[i].textContent === `${numLinha})`) {
+                    if(formatarString(nL[i].textContent) === numLinha) {
                             numLinhaMatches = true;
                             let newIndex = i;
                             if(window.innerWidth > 998) newIndex -= 2;
-                            i > 2 ? nL[newIndex].scrollIntoView() : document.body.scrollIntoView();         
-                            nL[i].parentElement.classList.add("ficha__num-de-linha", "--highlight");
+                            i > 2 ? nL[newIndex].parentElement.scrollIntoView() : document.body.scrollIntoView(); 
+                            this.highlightLnFound(nL[i].parentElement);        
                     }
                 }  
               
                 if(!numLinhaMatches) {
-                    const msg = `Sem correspondência. Certifique-se de que a referência digitada tenha o seguinte formato: "LETRApontoNÚMERO" (exemplo: B.10).`;
+                    const msg = "Nenhuma linha corresponde a referência digitada.";
                     alertarSobre(msg);
                 }
             },
@@ -241,7 +240,7 @@ function eventos() {
     // PARTILHAR 
     const data = {
         title: "Totalizador de Resumo Mensal de HIV/SIDA",
-        text: "O Totalizador de Resumo Mensal de HIV/SIDA é um serviço online gratuito, que auxilia na elaboração, como o nome sugere, do resumo mensal de HIV/SIDA, por meio do cálculo automático dos totais, com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de HIV/SIDA actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
+        text: "O Totalizador de Resumo Mensal de HIV/SIDA é um serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo mensal de HIV/SIDA, por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de HIV/SIDA actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
         url: "https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html"
     }
 

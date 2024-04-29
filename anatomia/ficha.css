@@ -1,6 +1,5 @@
 ﻿.ficha {
-    max-width: var(--layout-width);
-    min-width: var(--layout-width);
+    width: var(--layout-width);
     margin: 30px auto 10px;
     line-height: 1.5;
     font-weight: 700;
@@ -52,7 +51,6 @@
 
 .ficha__header__col-de-titulo-e-local {
     font-size: 14px;
-    font-weight: bold;
     min-height: 101px;
 }
 

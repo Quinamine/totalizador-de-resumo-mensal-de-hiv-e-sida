@@ -5,11 +5,11 @@ const referencia = {
         const classColIndicadores = inputTarget.parentElement.dataset.indicadores;
         const indicadores = document.querySelectorAll(`.${classColIndicadores} span`);
       
-        const inputParent__children = inputTarget.parentElement.children;
+        const inputTargetAndSiblings = inputTarget.parentElement.children;
 
         let inputTargetIndex;
-        for (let i = 0; i < inputParent__children.length; i++) {
-            if(inputTarget === inputParent__children[i]) {
+        for (let i = 0; i < inputTargetAndSiblings.length; i++) {
+            if(inputTarget === inputTargetAndSiblings[i]) {
                 inputTargetIndex = i;
             }
         }

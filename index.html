@@ -5,12 +5,12 @@
     <meta content="width=device-width,initial-scale=1" name=viewport>
     <title>Totalizador de Resumo Mensal de HIV/SIDA</title>
     <meta content="index, follow" name=robots>
-    <meta content="Serviço online gratuito, que auxilia na elaboração, como o nome sugere, do resumo mensal de HIV/SIDA, por meio do cálculo automático dos totais, com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de HIV/SIDA actualmente vigente no Serviço Nacional de Saúde em Moçambique." name=description>
+    <meta content="Serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo mensal de HIV/SIDA, por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de HIV/SIDA actualmente vigente no Serviço Nacional de Saúde em Moçambique." name=description>
     <meta content="Totalizador de Resumo Mensal de HIV/SIDA, Totalizador de Relatório Mensal de HIV/SIDA, Ficha de Resumo Mensal de HIV/SIDA." name=keywords>
     <meta content="Adérito Félix Quinamine" name=author>
     <meta content=https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html property=og:url>
     <meta content="Totalizador de Resumo Mensal de HIV/SIDA" property=og:title>
-    <meta content="Serviço online gratuito, que auxilia na elaboração, como o nome sugere, do resumo mensal de HIV/SIDA, por meio do cálculo automático dos totais, com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de HIV/SIDA actualmente vigente no Serviço Nacional de Saúde em Moçambique." property=og:description>
+    <meta content="Serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo mensal de HIV/SIDA, por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de HIV/SIDA actualmente vigente no Serviço Nacional de Saúde em Moçambique." property=og:description>
     <meta content=https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/imagens/totalizador-de-resumo-mensal-de-hiv.png property=og:image>
     <link href=favicon.ico rel="shortcut icon" type=image/x-icon>
     <link href=anatomia/reset.css rel=stylesheet>
@@ -22,14 +22,15 @@
     <script src="fisiologia/db.js"></script>
     <script src="fisiologia/referencia.js"></script>
     
-    <script src="https://www.googletagmanager.com/gtag/js?id=G-0WQ21LVG42" async></script>
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y9GQ9B45P"></script>
     <script>
-        function gtag() {
-            dataLayer.push(arguments)
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){
+            dataLayer.push(arguments);
         }
-        window.dataLayer = window.dataLayer || [],
-        gtag("js", new Date),
-        gtag("config", "G-0WQ21LVG42")
+        gtag('js', new Date());
+        gtag('config', 'G-2Y9GQ9B45P');
     </script>
     <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades do Totalizador. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
 
@@ -804,7 +805,7 @@
                                 </div>
                                 <div class="ficha__container-de-indicador --display-flex-y-center --border-t">
                                     <span>
-                                        Dos activos em TARV no fim do mês (B.13), subgrupo que <strong>recebeu um resultado</strong> de Carga Viral (CV)<br> <strong>durante o mês</strong>(Notificação anual!)         
+                                        Dos activos em TARV no fim do mês (B.13), subgrupo que <strong>recebeu um resultado</strong> de Carga Viral (CV)<br> <strong>durante o mês</strong> (Notificação anual!)         
                                     </span>
                                 </div>
                                 <div class="ficha__container-de-indicador --display-flex-y-center --border-t --border-b">
@@ -993,7 +994,7 @@
                 </figure>
                 
                 <p>
-                    O <b>Totalizador de Resumo Mensal de HIV/SIDA</b> é um serviço online gratuito, que auxilia na elaboração, como o nome sugere, do resumo mensal de HIV/SIDA, por meio do cálculo automático dos totais, com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de HIV/SIDA actualmente vigente no Serviço Nacional de Saúde em Moçambique.
+                    O <b>Totalizador de Resumo Mensal de HIV/SIDA</b> é um serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo mensal de HIV/SIDA, por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de HIV/SIDA actualmente vigente no Serviço Nacional de Saúde em Moçambique.
                 </p>
 
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Objectivos</h3>
@@ -1033,7 +1034,7 @@
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Limitações do totalizador</h3>
                     
                 <ul class="artigo__lista artigo__ul">
-                    <li>Não alerta sobre discrepância de dados, portanto, a análise da qualidade e lógica do resumo é inteiramente dependente do usuário;</li>
+                    <li>Não alerta sobre discrepância de dados, portanto, a análise da concordância dos dados é inteiramente dependente do usuário;</li>
                     <li>Disponibilidade remota (é necessário um telemóvel ou computador com acesso à internet para ser acessado).</li>
                 </ul>
                 <button class="artigo__btn-fechar artigo__btn-fechar--sobre" title="Fechar">&times;</button>
@@ -1044,11 +1045,11 @@
 
                 <details>
                     <summary>Realçar totais</summary>
-                    <p>Adiciona um fundo cinza a todas as células dos totais. Estas têm o acesso interdito e a funcionalidade de realçá-las, permite facilmente distinguir estas de outras células. Muito útil em dispositivos móveis.</p>
+                    <p>Adiciona um fundo cinzento a todas as células dos totais. Estas têm o acesso interdito e a funcionalidade de realçá-las, permite facilmente distinguir estas de outras células. Muito útil em dispositivos móveis.</p>
                 </details>
                 <details>
                     <summary >Ir para a linha...</summary>
-                    <p>Abre um campo no qual pode digitar um número de linha, no formato <b>LETRApontoNÚMERO</b> (ex.: <b>B.10</b>) e, uma vez digitado o número, a página rola até a linha correspondente ao número.</p>
+                    <p>Abre um campo no qual pode digitar um número de linha no formato <b>LETRA.NÚMERO</b> (ex.: <b>B.10</b> ou <b>B10</b>, o ponto é facultativo) e, uma vez digitado o número, a página rola até a linha correspondente ao número.</p>
                 </details>
                 <details>
                     <summary>Esvaziar ficha</summary>
