@@ -47,7 +47,7 @@ const menu = {
                 }  
               
                 if(!numLinhaMatches) {
-                    const msg = "Nenhuma linha corresponde a referência digitada.";
+                    const msg = "Nenhuma linha corresponde à referência digitada.";
                     alertarSobre(msg);
                 }
             },
@@ -116,7 +116,7 @@ const menu = {
 
     imprimirFicha() {
         const comentarios = document.querySelector(".main__campo-de-nota");
-        comentarios.value === "" && comentarios.classList.add("--no-print");
+        comentarios.value === "" && comentarios.parentElement.classList.add("--no-print");
         window.print()
     },
 

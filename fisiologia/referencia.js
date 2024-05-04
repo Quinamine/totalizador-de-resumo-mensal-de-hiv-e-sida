@@ -19,18 +19,15 @@ const referencia = {
         
     },
 
-    retornarFaixaEtaria(inputTarget) {
+    retornarFaixaEtariaEsexo(inputTarget) {
         const faixaEtariaOutput = document.querySelector(".reference-row__output--idade");
+        const sexoOutput = document.querySelector(".reference-row__output--sexo");
 
         let faixaEtaria = inputTarget.parentElement.dataset.faixaetaria;
-        faixaEtariaOutput.value = faixaEtaria;
-    },
-
-    retornarSexo(inputTarget) {
-        const faixaEtariaOutput = document.querySelector(".reference-row__output--sexo");
-
         let sexo = inputTarget.parentElement.dataset.sexo;
-        faixaEtariaOutput.value = sexo;
+
+        faixaEtariaOutput.value = faixaEtaria;
+        sexoOutput.value = sexo;
     },
 
     retornarVazio() {
@@ -44,8 +41,7 @@ function events() {
     gridInputs.forEach( gi => {
         gi.addEventListener("focus", () => {
             referencia.retornarIndicador(gi);
-            referencia.retornarFaixaEtaria(gi);
-            referencia.retornarSexo(gi);
+            referencia.retornarFaixaEtariaEsexo(gi);
         });
     });
 

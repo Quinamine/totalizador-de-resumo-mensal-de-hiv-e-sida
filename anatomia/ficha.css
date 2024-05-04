@@ -154,7 +154,7 @@
 
 .ficha__num-de-linha.--highlight {
     background-color: var(--orange);
-    color: var(--yt);
+    color: var(--cor-de-texto);
 }
 
 .ficha__grid-770-150-50 {
@@ -164,17 +164,17 @@
     margin-bottom: 4px;
 }
 
-.ficha__grid-template-col-10 {
+.ficha__grid-template-cols-10 {
     display: grid;
     grid-template-columns: 50px 320px repeat(8, 50px);
 }
 
-.ficha__grid-template-col-3 {
+.ficha__grid-template-cols-3 {
     display: grid;
     grid-template-columns: repeat(3, 50px);
 }
 
-.ficha__grid-template-col-1 {
+.ficha__grid-template-cols-1 {
     display: grid;
     grid-template-columns: 50px;
 }
