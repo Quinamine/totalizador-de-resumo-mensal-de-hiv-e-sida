@@ -106,19 +106,19 @@
     align-items: flex-end
 }
 
-.ficha__linha-de-nid-e-header-do-body {
+.ficha__linha-de-nid-e-body__header {
     display: grid;
     grid-template-columns: 370px 1fr;
 }
 
-.ficha__header-do-body {
+.ficha__body__header {
     display: grid;
     grid-template-columns: calc(50px * 8) calc(50px * 3) 50px;
     grid-column-gap: 2px;
     text-align: center;
 }
 
-@media screen {
+@media screen and (min-width: 1024px) {
     .body__header-2 {
         position: sticky;
         top: 0;
@@ -127,17 +127,17 @@
     }
 }
 
-.header-do-body__col-de-faixas-etarias-e-sexo {
+.body__header__col-de-faixas-etarias-e-sexo {
     display: grid;
     grid-template-columns: repeat(2, 50px) repeat(3, calc(50px * 2));
 }
 
-.header-do-body__grade-de-idade-e-sexo {
+.body__header__grade-de-idade-e-sexo {
     display: grid;
     grid-template-columns: repeat(2, 50px);
 }
 
-.header-do-body__celula-de-idade {
+.body__header__celula-de-idade {
     grid-column: 1/3;
 }
 
@@ -294,7 +294,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 26px 0 15px 24px;
+    padding: 26px 0 15px 21px;
     font-family: 'Times New Roman',Times,serif;
 }
 
@@ -317,8 +317,14 @@
 
 /* Main */
 .main__campo-de-nota {
-    margin-left: 24px;
+    margin-left: 6px;
     width: 962px;
+}
+
+@media screen and (min-width: 1024px) {
+    .main__campo-de-nota {
+        margin-left: 21px;
+    }
 }
 
 /* Reutilizavel */

@@ -1,3 +1,5 @@
+"use strict"
+
 var keyPrefix = "trmhiv";
 
 function desfoqueDoFundo(accao) {
@@ -46,7 +48,7 @@ function destacarCelulasSaturadas() {
     
     if(celulasSaturadas > 0) {
         setTimeout(() => {
-            motivoDeSaturacao = document.querySelector(".artigo__details-motivo-de-red-cells");
+            const motivoDeSaturacao =  document.querySelector(".artigo__details-motivo-de-red-cells");
 
             menu.abrirArtigo("ajuda");
             motivoDeSaturacao.setAttribute("open", "");
@@ -76,7 +78,7 @@ const aqd = {
 
 function actualizarAno() {
     const tempo = new Date();
-    anoActual = tempo.getFullYear();
+    let anoActual = tempo.getFullYear();
 
     if(anoActual < 2022) anoActual = 2022;
 
@@ -102,7 +104,7 @@ function animarJanelaAberta(event) {
 }
 
 function clonarHeader() {
-    const header = document.querySelector(".ficha__header-do-body");
+    const header = document.querySelector(".ficha__body__header");
     const previousSibling = document.querySelector(".grid-dos-as");
     const newNode = header.cloneNode(true);
   
