@@ -328,15 +328,11 @@
 }
 
 /* Reutilizavel */
-.grid-extra__input:focus,
-.ficha__rodape__input:focus {
-    border-bottom: 2px solid var(--blue);
-}
-.grid-extra__input:focus,
-.ficha__rodape__input:focus {
-    border-bottom: 2px solid var(--blue);
-}
-
 .grid-extra__input {
     font-weight: 700;
+}
+
+.grid-extra__input:focus{
+    border-bottom: 2px solid var(--blue);
+    background-color: var(--greenyellow);
 }
