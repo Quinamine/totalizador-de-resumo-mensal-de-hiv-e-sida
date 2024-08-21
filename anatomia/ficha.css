@@ -169,14 +169,18 @@
     display: grid;
     grid-template-columns: 50px;
 }
+.--destaque-padrao {
+    background-color: var(--gray--c);
+}
 [data-totalgeraleixox]:focus,
 .input-nao-celular:focus {
     border-bottom: 2px solid var(--blue);
     background-color: var(--greenyellow);
+    color: var(--cor-de-texto);
 }
 @media screen {
     .input--realcar-totais {
-        background-color: var(--gray--c);
+        background-color: var(--cor-de-realce-de-totais);
     }
 }
 .input--bg-color-danger {
@@ -186,10 +190,6 @@
 .input--font-small {
     font-size: 12px
 }
-.--destaque-padrao {
-    background-color: var(--gray--c);
-}
-
 /* GRID DOS BS */
 .grid-dos-bs {
     display: grid;
@@ -314,4 +314,5 @@
 .grid-extra__input:focus{
     border-bottom: 2px solid var(--blue);
     background-color: var(--greenyellow);
+    color: var(--cor-de-texto);
 }
