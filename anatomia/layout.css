@@ -29,7 +29,6 @@
     --reference-bgc: var(--blue--light);
     --layout-width: 995px;
     --input-font-size: 14px;
-    --border-style: 1px solid var(--cor-de-borda);
 }
 @media print {
     :root {
