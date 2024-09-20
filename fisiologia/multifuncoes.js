@@ -87,6 +87,12 @@ function clonarHeader() {
     newNode.classList.add("body__header-2");
     previousSibling.insertAdjacentElement("afterEnd", newNode)
 }
+function fecharTopoPropaganda() {
+    const topoPropaganda = document.querySelector(".topo-propaganda");
+    const body = document.querySelector("#body");
+    topoPropaganda.classList.add("topo-propaganda--off");
+    body.classList.remove("body-com-topo-propaganda")
+}
 let btnAutoCloseLoop;
 window.addEventListener("load", () => {
     const readonlyInputs = document.querySelectorAll("[readonly]");
@@ -108,4 +114,7 @@ window.addEventListener("load", () => {
     desfoque.addEventListener("mouseup", event => animarCaixaDeDialogo(event.type));
     // Clonar Elemento (Header do body)
     clonarHeader();
+    // Fechar Topo Propaganda 
+    const btnXDetopoProgaganda = document.querySelector(".topo-propaganda__btn");
+    btnXDetopoProgaganda.addEventListener("click", fecharTopoPropaganda);
 });

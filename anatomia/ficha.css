@@ -103,6 +103,9 @@
         background-color: var(--yt);
         z-index: 333;
     }
+    .body-com-topo-propaganda .body__header-2 {
+        top: 36px;
+    }
 }
 .body__header__col-de-faixas-etarias-e-sexo {
     display: grid;
