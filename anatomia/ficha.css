@@ -7,7 +7,6 @@
 .ficha label {
     font-size: 14px;
 }
-/* CABECALHO DE TITULO E LOCAL */
 .ficha__header {
     display: grid;
     grid-template-columns: 284px 1fr;
@@ -214,12 +213,10 @@
     transform: rotate(-90deg) translate(-57px,-17px);
     letter-spacing: .4px;
 }
-/* GRID DOS BS 2 */
 .grid-dos-bs-2__col {
     display: grid;
     grid-template-rows: repeat(2,47px) repeat(2,34px);
 }
-/* Grid Extra */
 .ficha__grid-extra {
     display: grid;
     grid-template-columns: 772px 202px;
@@ -257,7 +254,6 @@
     display: grid;
     grid-template-columns: 101px;
 }
-/* Rodape */
 .ficha__rodape {
     width: 100%;
     display: flex;
@@ -279,12 +275,6 @@
     min-width: 200px;
     text-align: center;
 }
-/* Main */
-.main__campo-de-comentarios {
-    margin-left: 21px;
-    width: 962px;
-}
-/* Reutilizavel */
 .grid-extra__input {
     font-weight: 700;
 }
