@@ -60,7 +60,7 @@ const menu = {
         return {  
             dialogBox: document.querySelector(".dialog-box-esvaziar-ficha"),
             abrirDialogBox() { 
-                const inputsDaFicha = document.querySelectorAll("[data-totalgeraleixox], [readonly], .input-nao-celular");
+                const inputsDaFicha = document.querySelectorAll("[data-totalgeraleixox], [readonly], .grid-extra__input, .input-nao-celular");
                 const campoDeObs = document.querySelector(".obs__input");
                 let inputFilled = 0;
                 campoDeObs.textContent.length > 0 && (inputFilled = 1);

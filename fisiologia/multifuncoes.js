@@ -24,15 +24,23 @@ function alertarSobre(msg) {
     dialogBoxDefault.classList.add("--open");
 }
 function destacarCelulasComConteudoOmisso() {
-    const celulas = document.querySelectorAll("[data-totalgeraleixox], [readonly]");
+    const celulas = document.querySelectorAll("[data-totalgeraleixox], [readonly], .grid-extra__input");
     let celulasSaturadas = 0;
     for(const c of celulas) {
         c.classList.remove("input--font-small");
         c.classList.remove("input--bg-color-danger");
-        if(c.value.length === 7) {
-            c.classList.add("input--font-small");
-        } else if(c.value.length > 7) {
+        if(c.clientWidth < 55) {
+            if(c.value.length === 7) {
+                c.classList.add("input--font-small");
+            } else if(c.value.length > 7) {
+                c.classList.add("input--bg-color-danger");
+                celulasSaturadas++;
+            }
+        } else if(c.clientWidth < 102 && c.value.length > 12) {
             c.classList.add("input--bg-color-danger");
+            celulasSaturadas++;
+        } else if (c.clientWidth < 204 && c.value.length > 25) {
+            c.classList.add("input--bg-color-danger")
             celulasSaturadas++;
         }
     }
@@ -46,7 +54,7 @@ function destacarCelulasComConteudoOmisso() {
     }  
 }
 function removerDestaqueDeRedCells() {
-    const celulas = document.querySelectorAll("[data-totalgeraleixox], [readonly]");
+    const celulas = document.querySelectorAll("[data-totalgeraleixox], .grid-extra__input, [readonly]");
     for (const c of celulas) c.classList.remove("input--bg-color-danger");
 }
 const aqd = {
@@ -67,12 +75,6 @@ function actualizarAnoDeCopyright() {
     const currentYearOutput = document.querySelector(".footer__current-year");
     currentYearOutput.textContent = anoActual;
 }
-function formatarNumeros() {
-    const numeros = document.querySelectorAll(".number-format");
-    for (const n of numeros) {
-        n.textContent = Number(n.textContent).toLocaleString();
-    }
-}
 function animarCaixaDeDialogo(event) {
     const dialogBox = document.querySelector(".dialog-box-esvaziar-ficha");
     if(dialogBox.matches(".--open")) {
@@ -90,7 +92,9 @@ function clonarHeader() {
 function fecharTopoPropaganda(topoPropaganda) {
     const body = document.querySelector("#body");
     topoPropaganda.classList.add("topo-propaganda--off");
-    body.classList.remove("body-com-topo-propaganda")
+    if(!topoPropaganda.matches(".topo-propaganda--festas-felizes")) {
+        body.classList.remove("body-com-topo-propaganda");
+    }
 }
 function omitirLinkDesteServicoNoRodape(){
     const servicosAfins = document.querySelectorAll(".footer__nav__link");
@@ -108,14 +112,13 @@ window.addEventListener("load", () => {
         const readonlyInputsMsg = "Os totais estão inacessíveis para assegurar que não sejam modificados.";
         alertarSobre(readonlyInputsMsg);
     }));
-    const inputsCelulares = document.querySelectorAll("[data-totalgeraleixox]");
+    const inputsCelulares = document.querySelectorAll("[data-totalgeraleixox], .grid-extra__input");
     inputsCelulares.forEach (inputCelular => inputCelular.addEventListener("input", destacarCelulasComConteudoOmisso));
     destacarCelulasComConteudoOmisso();
     aqd.mostrarAviso();
     const dialogBoxAQD__btn = document.querySelector(".dialog-box-default__btn--aqd");
     dialogBoxAQD__btn.addEventListener("click", aqd.salvarCiencia);
     actualizarAnoDeCopyright()
-    formatarNumeros();
     // Animar Caixa de diálogo "Esvaziar ficha"
     const desfoque = document.querySelector(".desfoque");
     desfoque.addEventListener("mousedown", event => animarCaixaDeDialogo(event.type));
