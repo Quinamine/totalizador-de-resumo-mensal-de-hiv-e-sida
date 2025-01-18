@@ -85,7 +85,7 @@
     flex-direction: column;
     align-items: flex-end
 }
-.ficha__linha-de-nid-e-body__header {
+.ficha__body__linha-de-nid-e-header {
     display: grid;
     grid-template-columns: 370px 1fr;
 }
