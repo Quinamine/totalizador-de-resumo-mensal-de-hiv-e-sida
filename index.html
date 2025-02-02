@@ -713,9 +713,174 @@
                     </div>
                 </footer>
             </div>
-            <div class="layout-row layout-row--obs layout-row--no-padding"">
+            <div class="layout-row layout-row--obs layout-row--no-padding">
                 <span class="obs__label --fw-700">Observações:</span>
                 <p contenteditable="true" id="input-obs" class="obs__input"></p>
+            </div>
+            <div class="ficha ficha--validacao">
+                <h1 class="ficha__titulo ficha__titulo--text-align-c">Validações - Resumo Mensal para a Unidade Sanitária - HIV/SIDA</h1>
+                <div class="ficha-validacao__grid ficha-validacao__grid--1">
+                    <div class="ficha-validacao__grid-1__col-de-titulo --display-flex-xy-center --border-l --border-t --border-r"><span>VERIFICADO <br>Assinalar com "✔"</span></div>
+                    <div class="ficha__container-de-indicador --border-l --border-t"><label for="ficha-validacao__grid1-l1">Todas as células estão preenchidas?</label></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid1-l1"></div>
+                    <div class="ficha__container-de-indicador --border-l --border-t"><label for="ficha-validacao__grid1-l2">Há números repetidos? Se sim, verificar se foram copiados por engano.</label></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid1-l2"></div>
+                    <div class="ficha__container-de-indicador --border-l --border-t"><label for="ficha-validacao__grid1-l3">Há números muito maiores que os registados nos meses anteriores? Se sim, verificar <br>se é um erro. (Verificar nos dados que a US apresenta em gráfico ou tabela)</label></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid1-l3"></div>
+                    <div class="ficha__container-de-indicador --border-l --border-t --border-b"><label for="ficha-validacao__grid1-l4">Repetir as somas. Estão correctas?</label></div>
+                    <div class="--display-flex-xy-center --border"><input type="checkbox" id="ficha-validacao__grid1-l4" checked></div>
+                </div>
+                <div class="ficha-validacao__grid ficha-validacao__grid--2">
+                    <div class="ficha-validacao__grid-2__col-de-titulo --display-flex-xy-center --border-l --border-t --border-r"><span>VERIFICADO <br>Assinalar com "✔"</span></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">A.1)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid2-l1">Nº cumulativo de pacientes que iniciou Pré-TARV (cuidados HIV) <br>nesta US <strong>até ao fim do mês anterior</strong> (copiar A.3 do mês anterior)</label></div>
+                    <div class="ficha-validacao__col-template-rows-2">
+                        <div class="--display-flex-xy-center --border-l --border-t"><span>Verificar a cópia</span></div>
+                        <div class="--display-flex-xy-center --border-l --border-t"><span>A.1 &le; A.3</span></div>
+                    </div>
+                    <div class="ficha-validacao__col-template-rows-2">
+                        <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox"></div>
+                        <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid2-l1"></div>
+                    </div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">A.2)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid2-l2">Nº de pacientes que iniciou Pré-TARV (cuidados HIV) nesta unidade <br>sanitária <strong>durante o mês</strong></label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span>A.2 &le; A.3</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid2-l2"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t --border-b"><span class="ficha-validacao-num-de-linha">A.3)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t --border-b"><label for="ficha-validacao__grid2-l3">Nº cumulativo de pacientes que iniciou Pré-TARV (cuidados HIV) <br>nesta unidade sanitária <strong>até ao fim do mês</strong> (A.3 = A.1 + A.2)</label></div>
+                    <div class="--display-flex-xy-center --txt-align-c --border-l --border-t --border-b"><span>Verificar o <br>cálculo</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r --border-b"><input type="checkbox" id="ficha-validacao__grid2-l3" checked></div>
+                </div>
+                <div class="ficha-validacao__grid ficha-validacao__grid--3">
+                    <div class="ficha__col-de-entradas-e-saidas --border-t --border-b --border-l">
+                        <div><span class="ficha__col-de-entradas-e-saidas__span">Entradas</span></div>
+                        <div class="--border-t"><span class="ficha__col-de-entradas-e-saidas__span">Saidas</span></div>
+                    </div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">B.1)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid3-l1">Nº de pacientes que iniciou TARV nesta unidade sanitária <strong>durante o mês</strong></label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span>B.1 &le; B.4</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid3-l1"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">B.2)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid3-l2">Nº de transferidos de outras US em TARV <strong>durante o mês</strong></label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span>B.2 &le; B.4</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid3-l2"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">B.3)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid3-l3">Nº de reinícios TARV <strong>durante o mês</strong></label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span>B.3 &le; B.4</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid3-l3"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t --destaque-padrao"><span class="ficha-validacao-num-de-linha">B.4)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t --destaque-padrao"><label for="ficha-validacao__grid3-l4">Nº de entradas TARV <strong>durante o mês</strong> &nbsp;&nbsp;&nbsp;(B.4 = B.1 + B.2 + B.3)</label></div>
+                    <div class="--display-flex-xy-center --txt-align-c --border-l --border-t --destaque-padrao"><span>Verificar o <br>cálculo</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r --destaque-padrao"><input type="checkbox" id="ficha-validacao__grid3-l4" checked></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">B.5)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid3-l5">Nº de transferidos para outras US em TARV <strong>durante o mês</strong></label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span>B.5 &le; B.9</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid3-l5"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">B.6)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid3-l6">Nº de suspensos TARV <strong>durante o mês</strong></label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span>B.6 &le; B.9</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid3-l6"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">B.7)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid3-l7">Nº de abandonos TARV <strong>durante o mês</strong></label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span>B.7 &le; B.9</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid3-l7"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">B.8)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid3-l8">Nº de óbitos TARV <strong>durante o mês</strong></label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span>B.8 &le; B.9</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid3-l8"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t --destaque-padrao"><span class="ficha-validacao-num-de-linha">B.9)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t --destaque-padrao"><label for="ficha-validacao__grid3-l9">Nº de saidas TARV <strong>durante o mês</strong> &nbsp;&nbsp;&nbsp;B.9 = B.5 + B.6 + B.7+ B.8)</label></div>
+                    <div class="--display-flex-xy-center --txt-align-c --border-l --border-t --destaque-padrao"><span>Verificar o <br>cálculo</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r --destaque-padrao"><input type="checkbox" id="ficha-validacao__grid3-l9" checked></div>
+                    <div></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">B.10)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid3-l10">Nº cumulativo de pacientes que iniciou TARV nesta unidade sanitária <br><strong>até ao fim do mês anterior</strong> (copiar B.11 do mês anterior)</label></div>
+                    <div class="ficha-validacao__col-template-rows-2">
+                        <div class="--display-flex-xy-center --border-l --border-t"><span>Verificar a cópia</span></div>
+                        <div class="--display-flex-xy-center --border-l --border-t"><span>B.10 &le; B.11</span></div>
+                    </div>
+                    <div class="ficha-validacao__col-template-rows-2">
+                        <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox"></div>
+                        <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid3-l10"></div>
+                    </div>
+                    <div></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">B.11)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid3-l11">Nº cumulativo de pacientes que iniciou TARV nesta unidade sanitária <br><strong>até ao fim do mês</strong> (B.11 = B.1 + B.10)</label></div>
+                    <div class="--display-flex-xy-center --txt-align-c --border-l --border-t"><span>Verificar o <br>cálculo</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid3-l11" checked></div>
+                    <div></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">B.12)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid3-l12">Nº activo em TARV <strong>até ao fim do mês anterior</strong> (copiar B.13 do mês anterior)</label></div>
+                    <div class="--display-flex-xy-center --txt-align-c --border-l --border-t"><span>Verificar <br>a cópia</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid3-l12"></div>
+                    <div></div>
+                    <div class="--display-flex-xy-center --border-l --border-t --border-b"><span class="ficha-validacao-num-de-linha">B.13)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t --border-b"><label for="ficha-validacao__grid3-l13">Nº activo em TARV <strong>no fim do mês</strong> &nbsp;&nbsp;&nbsp;(B.13 = B.12 + B.4 - B.9)</label></div>
+                    <div class="--display-flex-xy-center --txt-align-c --border-l --border-t --border-b"><span>Verificar o <br>cálculo</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r --border-b"><input type="checkbox" id="ficha-validacao__grid3-l13" checked></div>
+                </div>
+                <div class="ficha-validacao__grid ficha-validacao__grid--4">
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">C.1)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid4-l1">Dos inícios Pré-TARV durante o mês (A.2), subgrupo que foi rastreado para TB</label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span>C1. &le; A.2</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid4-l1"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">C.2)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid4-l2">Dos inícios Pré-TARV durante o mês (A.2), subgrupo de pacientes que iniciou <br>profilaxia com isoniazida (TPI)</strong></label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">C.2 &le; A.2</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid4-l2"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t --border-b"><span class="ficha-validacao-num-de-linha">C.3)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t --border-b"><label for="ficha-validacao__grid4-l3">Dos inícios Pré-TARV durante o mês (A.2), subgrupo que foi diagnosticado <br>como TB activa</label></div>
+                    <div class="--display-flex-xy-center --txt-align-c --border-l --border-t --border-b"><span>C.3 &le; A.2</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r --border-b"><input type="checkbox" id="ficha-validacao__grid4-l3"></div>
+                </div>
+                <div class="ficha-validacao__grid ficha-validacao__grid--5">
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">E.1)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid5-l1">Dos activos em TARV no fim do mês (B.13), subgrupo que realizou um teste <br>de Carga Viral (CV) <strong>durante o mês</strong> (Notificação anual!)</label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span>E1. &le; B.13</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid5-l1"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">E.2)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid5-l2">Dos activos em TARV no fim do mês (B.13), subgrupo que recebeu um resultado <br>de Carga Viral (CV) <strong>durante o mês</strong> (Notificação anual!)</label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span>E.2 &le; B.13</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid5-l2"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t --border-b"><span class="ficha-validacao-num-de-linha">E.3)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t --border-b"><label for="ficha-validacao__grid5-l3">Dos activos TARV no fim do mês (B.13), subgrupo que recebeu resultado de <br>CV com supressão virológica <strong>durante o mês</strong> (&lt;1000 cópias/mL) (Notificação anual!)</label></div>
+                    <div class="ficha-validacao__col-template-rows-2">
+                        <div class="--display-flex-xy-center --border-l --border-t"><span>E.3 &le; B.13</span></div>
+                        <div class="--display-flex-xy-center --border-l --border-t --border-b"><span>E.3 &le; E.2</span></div>
+                    </div>
+                    <div class="ficha-validacao__col-template-rows-2">
+                        <div class="--display-flex-xy-center  --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid5-l3"></div>
+                        <div class="--display-flex-xy-center --border"><input type="checkbox"></div>
+                    </div>
+                </div>
+                <div class="ficha-validacao__grid ficha-validacao__grid--6">
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">F.1)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid6-l1">Nº de pacientes que vieram à consulta <strong>durante o mês</strong></label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid6-l1"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span class="ficha-validacao-num-de-linha">F.2)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t"><label for="ficha-validacao__grid6-l2">Dos pacientes que vieram à consulta <strong>durante o mês</strong>, subgrupo que foi <br>rastreado para TB</label></div>
+                    <div class="--display-flex-xy-center --border-l --border-t"><span>F.2 &le; F.1</span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r"><input type="checkbox" id="ficha-validacao__grid6-l2"></div>
+                    <div class="--display-flex-xy-center --border-l --border-t --border-b"><span class="ficha-validacao-num-de-linha">F.3)</span></div>
+                    <div class="ficha__container-de-indicador --display-flex-y-center --border-l --border-t --border-b"><label for="ficha-validacao__grid6-l3">Nº de pacientes que vieram, pelo menos, a uma consulta durante o <br>ANO (Notificação anual!)</label></div>
+                    <div class="--display-flex-xy-center --txt-align-c --border-l --border-t --border-b"><span></div>
+                    <div class="--display-flex-xy-center --border-t --border-l --border-r --border-b"><input type="checkbox" id="ficha-validacao__grid6-l3"></div>
+                </div>
+                <footer class="ficha__rodape ficha__rodape--no-padding">
+                    <div class="ficha__rodape__col">
+                        <label for=input-nome--2 class="ficha__rodape__label">Nome</label>
+                        <input id=input-nome--2 class="ficha__rodape__input input-nao-celular --border-b --fw-700">
+                    </div>
+                    <div class="ficha__rodape__col">
+                        <label for=input-assinatura--2 class="ficha__rodape__label">Nome</label>
+                        <input id=input-assinatura--2 class="ficha__rodape__input input-nao-celular  --border-b --fw-700">
+                    </div>
+                    <div class="ficha__rodape__col">
+                        <label for=input-data--2 class="ficha__rodape__label">Data</label>
+                        <input type=date id=input-data--2 class="ficha__rodape__input input-nao-celular --border-b --fw-700">
+                    </div>
+                </footer>
             </div>
             <div class="reference --no-print">
                 <div class="layout-row layout-row--of-reference">
@@ -933,10 +1098,9 @@
                 <p class="footer__p footer__p--created-by">Criado com atenção e <span class="footer__p__heart">❤</span> por <a href=https://quinamine.github.io/aderito-felix-quinamine/index.html title="Acessar biografia &raquo;">Adérito Félix Quinamine</a> | ©&nbsp;<span class="footer__current-year"></span> Totalizador de Resumo Mensal de HIV/SIDA</p>
                 <a href=#root class=footer__link--back-to-top>Rolar para o topo</a>
             </div>
-            <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2022-07-22">22/07/2022</time>. Última actualização: Janeiro/2025.</p>
+            <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2022-07-22">22/07/2022</time>. Última actualização: Fevereiro/2025.</p>
         </footer>
         <div class="desfoque"></div>
         <script src="fisiologia/festasfelizes.js"></script>
     </body>
 </html>
-
