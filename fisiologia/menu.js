@@ -60,7 +60,7 @@ const menu = {
         return {  
             dialogBox: document.querySelector(".dialog-box-esvaziar-ficha"),
             abrirDialogBox() { 
-                const inputsDaFicha = document.querySelectorAll("[data-totalgeraleixox], [readonly], .grid-extra__input, .input-nao-celular");
+                const inputsDaFicha = document.querySelectorAll(".ficha input");
                 const campoDeObs = document.querySelector(".obs__input");
                 let inputFilled = 0;
                 campoDeObs.textContent.length > 0 && (inputFilled = 1);
@@ -80,8 +80,9 @@ const menu = {
                 desfoqueDoFundo("focar");
             },
             confirmar() {
-                const inputsCelulares  = document.querySelectorAll("[data-totalgeraleixox], [readonly], .grid-extra__input");
+                const inputsCelulares  = document.querySelectorAll(".ficha__col-de-inputs input");
                 const checkboxesParaInputsNaoCelulares = document.querySelectorAll("[data-for]");
+                const inputsCheckbox = document.querySelectorAll(".ficha input[type=checkbox]")
                 for (let i = 0; i < inputsCelulares.length; i++) {
                     inputsCelulares[i].value = "";
                     localStorage.removeItem(`${keyPrefix}-input${i}`);
@@ -91,11 +92,23 @@ const menu = {
                         let idDeInputNaoCelular = cb.dataset.for
                         let inputNaoCelular = document.getElementById(`${idDeInputNaoCelular}`);
                         inputNaoCelular.value = "";
-                        if(inputNaoCelular.matches("#input-obs")) {
-                            inputNaoCelular.textContent = "";
-                        }
+                        inputNaoCelular.matches("#input-obs") && (inputNaoCelular.textContent = "");
                         localStorage.removeItem(`${keyPrefix}-${inputNaoCelular.id}`);
+                        if(inputNaoCelular.matches("#input-nome")){
+                            document.querySelector("#input-nome--2").value = "";
+                            localStorage.removeItem(`${keyPrefix}-input-nome--2`);
+                        } else if(inputNaoCelular.matches("#input-assinatura")){
+                            document.querySelector("#input-assinatura--2").value = "";
+                            localStorage.removeItem(`${keyPrefix}-input-assinatura--2`);
+                        } else if(inputNaoCelular.matches("#input-data")) {
+                            document.querySelector("#input-data--2").value = "";
+                            localStorage.removeItem(`${keyPrefix}-input-data--2`);
+                        }
                     }
+                }
+                for (let i = 0; i < inputsCheckbox.length; i++) {
+                    inputsCheckbox[i].removeAttribute("checked");
+                    localStorage.removeItem(`${keyPrefix}-checkbox${i}`);
                 }
                 menu.esvaziarFicha().fecharDialogBox();
                 removerDestaqueDeRedCells();
@@ -221,5 +234,3 @@ window.addEventListener("keydown", event => {
         menu.imprimirFicha();
     }
 });
-
-

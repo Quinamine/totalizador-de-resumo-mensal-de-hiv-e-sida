@@ -3,7 +3,6 @@ const backup = {
     saveGridInputs() {
         const inputsCelulares = document.querySelectorAll("[data-totalgeraleixox], .grid-extra__input");
         for (let i = 0; i < inputsCelulares.length; i++) {
-            
             inputsCelulares[i].addEventListener("input", () => {
                 localStorage.setItem(`${keyPrefix}-input${i}`, inputsCelulares[i].value);
             });
@@ -19,6 +18,21 @@ const backup = {
         });
         campoDeObs.addEventListener("input", () => localStorage.setItem(`${keyPrefix}-input-obs`, campoDeObs.textContent));
         campoDeObs.textContent = localStorage.getItem(`${keyPrefix}-input-obs`);
+    },
+    saveCheckboxInputs() {
+        const inputsCheckbox = document.querySelectorAll(".ficha input[type=checkbox]");
+        for (let i = 0; i < inputsCheckbox.length; i++) {
+            inputsCheckbox[i].addEventListener("change", () => {
+                if(inputsCheckbox[i].checked) {
+                    localStorage.setItem(`${keyPrefix}-checkbox${i}`, "checked");
+                } else {
+                    localStorage.removeItem(`${keyPrefix}-checkbox${i}`);
+                }
+            });
+            if(localStorage.getItem(`${keyPrefix}-checkbox${i}`)){
+                inputsCheckbox[i].setAttribute("checked", "");
+            };
+        }
     }
 }
 const totalizador = {
@@ -153,9 +167,6 @@ function escutarEventos() {
 window.addEventListener("load", () => {
     backup.saveGridInputs();
     backup.saveExtraInputs();
-    escutarEventos();    
+    backup.saveCheckboxInputs();
+    escutarEventos();
 });
-
-
-
-
