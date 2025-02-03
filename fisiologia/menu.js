@@ -60,7 +60,7 @@ const menu = {
         return {  
             dialogBox: document.querySelector(".dialog-box-esvaziar-ficha"),
             abrirDialogBox() { 
-                const inputsDaFicha = document.querySelectorAll(".ficha input");
+                const inputsDaFicha = document.querySelectorAll(".ficha__col-de-inputs input, .input-nao-celular");
                 const campoDeObs = document.querySelector(".obs__input");
                 let inputFilled = 0;
                 campoDeObs.textContent.length > 0 && (inputFilled = 1);
@@ -108,6 +108,7 @@ const menu = {
                 }
                 for (let i = 0; i < inputsCheckbox.length; i++) {
                     inputsCheckbox[i].removeAttribute("checked");
+                    inputsCheckbox[i].checked = false;
                     localStorage.removeItem(`${keyPrefix}-checkbox${i}`);
                 }
                 menu.esvaziarFicha().fecharDialogBox();
