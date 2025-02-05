@@ -129,7 +129,7 @@
 }
 /* CORPO DA FICHA PROPRIAMENTE DITO */
 .ficha__col-de-linhas,
-.ficha-validacao-num-de-linha {
+.ficha-validacao__num-de-linha {
     font-family: 'Times New Roman',Times,serif;
 }
 .ficha__num-de-linha.--highlight {
@@ -212,8 +212,12 @@
 .ficha__col-de-entradas-e-saidas {
     grid-row: 1/10;
     display: grid;
-    grid-template-rows: repeat(2,135px);
+    grid-template-rows: repeat(2, 135px);
     margin-right: -2px;
+}
+.ficha-validacao__col-de-entradas-e-saidas {
+    grid-template-rows: repeat(2, 143px);
+    margin-bottom: -1px;
 }
 .ficha__col-de-entradas-e-saidas__span {
     display: block;
