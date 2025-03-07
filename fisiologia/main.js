@@ -80,30 +80,24 @@ const totalizador = {
         if(inputTarget.dataset.totalgeraleixoy) {
             const classNameDosOperandos = inputTarget.dataset.totalgeraleixoy;
             inputTarget.classList.add(`${classNameDosOperandos}`);
-
             const operandos = document.querySelectorAll(`.${classNameDosOperandos}`);
             const celulaDeSaida = document.querySelector(`.${inputTarget.dataset.totalgeraleixoyoutput}`);
             celulaDeSaida.value = this.somar(operandos);
         }
-    
         if(inputTarget.dataset.b11) {
             classNameDosOperandos = inputTarget.dataset.b11;
             inputTarget.classList.add(`${classNameDosOperandos}`);
-
             operandos = document.querySelectorAll(`.${classNameDosOperandos}`);
             celulaDeSaida = document.querySelector(`.${inputTarget.dataset.b11output}`);
             celulaDeSaida.value = this.somar(operandos);
         }
-
         if(inputTarget.dataset.b11subtotal) {
             classNameDosOperandos = inputTarget.dataset.b11subtotal;
             inputTarget.classList.add(`${classNameDosOperandos}`);
-
             operandos = document.querySelectorAll(`.${classNameDosOperandos}`);
             celulaDeSaida = document.querySelector(`.${inputTarget.dataset.b11subtotaloutput}`);
             celulaDeSaida.value = this.somar(operandos);
         }
-
         if(inputTarget.dataset.b11totalgeral) {
             classNameDosOperandos = inputTarget.dataset.b11totalgeral;
             inputTarget.classList.add(`${classNameDosOperandos}`);
