@@ -83,7 +83,6 @@
     max-width: 98px;
     text-align: left !important;
 }
-/* CORPO DA FICHA */
 .ficha__body {
     line-height: 1.2;
     display: flex;
@@ -127,7 +126,6 @@
     margin-left: 4px;
     text-align: left !important;
 }
-/* CORPO DA FICHA PROPRIAMENTE DITO */
 .ficha__col-de-linhas,
 .ficha-validacao__num-de-linha {
     font-family: 'Times New Roman',Times,serif;
@@ -198,7 +196,6 @@
 .input--font-small {
     font-size: 12px
 }
-/* GRID DOS BS */
 .grid-dos-bs {
     display: grid;
     grid-template-columns: 18px 770px 150px 50px;
@@ -294,7 +291,6 @@
     background-color: var(--greenyellow);
     color: var(--cor-de-texto);
 }
-/* Ficha Validação */
 @media print {
     .ficha--validacao {
         page-break-before: always;
