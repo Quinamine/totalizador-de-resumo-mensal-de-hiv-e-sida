@@ -106,7 +106,7 @@
         background-color: var(--yt);
         z-index: 333;
     }
-    .body-com-topo-propaganda .body__header-2 {
+    .body-com-topo-info .body__header-2 {
         top: 36px;
     }
 }
@@ -176,7 +176,7 @@
     grid-template-columns: 50px;
 }
 .--destaque-padrao {
-    background-color: var(--gray--c);
+    background-color: var(--gray-c);
 }
 [data-totalgeraleixox]:focus,
 .input-nao-celular:focus {
