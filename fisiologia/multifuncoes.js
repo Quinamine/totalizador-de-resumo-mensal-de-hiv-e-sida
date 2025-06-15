@@ -46,9 +46,10 @@ function destacarCelulasComConteudoOmisso() {
     }
     if(celulasSaturadas > 0) {
         setTimeout(() => {
-            const motivoDeSaturacao =  document.querySelector(".artigo__details--motivo-de-celulas-vermelhas");
+            const motivoDeSaturacao = document.querySelector(".artigo__details--motivo-de-celulas-vermelhas");
             menu.abrirArtigo("ajuda");
             motivoDeSaturacao.setAttribute("open", "");
+            motivoDeSaturacao.classList.add("--borda-de-destaque");
             motivoDeSaturacao.scrollIntoView();
         }, 2500);
     }  
@@ -56,6 +57,10 @@ function destacarCelulasComConteudoOmisso() {
 function removerDestaqueDeRedCells() {
     const celulas = document.querySelectorAll("[data-totalgeraleixox], .grid-extra__input, [readonly]");
     for (const c of celulas) c.classList.remove("input--bg-color-danger");
+}
+function removerBordaDoMovitoDeRedCells() {
+    const motivoDeRedCells =  document.querySelector(".artigo__details--motivo-de-celulas-vermelhas");
+    motivoDeRedCells.classList.remove("--borda-de-destaque");
 }
 const aqd = {
     mostrarAviso() {
@@ -156,7 +161,7 @@ window.addEventListener("load", () => {
     desfoque.addEventListener("mouseup", event => animarCaixaDeDialogo(event.type));
     // Clonar Elemento (Header do body)
     clonarHeader();
-    // Fechar Topo Propaganda 
+    // Fecha Topo Info
     const btnXDetopoInfo = document.querySelectorAll(".topo-info__btn");
     btnXDetopoInfo.forEach(btn => {
         btn.addEventListener("click", () => fechartopoInfo(btn.parentElement.parentElement));
