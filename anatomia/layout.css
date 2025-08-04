@@ -1095,6 +1095,6 @@ details[open] .details__summary {
         left: 0;
     }
     .ficha__url-pub__link {
-        color: var(--cor-de-link);
+        color: var(--blue);
     }
 }
