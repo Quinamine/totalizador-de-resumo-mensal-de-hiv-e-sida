@@ -154,7 +154,7 @@ function redirecionarParaTES() {
     }, 1000);
 
     setTimeout(() => {
-        window.location.href = 'https://quinamine.github.io/totalizador-estatistica-saude/?page=consultas'
+        window.location.href = 'https://quinamine.github.io/totalizador-estatistica-saude/?page=hiv-sida'
     }, tempoRedirecionamento)
 }
 let btnAutoCloseLoop, redirectionTime;
